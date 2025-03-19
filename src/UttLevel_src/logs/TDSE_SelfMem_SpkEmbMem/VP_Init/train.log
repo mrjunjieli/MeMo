@@ -1,0 +1,1155 @@
+started on logs/TDSE_SelfMem_SpkEmbMem/pre_enroll_28
+
+Namespace(mix_lst_path='../../data_preparation/mixture_data_list_2mix_with_occludded.csv', visual_direc='/mntcephfs/lee_dataset/separation/voxceleb2/mp4/', mixture_direc='/mntcephfs/lee_dataset/separation/voxceleb2/mixture/', obj_dir='../../data_preparation/Asset/object_image_sr', obj_mask_dir='../../data_preparation/Asset/object_mask_x4', batch_size=6, max_length=6, num_workers=8, epochs=100, effec_batch_size=8, accu_grad=0, C=2, model_name='TDSE_SelfMem_SpkEmbMem', lr=0.001, max_norm=5, log_name='logs/TDSE_SelfMem_SpkEmbMem/pre_enroll_28', use_tensorboard=1, continue_from='FALSE', local_rank=0, sample_rate=16000, win=512, hop_length=128, n_mels=80, shift_range='0,1', Self_enroll_amplitude_scaling='0.1,1', teacher_point=50, num_slots='5,5', loss_weight='28', distributed=True, world_size=2, speaker_dict={'id08108': 0, 'id07077': 1, 'id08249': 2, 'id00699': 3, 'id09016': 4, 'id06010': 5, 'id06017': 6, 'id00015': 7, 'id04526': 8, 'id02179': 9, 'id07955': 10, 'id08592': 11, 'id05480': 12, 'id06645': 13, 'id00979': 14, 'id07447': 15, 'id06496': 16, 'id08457': 17, 'id01355': 18, 'id03918': 19, 'id07970': 20, 'id04015': 21, 'id05010': 22, 'id06843': 23, 'id04219': 24, 'id07293': 25, 'id01264': 26, 'id07744': 27, 'id02455': 28, 'id07741': 29, 'id06702': 30, 'id07108': 31, 'id02102': 32, 'id07136': 33, 'id08745': 34, 'id03824': 35, 'id01457': 36, 'id08834': 37, 'id07613': 38, 'id05241': 39, 'id08241': 40, 'id07560': 41, 'id06070': 42, 'id03258': 43, 'id01764': 44, 'id03312': 45, 'id02339': 46, 'id04081': 47, 'id05913': 48, 'id08053': 49, 'id04523': 50, 'id08335': 51, 'id08546': 52, 'id08376': 53, 'id04705': 54, 'id08065': 55, 'id08041': 56, 'id04199': 57, 'id02667': 58, 'id07672': 59, 'id07357': 60, 'id03493': 61, 'id01681': 62, 'id08066': 63, 'id08704': 64, 'id02294': 65, 'id07837': 66, 'id02593': 67, 'id06362': 68, 'id01857': 69, 'id08853': 70, 'id07982': 71, 'id06203': 72, 'id04586': 73, 'id02239': 74, 'id01057': 75, 'id02343': 76, 'id03269': 77, 'id05057': 78, 'id08647': 79, 'id01056': 80, 'id08904': 81, 'id00078': 82, 'id02578': 83, 'id03942': 84, 'id03696': 85, 'id06005': 86, 'id04738': 87, 'id06617': 88, 'id01111': 89, 'id06988': 90, 'id09032': 91, 'id01840': 92, 'id06798': 93, 'id04684': 94, 'id03748': 95, 'id06239': 96, 'id00282': 97, 'id02281': 98, 'id04961': 99, 'id00943': 100, 'id01054': 101, 'id07158': 102, 'id04534': 103, 'id03502': 104, 'id02987': 105, 'id00568': 106, 'id04615': 107, 'id01648': 108, 'id06597': 109, 'id07670': 110, 'id05066': 111, 'id03445': 112, 'id08739': 113, 'id01694': 114, 'id09232': 115, 'id05710': 116, 'id07719': 117, 'id08377': 118, 'id01916': 119, 'id01570': 120, 'id05978': 121, 'id08714': 122, 'id02318': 123, 'id03994': 124, 'id06948': 125, 'id07165': 126, 'id06663': 127, 'id07164': 128, 'id08042': 129, 'id04518': 130, 'id05875': 131, 'id08569': 132, 'id05856': 133, 'id08317': 134, 'id08243': 135, 'id01286': 136, 'id06038': 137, 'id00262': 138, 'id01504': 139, 'id05935': 140, 'id01677': 141, 'id07276': 142, 'id01658': 143, 'id04221': 144, 'id05293': 145, 'id06771': 146, 'id06586': 147, 'id06323': 148, 'id03992': 149, 'id03713': 150, 'id04968': 151, 'id00076': 152, 'id06364': 153, 'id03240': 154, 'id04134': 155, 'id00187': 156, 'id08348': 157, 'id08568': 158, 'id08917': 159, 'id04257': 160, 'id02733': 161, 'id05573': 162, 'id00996': 163, 'id02438': 164, 'id05777': 165, 'id04715': 166, 'id03939': 167, 'id02214': 168, 'id04320': 169, 'id08064': 170, 'id07272': 171, 'id01225': 172, 'id06588': 173, 'id00272': 174, 'id06445': 175, 'id05907': 176, 'id01040': 177, 'id02297': 178, 'id08343': 179, 'id03199': 180, 'id00350': 181, 'id08122': 182, 'id01163': 183, 'id03522': 184, 'id08080': 185, 'id07708': 186, 'id07844': 187, 'id04988': 188, 'id03923': 189, 'id04086': 190, 'id02299': 191, 'id07800': 192, 'id02457': 193, 'id05496': 194, 'id08837': 195, 'id09033': 196, 'id07161': 197, 'id02260': 198, 'id06584': 199, 'id07349': 200, 'id06351': 201, 'id05288': 202, 'id03215': 203, 'id03334': 204, 'id01758': 205, 'id00978': 206, 'id05851': 207, 'id07351': 208, 'id08362': 209, 'id08518': 210, 'id08928': 211, 'id00062': 212, 'id08658': 213, 'id01193': 214, 'id05453': 215, 'id09051': 216, 'id00708': 217, 'id03267': 218, 'id02477': 219, 'id06507': 220, 'id01262': 221, 'id02249': 222, 'id01750': 223, 'id00741': 224, 'id07956': 225, 'id02361': 226, 'id08933': 227, 'id05832': 228, 'id06866': 229, 'id07181': 230, 'id00876': 231, 'id04537': 232, 'id00620': 233, 'id05591': 234, 'id09147': 235, 'id03430': 236, 'id00086': 237, 'id07010': 238, 'id06696': 239, 'id02116': 240, 'id09192': 241, 'id05060': 242, 'id01387': 243, 'id04538': 244, 'id03201': 245, 'id09171': 246, 'id04752': 247, 'id06360': 248, 'id08781': 249, 'id04064': 250, 'id06289': 251, 'id05664': 252, 'id02008': 253, 'id05186': 254, 'id01265': 255, 'id05998': 256, 'id06725': 257, 'id04855': 258, 'id00967': 259, 'id00513': 260, 'id00816': 261, 'id03727': 262, 'id06958': 263, 'id03755': 264, 'id04780': 265, 'id01010': 266, 'id01904': 267, 'id00942': 268, 'id02067': 269, 'id01411': 270, 'id03896': 271, 'id07623': 272, 'id05506': 273, 'id06415': 274, 'id07434': 275, 'id07856': 276, 'id05693': 277, 'id01806': 278, 'id02156': 279, 'id01713': 280, 'id05454': 281, 'id06212': 282, 'id02534': 283, 'id00806': 284, 'id01678': 285, 'id07578': 286, 'id03014': 287, 'id07145': 288, 'id06250': 289, 'id08653': 290, 'id04372': 291, 'id07236': 292, 'id06582': 293, 'id07750': 294, 'id00060': 295, 'id02015': 296, 'id05257': 297, 'id00692': 298, 'id03371': 299, 'id08289': 300, 'id01160': 301, 'id07809': 302, 'id04618': 303, 'id01906': 304, 'id08694': 305, 'id00888': 306, 'id07618': 307, 'id06986': 308, 'id05171': 309, 'id06717': 310, 'id03414': 311, 'id01746': 312, 'id00664': 313, 'id09010': 314, 'id03885': 315, 'id08993': 316, 'id08501': 317, 'id06131': 318, 'id07776': 319, 'id05165': 320, 'id08047': 321, 'id00709': 322, 'id08738': 323, 'id04358': 324, 'id05265': 325, 'id06411': 326, 'id05699': 327, 'id00891': 328, 'id07686': 329, 'id00990': 330, 'id00673': 331, 'id02495': 332, 'id04125': 333, 'id00084': 334, 'id02943': 335, 'id02980': 336, 'id07703': 337, 'id04349': 338, 'id02888': 339, 'id00159': 340, 'id08079': 341, 'id01218': 342, 'id00787': 343, 'id07178': 344, 'id08239': 345, 'id04409': 346, 'id00378': 347, 'id02873': 348, 'id05260': 349, 'id00417': 350, 'id05666': 351, 'id04284': 352, 'id09225': 353, 'id05691': 354, 'id07834': 355, 'id02075': 356, 'id05049': 357, 'id03983': 358, 'id02392': 359, 'id00258': 360, 'id04419': 361, 'id07642': 362, 'id01006': 363, 'id00385': 364, 'id03728': 365, 'id06479': 366, 'id05153': 367, 'id03028': 368, 'id03147': 369, 'id03328': 370, 'id04194': 371, 'id01859': 372, 'id02341': 373, 'id04508': 374, 'id01354': 375, 'id03118': 376, 'id06946': 377, 'id01556': 378, 'id00043': 379, 'id07535': 380, 'id03429': 381, 'id07128': 382, 'id04247': 383, 'id06114': 384, 'id03227': 385, 'id01614': 386, 'id06424': 387, 'id09269': 388, 'id02157': 389, 'id01768': 390, 'id09088': 391, 'id04742': 392, 'id04903': 393, 'id07531': 394, 'id04757': 395, 'id00680': 396, 'id03313': 397, 'id02721': 398, 'id06109': 399, 'id05738': 400, 'id05632': 401, 'id04617': 402, 'id08604': 403, 'id08573': 404, 'id06477': 405, 'id08236': 406, 'id05272': 407, 'id02760': 408, 'id09052': 409, 'id07360': 410, 'id06551': 411, 'id06414': 412, 'id08742': 413, 'id06252': 414, 'id01776': 415, 'id04842': 416, 'id03810': 417, 'id08968': 418, 'id01060': 419, 'id06196': 420, 'id04117': 421, 'id04184': 422, 'id03460': 423, 'id00191': 424, 'id01448': 425, 'id02311': 426, 'id04198': 427, 'id04458': 428, 'id05986': 429, 'id07078': 430, 'id06792': 431, 'id02817': 432, 'id04417': 433, 'id04997': 434, 'id00149': 435, 'id00462': 436, 'id01209': 437, 'id04974': 438, 'id03786': 439, 'id04644': 440, 'id02053': 441, 'id03556': 442, 'id07851': 443, 'id00944': 444, 'id03705': 445, 'id03288': 446, 'id06183': 447, 'id06432': 448, 'id04564': 449, 'id07887': 450, 'id05494': 451, 'id02653': 452, 'id09091': 453, 'id00529': 454, 'id06121': 455, 'id04229': 456, 'id06248': 457, 'id05930': 458, 'id08885': 459, 'id08953': 460, 'id05189': 461, 'id01798': 462, 'id07400': 463, 'id04655': 464, 'id03750': 465, 'id02039': 466, 'id07415': 467, 'id07974': 468, 'id05133': 469, 'id08860': 470, 'id04108': 471, 'id08334': 472, 'id04188': 473, 'id05741': 474, 'id04017': 475, 'id01659': 476, 'id06870': 477, 'id04179': 478, 'id03675': 479, 'id03733': 480, 'id01206': 481, 'id04274': 482, 'id02166': 483, 'id04160': 484, 'id03532': 485, 'id00202': 486, 'id06336': 487, 'id04486': 488, 'id03754': 489, 'id05054': 490, 'id07421': 491, 'id03247': 492, 'id08146': 493, 'id02289': 494, 'id05027': 495, 'id00168': 496, 'id00184': 497, 'id08529': 498, 'id03917': 499, 'id06944': 500, 'id01960': 501, 'id00774': 502, 'id00903': 503, 'id05554': 504, 'id00332': 505, 'id04814': 506, 'id05261': 507, 'id01100': 508, 'id01523': 509, 'id06222': 510, 'id02463': 511, 'id07556': 512, 'id00773': 513, 'id08660': 514, 'id03088': 515, 'id01317': 516, 'id04667': 517, 'id08999': 518, 'id02948': 519, 'id00788': 520, 'id05585': 521, 'id05926': 522, 'id08802': 523, 'id07624': 524, 'id07179': 525, 'id04333': 526, 'id04930': 527, 'id01539': 528, 'id08981': 529, 'id02351': 530, 'id04554': 531, 'id06062': 532, 'id08936': 533, 'id07489': 534, 'id07625': 535, 'id04404': 536, 'id05289': 537, 'id03866': 538, 'id03325': 539, 'id04195': 540, 'id00029': 541, 'id00823': 542, 'id04254': 543, 'id02017': 544, 'id04588': 545, 'id04677': 546, 'id04423': 547, 'id06952': 548, 'id02389': 549, 'id00413': 550, 'id00176': 551, 'id01101': 552, 'id00352': 553, 'id07299': 554, 'id04223': 555, 'id00976': 556, 'id03821': 557, 'id08462': 558, 'id02735': 559, 'id02739': 560, 'id07727': 561, 'id08160': 562, 'id05696': 563, 'id04488': 564, 'id00592': 565, 'id02598': 566, 'id00650': 567, 'id01754': 568, 'id00980': 569, 'id04559': 570, 'id01690': 571, 'id03351': 572, 'id04511': 573, 'id05771': 574, 'id06650': 575, 'id03768': 576, 'id02981': 577, 'id07405': 578, 'id03652': 579, 'id07186': 580, 'id03706': 581, 'id04146': 582, 'id05622': 583, 'id05401': 584, 'id07332': 585, 'id01617': 586, 'id03331': 587, 'id00266': 588, 'id02573': 589, 'id08147': 590, 'id00524': 591, 'id03274': 592, 'id07497': 593, 'id09210': 594, 'id05737': 595, 'id00494': 596, 'id03871': 597, 'id00020': 598, 'id04628': 599, 'id08919': 600, 'id08097': 601, 'id09049': 602, 'id05541': 603, 'id05286': 604, 'id06937': 605, 'id06347': 606, 'id06874': 607, 'id04784': 608, 'id06949': 609, 'id02062': 610, 'id03264': 611, 'id08049': 612, 'id04408': 613, 'id06900': 614, 'id08261': 615, 'id06140': 616, 'id05477': 617, 'id07060': 618, 'id07726': 619, 'id00353': 620, 'id05160': 621, 'id07418': 622, 'id00064': 623, 'id02724': 624, 'id04265': 625, 'id04097': 626, 'id08599': 627, 'id04133': 628, 'id00902': 629, 'id06262': 630, 'id09230': 631, 'id00469': 632, 'id08536': 633, 'id00395': 634, 'id05853': 635, 'id01931': 636, 'id02004': 637, 'id01280': 638, 'id07429': 639, 'id05916': 640, 'id02889': 641, 'id04163': 642, 'id05492': 643, 'id04654': 644, 'id04839': 645, 'id00965': 646, 'id01489': 647, 'id00558': 648, 'id08804': 649, 'id06529': 650, 'id02306': 651, 'id08311': 652, 'id04712': 653, 'id03525': 654, 'id01511': 655, 'id03336': 656, 'id00459': 657, 'id01908': 658, 'id06847': 659, 'id08983': 660, 'id03989': 661, 'id08556': 662, 'id06875': 663, 'id00185': 664, 'id02021': 665, 'id08240': 666, 'id06723': 667, 'id04869': 668, 'id01501': 669, 'id01235': 670, 'id02340': 671, 'id04582': 672, 'id06676': 673, 'id05841': 674, 'id08702': 675, 'id04517': 676, 'id02346': 677, 'id04660': 678, 'id03947': 679, 'id00724': 680, 'id00829': 681, 'id07256': 682, 'id03796': 683, 'id06541': 684, 'id07080': 685, 'id07500': 686, 'id06378': 687, 'id08323': 688, 'id05757': 689, 'id05723': 690, 'id05576': 691, 'id08278': 692, 'id04873': 693, 'id06226': 694, 'id02891': 695, 'id04856': 696, 'id05739': 697, 'id03804': 698, 'id05893': 699, 'id08002': 700, 'id01769': 701, 'id04334': 702, 'id00192': 703, 'id07043': 704, 'id08533': 705, 'id03298': 706, 'id05209': 707, 'id01689': 708, 'id07130': 709, 'id08937': 710, 'id02538': 711, 'id04031': 712, 'id01239': 713, 'id05434': 714, 'id02112': 715, 'id04782': 716, 'id06552': 717, 'id04509': 718, 'id08414': 719, 'id07344': 720, 'id05644': 721, 'id09186': 722, 'id02087': 723, 'id06355': 724, 'id04907': 725, 'id05685': 726, 'id02267': 727, 'id06138': 728, 'id04216': 729, 'id04529': 730, 'id06368': 731, 'id07046': 732, 'id04530': 733, 'id02032': 734, 'id01121': 735, 'id01927': 736, 'id05256': 737, 'id03757': 738, 'id05104': 739, 'id08600': 740, 'id05039': 741, 'id05983': 742, 'id08351': 743, 'id06016': 744, 'id04427': 745, 'id07534': 746, 'id08756': 747, 'id02979': 748, 'id03945': 749, 'id04128': 750, 'id04222': 751, 'id06673': 752, 'id07050': 753, 'id00255': 754, 'id05471': 755, 'id05141': 756, 'id04027': 757, 'id08525': 758, 'id04266': 759, 'id05989': 760, 'id01827': 761, 'id02270': 762, 'id03242': 763, 'id01223': 764, 'id09048': 765, 'id03207': 766, 'id01098': 767, 'id04224': 768, 'id07175': 769, 'id03877': 770, 'id00755': 771, 'id04151': 772, 'id00022': 773, 'id08022': 774, 'id02384': 775, 'id06474': 776, 'id04716': 777, 'id04560': 778, 'id02040': 779, 'id02437': 780, 'id00911': 781, 'id03931': 782, 'id03527': 783, 'id01315': 784, 'id03820': 785, 'id03352': 786, 'id02150': 787, 'id00752': 788, 'id07980': 789, 'id07341': 790, 'id01639': 791, 'id03304': 792, 'id04589': 793, 'id02252': 794, 'id08477': 795, 'id07954': 796, 'id03907': 797, 'id04300': 798, 'id06905': 799}, speakers=800)
+
+Total number of parameters: 26797029 
+
+av_convtasnet(
+  (encoder): Encoder(
+    (conv1d_U): Conv1d(1, 256, kernel_size=(40,), stride=(20,), bias=False)
+  )
+  (separator): TemporalConvNet(
+    (layer_norm): ChannelWiseLayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (bottleneck_conv1x1): Conv1d(256, 256, kernel_size=(1,), stride=(1,), bias=False)
+    (tcn): ModuleList(
+      (0-3): 4 x Sequential(
+        (0): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+        (1): TemporalBlock(
+          (net): Sequential(
+            (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,), bias=False)
+            (1): PReLU(num_parameters=1)
+            (2): GlobalLayerNorm()
+            (3): DepthwiseSeparableConv(
+              (net): Sequential(
+                (0): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(1,), groups=512, bias=False)
+                (1): PReLU(num_parameters=1)
+                (2): GlobalLayerNorm()
+                (3): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+              )
+            )
+          )
+        )
+        (2): TemporalBlock(
+          (net): Sequential(
+            (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,), bias=False)
+            (1): PReLU(num_parameters=1)
+            (2): GlobalLayerNorm()
+            (3): DepthwiseSeparableConv(
+              (net): Sequential(
+                (0): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(2,), dilation=(2,), groups=512, bias=False)
+                (1): PReLU(num_parameters=1)
+                (2): GlobalLayerNorm()
+                (3): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+              )
+            )
+          )
+        )
+        (3): TemporalBlock(
+          (net): Sequential(
+            (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,), bias=False)
+            (1): PReLU(num_parameters=1)
+            (2): GlobalLayerNorm()
+            (3): DepthwiseSeparableConv(
+              (net): Sequential(
+                (0): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(4,), dilation=(4,), groups=512, bias=False)
+                (1): PReLU(num_parameters=1)
+                (2): GlobalLayerNorm()
+                (3): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+              )
+            )
+          )
+        )
+        (4): TemporalBlock(
+          (net): Sequential(
+            (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,), bias=False)
+            (1): PReLU(num_parameters=1)
+            (2): GlobalLayerNorm()
+            (3): DepthwiseSeparableConv(
+              (net): Sequential(
+                (0): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(8,), dilation=(8,), groups=512, bias=False)
+                (1): PReLU(num_parameters=1)
+                (2): GlobalLayerNorm()
+                (3): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+              )
+            )
+          )
+        )
+        (5): TemporalBlock(
+          (net): Sequential(
+            (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,), bias=False)
+            (1): PReLU(num_parameters=1)
+            (2): GlobalLayerNorm()
+            (3): DepthwiseSeparableConv(
+              (net): Sequential(
+                (0): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(16,), dilation=(16,), groups=512, bias=False)
+                (1): PReLU(num_parameters=1)
+                (2): GlobalLayerNorm()
+                (3): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+              )
+            )
+          )
+        )
+        (6): TemporalBlock(
+          (net): Sequential(
+            (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,), bias=False)
+            (1): PReLU(num_parameters=1)
+            (2): GlobalLayerNorm()
+            (3): DepthwiseSeparableConv(
+              (net): Sequential(
+                (0): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(32,), dilation=(32,), groups=512, bias=False)
+                (1): PReLU(num_parameters=1)
+                (2): GlobalLayerNorm()
+                (3): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+              )
+            )
+          )
+        )
+        (7): TemporalBlock(
+          (net): Sequential(
+            (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,), bias=False)
+            (1): PReLU(num_parameters=1)
+            (2): GlobalLayerNorm()
+            (3): DepthwiseSeparableConv(
+              (net): Sequential(
+                (0): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(64,), dilation=(64,), groups=512, bias=False)
+                (1): PReLU(num_parameters=1)
+                (2): GlobalLayerNorm()
+                (3): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+              )
+            )
+          )
+        )
+        (8): TemporalBlock(
+          (net): Sequential(
+            (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,), bias=False)
+            (1): PReLU(num_parameters=1)
+            (2): GlobalLayerNorm()
+            (3): DepthwiseSeparableConv(
+              (net): Sequential(
+                (0): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(128,), dilation=(128,), groups=512, bias=False)
+                (1): PReLU(num_parameters=1)
+                (2): GlobalLayerNorm()
+                (3): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+              )
+            )
+          )
+        )
+      )
+    )
+    (visual_conv): Sequential(
+      (0): VisualConv1D(
+        (net): Sequential(
+          (0): ReLU()
+          (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(1,), groups=512, bias=False)
+          (3): PReLU(num_parameters=1)
+          (4): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): Conv1d(512, 512, kernel_size=(1,), stride=(1,), bias=False)
+        )
+      )
+      (1): VisualConv1D(
+        (net): Sequential(
+          (0): ReLU()
+          (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(1,), groups=512, bias=False)
+          (3): PReLU(num_parameters=1)
+          (4): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): Conv1d(512, 512, kernel_size=(1,), stride=(1,), bias=False)
+        )
+      )
+      (2): VisualConv1D(
+        (net): Sequential(
+          (0): ReLU()
+          (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(1,), groups=512, bias=False)
+          (3): PReLU(num_parameters=1)
+          (4): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): Conv1d(512, 512, kernel_size=(1,), stride=(1,), bias=False)
+        )
+      )
+      (3): VisualConv1D(
+        (net): Sequential(
+          (0): ReLU()
+          (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(1,), groups=512, bias=False)
+          (3): PReLU(num_parameters=1)
+          (4): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): Conv1d(512, 512, kernel_size=(1,), stride=(1,), bias=False)
+        )
+      )
+      (4): VisualConv1D(
+        (net): Sequential(
+          (0): ReLU()
+          (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(1,), groups=512, bias=False)
+          (3): PReLU(num_parameters=1)
+          (4): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): Conv1d(512, 512, kernel_size=(1,), stride=(1,), bias=False)
+        )
+      )
+    )
+    (ve_conv1x1): ModuleList(
+      (0-3): 4 x Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+    )
+    (mask_conv1x1): Conv1d(256, 256, kernel_size=(1,), stride=(1,), bias=False)
+    (linear_fusion): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+  )
+  (decoder): Decoder(
+    (basis_signals): Linear(in_features=256, out_features=40, bias=False)
+  )
+  (visual_frontend): VisualFrontend(
+    (frontend3D): Sequential(
+      (0): Conv3d(1, 64, kernel_size=(5, 7, 7), stride=(1, 2, 2), padding=(2, 3, 3), bias=False)
+      (1): BatchNorm3d(64, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+      (2): ReLU()
+      (3): MaxPool3d(kernel_size=(1, 3, 3), stride=(1, 2, 2), padding=(0, 1, 1), dilation=1, ceil_mode=False)
+    )
+    (resnet): ResNet(
+      (layer1): ResNetLayer(
+        (conv1a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1a): BatchNorm2d(64, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv2a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (downsample): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (outbna): BatchNorm2d(64, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv1b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1b): BatchNorm2d(64, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv2b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (outbnb): BatchNorm2d(64, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+      )
+      (layer2): ResNetLayer(
+        (conv1a): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1a): BatchNorm2d(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv2a): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (downsample): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (outbna): BatchNorm2d(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv1b): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1b): BatchNorm2d(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv2b): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (outbnb): BatchNorm2d(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+      )
+      (layer3): ResNetLayer(
+        (conv1a): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1a): BatchNorm2d(256, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv2a): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (downsample): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (outbna): BatchNorm2d(256, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv1b): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1b): BatchNorm2d(256, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv2b): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (outbnb): BatchNorm2d(256, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+      )
+      (layer4): ResNetLayer(
+        (conv1a): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1a): BatchNorm2d(512, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv2a): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (downsample): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (outbna): BatchNorm2d(512, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv1b): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1b): BatchNorm2d(512, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv2b): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (outbnb): BatchNorm2d(512, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+      )
+      (avgpool): AvgPool2d(kernel_size=(4, 4), stride=(1, 1), padding=0)
+    )
+  )
+  (linear_fusion): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+  (preEmphasis): PreEmphasis()
+  (spk_encoder): MelSpectrogram(
+    (spectrogram): Spectrogram()
+    (mel_scale): MelScale()
+  )
+  (spk_model): ECAPA_TDNN(
+    (layer1): Conv1dReluBn(
+      (conv): Conv1d(80, 256, kernel_size=(5,), stride=(1,), padding=(2,))
+      (bn): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (layer2): SE_Res2Block(
+      (se_res2block): Sequential(
+        (0): Conv1dReluBn(
+          (conv): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+          (bn): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (1): Res2Conv1dReluBn(
+          (convs): ModuleList(
+            (0-6): 7 x Conv1d(32, 32, kernel_size=(3,), stride=(1,), padding=(2,), dilation=(2,))
+          )
+          (bns): ModuleList(
+            (0-6): 7 x BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (2): Conv1dReluBn(
+          (conv): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+          (bn): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (3): SE_Connect(
+          (linear1): Linear(in_features=256, out_features=128, bias=True)
+          (linear2): Linear(in_features=128, out_features=256, bias=True)
+        )
+      )
+    )
+    (layer3): SE_Res2Block(
+      (se_res2block): Sequential(
+        (0): Conv1dReluBn(
+          (conv): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+          (bn): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (1): Res2Conv1dReluBn(
+          (convs): ModuleList(
+            (0-6): 7 x Conv1d(32, 32, kernel_size=(3,), stride=(1,), padding=(3,), dilation=(3,))
+          )
+          (bns): ModuleList(
+            (0-6): 7 x BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (2): Conv1dReluBn(
+          (conv): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+          (bn): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (3): SE_Connect(
+          (linear1): Linear(in_features=256, out_features=128, bias=True)
+          (linear2): Linear(in_features=128, out_features=256, bias=True)
+        )
+      )
+    )
+    (layer4): SE_Res2Block(
+      (se_res2block): Sequential(
+        (0): Conv1dReluBn(
+          (conv): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+          (bn): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (1): Res2Conv1dReluBn(
+          (convs): ModuleList(
+            (0-6): 7 x Conv1d(32, 32, kernel_size=(3,), stride=(1,), padding=(4,), dilation=(4,))
+          )
+          (bns): ModuleList(
+            (0-6): 7 x BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (2): Conv1dReluBn(
+          (conv): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+          (bn): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (3): SE_Connect(
+          (linear1): Linear(in_features=256, out_features=128, bias=True)
+          (linear2): Linear(in_features=128, out_features=256, bias=True)
+        )
+      )
+    )
+    (conv): Conv1d(768, 1536, kernel_size=(1,), stride=(1,))
+    (pool): ASTP(
+      (linear1): Conv1d(1536, 128, kernel_size=(1,), stride=(1,))
+      (linear2): Conv1d(128, 1536, kernel_size=(1,), stride=(1,))
+    )
+    (bn): BatchNorm1d(3072, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (linear): Linear(in_features=3072, out_features=256, bias=True)
+    (bn2): Identity()
+  )
+  (spk_self_att): SelfAtten(
+    (query_proj): Linear(in_features=256, out_features=256, bias=False)
+    (key_proj): Linear(in_features=256, out_features=256, bias=False)
+    (value_proj): Linear(in_features=256, out_features=256, bias=False)
+  )
+  (time_cross_attn): CrossAttention(
+    (self_attn): MultiheadAttention(
+      (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)
+    )
+    (linear1): Linear(in_features=256, out_features=1024, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+    (linear2): Linear(in_features=1024, out_features=256, bias=True)
+    (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (dropout1): Dropout(p=0.1, inplace=False)
+    (dropout2): Dropout(p=0.1, inplace=False)
+  )
+  (slot_attn): CrossAttentionAVG(
+    (query_proj): Linear(in_features=256, out_features=256, bias=False)
+    (key_proj): Linear(in_features=256, out_features=256, bias=False)
+    (value_proj): Linear(in_features=256, out_features=256, bias=False)
+  )
+)
+Start new training
+step:1/1667 avg loss:35.576, stage_1_loss:34.090, stage_2_loss:35.948
+step:1/1667 avg loss:32.293, stage_1_loss:31.271, stage_2_loss:32.549
+step:1001/1667 avg loss:-0.585, stage_1_loss:0.071, stage_2_loss:-0.749step:1001/1667 avg loss:-0.568, stage_1_loss:0.086, stage_2_loss:-0.732
+
+Train Summary | End of Epoch 1 | Time 3680.21s | Current time 2025-01-06 12:30:53.899460 |Train Loss -1.059| 
+step:1/417 avg loss:-0.248, stage_1_loss:-0.655, stage_2_loss:-0.146
+step:1/417 avg loss:-0.160, stage_1_loss:-0.358, stage_2_loss:-0.110
+step:301/417 avg loss:-0.031, stage_1_loss:-0.433, stage_2_loss:0.069
+step:301/417 avg loss:-0.029, stage_1_loss:-0.417, stage_2_loss:0.069
+Valid Summary | End of Epoch 1 | Time 861.70s | Current time 2025-01-06 12:45:16.075823 |Valid Loss -0.037| 
+Found new best model, dict saved
+step:1/1667 avg loss:0.308, stage_1_loss:-0.164, stage_2_loss:0.426
+step:1/1667 avg loss:-2.745, stage_1_loss:-0.429, stage_2_loss:-3.324
+step:1001/1667 avg loss:-2.579, stage_1_loss:-0.568, stage_2_loss:-3.081
+step:1001/1667 avg loss:-2.606, stage_1_loss:-0.568, stage_2_loss:-3.116
+Train Summary | End of Epoch 2 | Time 3620.19s | Current time 2025-01-06 13:45:39.409277 |Train Loss -3.074| 
+step:1/417 avg loss:-2.491, stage_1_loss:-2.679, stage_2_loss:-2.444
+step:1/417 avg loss:-1.413, stage_1_loss:-1.518, stage_2_loss:-1.386
+step:301/417 avg loss:-1.773, stage_1_loss:-1.960, stage_2_loss:-1.726
+step:301/417 avg loss:-1.826, stage_1_loss:-2.032, stage_2_loss:-1.774
+Valid Summary | End of Epoch 2 | Time 469.63s | Current time 2025-01-06 13:53:29.165761 |Valid Loss -1.803| 
+Found new best model, dict saved
+step:1/1667 avg loss:-4.735, stage_1_loss:-0.905, stage_2_loss:-5.693
+step:1/1667 avg loss:-3.963, stage_1_loss:-3.200, stage_2_loss:-4.154
+step:1001/1667 avg loss:-4.872, stage_1_loss:-2.275, stage_2_loss:-5.521step:1001/1667 avg loss:-4.834, stage_1_loss:-2.205, stage_2_loss:-5.491
+
+Train Summary | End of Epoch 3 | Time 3520.73s | Current time 2025-01-06 14:52:14.195034 |Train Loss -5.179| 
+step:1/417 avg loss:-4.245, stage_1_loss:-4.232, stage_2_loss:-4.248
+step:1/417 avg loss:-1.757, stage_1_loss:-2.345, stage_2_loss:-1.610
+step:301/417 avg loss:-3.575, stage_1_loss:-3.734, stage_2_loss:-3.535
+step:301/417 avg loss:-3.629, stage_1_loss:-3.794, stage_2_loss:-3.588
+Valid Summary | End of Epoch 3 | Time 467.81s | Current time 2025-01-06 15:00:02.212879 |Valid Loss -3.607| 
+Found new best model, dict saved
+step:1/1667 avg loss:-3.613, stage_1_loss:-3.275, stage_2_loss:-3.697
+step:1/1667 avg loss:-6.579, stage_1_loss:-3.442, stage_2_loss:-7.363
+step:1001/1667 avg loss:-6.313, stage_1_loss:-3.705, stage_2_loss:-6.965
+step:1001/1667 avg loss:-6.305, stage_1_loss:-3.670, stage_2_loss:-6.963
+Train Summary | End of Epoch 4 | Time 3530.23s | Current time 2025-01-06 15:58:56.179679 |Train Loss -6.505| 
+step:1/417 avg loss:-5.646, stage_1_loss:-5.658, stage_2_loss:-5.643
+step:1/417 avg loss:-0.938, stage_1_loss:-1.949, stage_2_loss:-0.685
+step:301/417 avg loss:-4.424, stage_1_loss:-4.655, stage_2_loss:-4.367
+step:301/417 avg loss:-4.450, stage_1_loss:-4.707, stage_2_loss:-4.385
+Valid Summary | End of Epoch 4 | Time 470.75s | Current time 2025-01-06 16:06:47.663242 |Valid Loss -4.455| 
+Found new best model, dict saved
+step:1/1667 avg loss:-9.013, stage_1_loss:-7.258, stage_2_loss:-9.452
+step:1/1667 avg loss:-6.461, stage_1_loss:-4.240, stage_2_loss:-7.017
+step:1001/1667 avg loss:-7.243, stage_1_loss:-4.743, stage_2_loss:-7.868step:1001/1667 avg loss:-7.212, stage_1_loss:-4.729, stage_2_loss:-7.832
+
+Train Summary | End of Epoch 5 | Time 3556.69s | Current time 2025-01-06 17:06:05.288725 |Train Loss -7.420| 
+step:1/417 avg loss:-6.821, stage_1_loss:-6.690, stage_2_loss:-6.853
+step:1/417 avg loss:-3.200, stage_1_loss:-3.762, stage_2_loss:-3.059
+step:301/417 avg loss:-5.794, stage_1_loss:-5.779, stage_2_loss:-5.797
+step:301/417 avg loss:-5.862, stage_1_loss:-5.846, stage_2_loss:-5.866
+Valid Summary | End of Epoch 5 | Time 475.09s | Current time 2025-01-06 17:14:00.401300 |Valid Loss -5.861| 
+Found new best model, dict saved
+step:1/1667 avg loss:-8.187, stage_1_loss:-6.065, stage_2_loss:-8.717
+step:1/1667 avg loss:-8.834, stage_1_loss:-7.380, stage_2_loss:-9.197
+step:1001/1667 avg loss:-8.005, stage_1_loss:-5.564, stage_2_loss:-8.615step:1001/1667 avg loss:-7.965, stage_1_loss:-5.564, stage_2_loss:-8.566
+
+Train Summary | End of Epoch 6 | Time 3565.00s | Current time 2025-01-06 18:13:26.257523 |Train Loss -8.080| 
+step:1/417 avg loss:-6.436, stage_1_loss:-6.820, stage_2_loss:-6.341
+step:1/417 avg loss:-4.533, stage_1_loss:-4.857, stage_2_loss:-4.452
+step:301/417 avg loss:-6.129, stage_1_loss:-6.323, stage_2_loss:-6.080
+step:301/417 avg loss:-6.216, stage_1_loss:-6.423, stage_2_loss:-6.164
+Valid Summary | End of Epoch 6 | Time 468.80s | Current time 2025-01-06 18:21:15.064391 |Valid Loss -6.183| 
+Found new best model, dict saved
+step:1/1667 avg loss:-9.164, stage_1_loss:-6.815, stage_2_loss:-9.751
+step:1/1667 avg loss:-7.848, stage_1_loss:-5.518, stage_2_loss:-8.431
+step:1001/1667 avg loss:-8.749, stage_1_loss:-6.635, stage_2_loss:-9.278
+step:1001/1667 avg loss:-8.714, stage_1_loss:-6.543, stage_2_loss:-9.256
+Train Summary | End of Epoch 7 | Time 3082.40s | Current time 2025-01-06 19:12:38.603502 |Train Loss -8.798| 
+step:1/417 avg loss:-7.827, stage_1_loss:-7.554, stage_2_loss:-7.896
+step:1/417 avg loss:-5.290, stage_1_loss:-5.473, stage_2_loss:-5.244
+step:301/417 avg loss:-7.134, stage_1_loss:-7.160, stage_2_loss:-7.127
+step:301/417 avg loss:-7.096, stage_1_loss:-7.136, stage_2_loss:-7.086
+Valid Summary | End of Epoch 7 | Time 453.38s | Current time 2025-01-06 19:20:12.003722 |Valid Loss -7.144| 
+Found new best model, dict saved
+step:1/1667 avg loss:-9.322, stage_1_loss:-8.228, stage_2_loss:-9.595
+step:1/1667 avg loss:-9.700, stage_1_loss:-7.319, stage_2_loss:-10.296
+step:1001/1667 avg loss:-9.194, stage_1_loss:-7.218, stage_2_loss:-9.688step:1001/1667 avg loss:-9.226, stage_1_loss:-7.262, stage_2_loss:-9.717
+
+Train Summary | End of Epoch 8 | Time 3515.51s | Current time 2025-01-06 20:18:48.875471 |Train Loss -9.354| 
+step:1/417 avg loss:-9.040, stage_1_loss:-8.768, stage_2_loss:-9.108
+step:1/417 avg loss:-6.431, stage_1_loss:-6.431, stage_2_loss:-6.431
+step:301/417 avg loss:-8.165, stage_1_loss:-8.138, stage_2_loss:-8.171
+step:301/417 avg loss:-8.084, stage_1_loss:-8.076, stage_2_loss:-8.086
+Valid Summary | End of Epoch 8 | Time 463.20s | Current time 2025-01-06 20:26:32.087446 |Valid Loss -8.157| 
+Found new best model, dict saved
+step:1/1667 avg loss:-10.072, stage_1_loss:-8.844, stage_2_loss:-10.379
+step:1/1667 avg loss:-9.976, stage_1_loss:-8.020, stage_2_loss:-10.465
+step:1001/1667 avg loss:-9.827, stage_1_loss:-7.991, stage_2_loss:-10.286
+step:1001/1667 avg loss:-9.801, stage_1_loss:-7.898, stage_2_loss:-10.276
+Train Summary | End of Epoch 9 | Time 3512.52s | Current time 2025-01-06 21:25:06.324434 |Train Loss -9.907| 
+step:1/417 avg loss:-8.589, stage_1_loss:-8.499, stage_2_loss:-8.612
+step:1/417 avg loss:-8.180, stage_1_loss:-8.240, stage_2_loss:-8.165
+step:301/417 avg loss:-8.768, stage_1_loss:-8.844, stage_2_loss:-8.749
+step:301/417 avg loss:-8.630, stage_1_loss:-8.743, stage_2_loss:-8.601
+Valid Summary | End of Epoch 9 | Time 470.08s | Current time 2025-01-06 21:32:56.460057 |Valid Loss -8.714| 
+Found new best model, dict saved
+step:1/1667 avg loss:-10.472, stage_1_loss:-7.695, stage_2_loss:-11.166
+step:1/1667 avg loss:-9.817, stage_1_loss:-8.225, stage_2_loss:-10.215
+step:1001/1667 avg loss:-10.187, stage_1_loss:-8.498, stage_2_loss:-10.609step:1001/1667 avg loss:-10.196, stage_1_loss:-8.496, stage_2_loss:-10.620
+
+Train Summary | End of Epoch 10 | Time 3512.89s | Current time 2025-01-06 22:31:31.317770 |Train Loss -10.244| 
+step:1/417 avg loss:-8.942, stage_1_loss:-8.602, stage_2_loss:-9.027
+step:1/417 avg loss:-7.878, stage_1_loss:-8.285, stage_2_loss:-7.776
+step:301/417 avg loss:-8.684, stage_1_loss:-8.759, stage_2_loss:-8.666
+step:301/417 avg loss:-8.627, stage_1_loss:-8.683, stage_2_loss:-8.613
+Valid Summary | End of Epoch 10 | Time 461.09s | Current time 2025-01-06 22:39:12.462371 |Valid Loss -8.691| 
+step:1/1667 avg loss:-11.092, stage_1_loss:-10.609, stage_2_loss:-11.212
+step:1/1667 avg loss:-10.639, stage_1_loss:-7.859, stage_2_loss:-11.334
+step:1001/1667 avg loss:-10.487, stage_1_loss:-8.917, stage_2_loss:-10.880step:1001/1667 avg loss:-10.463, stage_1_loss:-8.890, stage_2_loss:-10.857
+
+Train Summary | End of Epoch 11 | Time 3524.46s | Current time 2025-01-06 23:38:00.812539 |Train Loss -10.537| 
+step:1/417 avg loss:-9.797, stage_1_loss:-9.558, stage_2_loss:-9.857
+step:1/417 avg loss:-7.774, stage_1_loss:-8.007, stage_2_loss:-7.716
+step:301/417 avg loss:-9.417, stage_1_loss:-9.296, stage_2_loss:-9.447
+step:301/417 avg loss:-9.308, stage_1_loss:-9.227, stage_2_loss:-9.328
+Valid Summary | End of Epoch 11 | Time 465.18s | Current time 2025-01-06 23:45:46.001904 |Valid Loss -9.388| 
+Found new best model, dict saved
+step:1/1667 avg loss:-11.749, stage_1_loss:-10.127, stage_2_loss:-12.154
+step:1/1667 avg loss:-12.359, stage_1_loss:-11.328, stage_2_loss:-12.617
+step:1001/1667 avg loss:-10.757, stage_1_loss:-9.319, stage_2_loss:-11.117step:1001/1667 avg loss:-10.807, stage_1_loss:-9.381, stage_2_loss:-11.163
+
+Train Summary | End of Epoch 12 | Time 3556.20s | Current time 2025-01-07 00:45:03.242245 |Train Loss -10.774| 
+step:1/417 avg loss:-9.423, stage_1_loss:-9.353, stage_2_loss:-9.440
+step:1/417 avg loss:-8.461, stage_1_loss:-8.692, stage_2_loss:-8.403
+step:301/417 avg loss:-9.444, stage_1_loss:-9.477, stage_2_loss:-9.435
+step:301/417 avg loss:-9.291, stage_1_loss:-9.344, stage_2_loss:-9.278
+Valid Summary | End of Epoch 12 | Time 479.52s | Current time 2025-01-07 00:53:02.811980 |Valid Loss -9.387| 
+step:1/1667 avg loss:-9.955, stage_1_loss:-8.389, stage_2_loss:-10.347
+step:1/1667 avg loss:-10.906, stage_1_loss:-9.969, stage_2_loss:-11.141
+step:1001/1667 avg loss:-10.749, stage_1_loss:-9.364, stage_2_loss:-11.095step:1001/1667 avg loss:-10.733, stage_1_loss:-9.340, stage_2_loss:-11.081
+
+Train Summary | End of Epoch 13 | Time 3555.23s | Current time 2025-01-07 01:52:18.699512 |Train Loss -10.805| 
+step:1/417 avg loss:-9.591, stage_1_loss:-9.555, stage_2_loss:-9.601
+step:1/417 avg loss:-7.047, stage_1_loss:-7.498, stage_2_loss:-6.935
+step:301/417 avg loss:-9.446, stage_1_loss:-9.552, stage_2_loss:-9.419
+step:301/417 avg loss:-9.411, stage_1_loss:-9.548, stage_2_loss:-9.376
+Valid Summary | End of Epoch 13 | Time 461.47s | Current time 2025-01-07 02:00:00.765806 |Valid Loss -9.464| 
+Found new best model, dict saved
+step:1/1667 avg loss:-11.624, stage_1_loss:-10.407, stage_2_loss:-11.928
+step:1/1667 avg loss:-10.860, stage_1_loss:-9.737, stage_2_loss:-11.141
+step:1001/1667 avg loss:-11.062, stage_1_loss:-9.785, stage_2_loss:-11.382
+step:1001/1667 avg loss:-11.119, stage_1_loss:-9.858, stage_2_loss:-11.434
+Train Summary | End of Epoch 14 | Time 3542.33s | Current time 2025-01-07 02:59:04.417160 |Train Loss -11.035| 
+step:1/417 avg loss:-9.823, stage_1_loss:-9.465, stage_2_loss:-9.912
+step:1/417 avg loss:-7.689, stage_1_loss:-7.332, stage_2_loss:-7.778
+step:301/417 avg loss:-9.299, stage_1_loss:-9.359, stage_2_loss:-9.284
+step:301/417 avg loss:-9.205, stage_1_loss:-9.263, stage_2_loss:-9.190
+Valid Summary | End of Epoch 14 | Time 457.88s | Current time 2025-01-07 03:06:42.338430 |Valid Loss -9.281| 
+step:1/1667 avg loss:-10.284, stage_1_loss:-7.476, stage_2_loss:-10.986
+step:1/1667 avg loss:-10.231, stage_1_loss:-9.533, stage_2_loss:-10.406
+step:1001/1667 avg loss:-11.248, stage_1_loss:-10.098, stage_2_loss:-11.535step:1001/1667 avg loss:-11.186, stage_1_loss:-9.968, stage_2_loss:-11.490
+
+Train Summary | End of Epoch 15 | Time 3545.98s | Current time 2025-01-07 04:05:49.768202 |Train Loss -11.145| 
+step:1/417 avg loss:-10.130, stage_1_loss:-9.566, stage_2_loss:-10.270
+step:1/417 avg loss:-6.659, stage_1_loss:-7.299, stage_2_loss:-6.500
+step:301/417 avg loss:-9.568, stage_1_loss:-9.484, stage_2_loss:-9.589
+step:301/417 avg loss:-9.459, stage_1_loss:-9.369, stage_2_loss:-9.482
+Valid Summary | End of Epoch 15 | Time 463.83s | Current time 2025-01-07 04:13:33.756596 |Valid Loss -9.576| 
+Found new best model, dict saved
+step:1/1667 avg loss:-10.011, stage_1_loss:-6.510, stage_2_loss:-10.886
+step:1/1667 avg loss:-11.239, stage_1_loss:-10.663, stage_2_loss:-11.382
+step:1001/1667 avg loss:-11.252, stage_1_loss:-10.178, stage_2_loss:-11.520
+step:1001/1667 avg loss:-11.271, stage_1_loss:-10.180, stage_2_loss:-11.544
+Train Summary | End of Epoch 16 | Time 3537.93s | Current time 2025-01-07 05:12:33.298611 |Train Loss -11.258| 
+step:1/417 avg loss:-9.539, stage_1_loss:-9.703, stage_2_loss:-9.498
+step:1/417 avg loss:-9.279, stage_1_loss:-9.389, stage_2_loss:-9.251
+step:301/417 avg loss:-9.781, stage_1_loss:-9.908, stage_2_loss:-9.750
+step:301/417 avg loss:-9.722, stage_1_loss:-9.854, stage_2_loss:-9.689
+Valid Summary | End of Epoch 16 | Time 455.15s | Current time 2025-01-07 05:20:08.451864 |Valid Loss -9.800| 
+Found new best model, dict saved
+step:1/1667 avg loss:-10.810, stage_1_loss:-9.454, stage_2_loss:-11.149
+step:1/1667 avg loss:-11.479, stage_1_loss:-11.099, stage_2_loss:-11.574
+step:1001/1667 avg loss:-11.383, stage_1_loss:-10.384, stage_2_loss:-11.632step:1001/1667 avg loss:-11.380, stage_1_loss:-10.341, stage_2_loss:-11.639
+
+Train Summary | End of Epoch 17 | Time 3553.93s | Current time 2025-01-07 06:19:24.848727 |Train Loss -11.347| 
+step:1/417 avg loss:-9.827, stage_1_loss:-9.496, stage_2_loss:-9.909
+step:1/417 avg loss:-7.185, stage_1_loss:-7.385, stage_2_loss:-7.135
+step:301/417 avg loss:-8.977, stage_1_loss:-9.093, stage_2_loss:-8.948
+step:301/417 avg loss:-8.905, stage_1_loss:-8.999, stage_2_loss:-8.882
+Valid Summary | End of Epoch 17 | Time 470.03s | Current time 2025-01-07 06:27:14.928861 |Valid Loss -9.027| 
+step:1/1667 avg loss:-9.793, stage_1_loss:-8.830, stage_2_loss:-10.034
+step:1/1667 avg loss:-8.052, stage_1_loss:-7.356, stage_2_loss:-8.226
+step:1001/1667 avg loss:-11.296, stage_1_loss:-10.389, stage_2_loss:-11.523
+step:1001/1667 avg loss:-11.231, stage_1_loss:-10.330, stage_2_loss:-11.457
+Train Summary | End of Epoch 18 | Time 3517.63s | Current time 2025-01-07 07:25:53.025570 |Train Loss -11.218| 
+step:1/417 avg loss:-10.106, stage_1_loss:-9.781, stage_2_loss:-10.187
+step:1/417 avg loss:-7.369, stage_1_loss:-8.055, stage_2_loss:-7.198
+step:301/417 avg loss:-10.022, stage_1_loss:-10.108, stage_2_loss:-10.000
+step:301/417 avg loss:-9.924, stage_1_loss:-10.023, stage_2_loss:-9.900
+Valid Summary | End of Epoch 18 | Time 451.75s | Current time 2025-01-07 07:33:24.925096 |Valid Loss -10.024| 
+Found new best model, dict saved
+step:1/1667 avg loss:-12.496, stage_1_loss:-11.832, stage_2_loss:-12.662
+step:1/1667 avg loss:-13.303, stage_1_loss:-12.715, stage_2_loss:-13.450
+step:1001/1667 avg loss:-11.322, stage_1_loss:-10.576, stage_2_loss:-11.508step:1001/1667 avg loss:-11.343, stage_1_loss:-10.603, stage_2_loss:-11.528
+
+Train Summary | End of Epoch 19 | Time 3511.28s | Current time 2025-01-07 08:31:56.991506 |Train Loss -11.305| 
+step:1/417 avg loss:-9.802, stage_1_loss:-9.850, stage_2_loss:-9.791
+step:1/417 avg loss:-9.179, stage_1_loss:-9.142, stage_2_loss:-9.188
+step:301/417 avg loss:-10.153, stage_1_loss:-10.305, stage_2_loss:-10.115
+step:301/417 avg loss:-10.077, stage_1_loss:-10.222, stage_2_loss:-10.041
+Valid Summary | End of Epoch 19 | Time 466.37s | Current time 2025-01-07 08:39:43.426571 |Valid Loss -10.187| 
+Found new best model, dict saved
+step:1/1667 avg loss:-12.412, stage_1_loss:-11.786, stage_2_loss:-12.568
+step:1/1667 avg loss:-11.112, stage_1_loss:-9.738, stage_2_loss:-11.456
+step:1001/1667 avg loss:-11.292, stage_1_loss:-10.647, stage_2_loss:-11.453step:1001/1667 avg loss:-11.280, stage_1_loss:-10.622, stage_2_loss:-11.445
+
+Train Summary | End of Epoch 20 | Time 3524.39s | Current time 2025-01-07 09:38:29.483189 |Train Loss -11.077| 
+step:1/417 avg loss:-8.180, stage_1_loss:-8.870, stage_2_loss:-8.008
+step:1/417 avg loss:-6.992, stage_1_loss:-7.831, stage_2_loss:-6.782
+step:301/417 avg loss:-9.958, stage_1_loss:-10.000, stage_2_loss:-9.948
+step:301/417 avg loss:-9.825, stage_1_loss:-9.848, stage_2_loss:-9.819
+Valid Summary | End of Epoch 20 | Time 457.46s | Current time 2025-01-07 09:46:07.078195 |Valid Loss -9.915| 
+step:1/1667 avg loss:-10.067, stage_1_loss:-10.118, stage_2_loss:-10.055
+step:1/1667 avg loss:-8.201, stage_1_loss:-7.886, stage_2_loss:-8.280
+step:1001/1667 avg loss:-11.192, stage_1_loss:-10.649, stage_2_loss:-11.328step:1001/1667 avg loss:-11.140, stage_1_loss:-10.601, stage_2_loss:-11.275
+
+Train Summary | End of Epoch 21 | Time 3444.36s | Current time 2025-01-07 10:43:32.411624 |Train Loss -11.190| 
+step:1/417 avg loss:-10.847, stage_1_loss:-10.720, stage_2_loss:-10.879
+step:1/417 avg loss:-7.317, stage_1_loss:-7.954, stage_2_loss:-7.157
+step:301/417 avg loss:-10.217, stage_1_loss:-10.351, stage_2_loss:-10.183
+step:301/417 avg loss:-10.209, stage_1_loss:-10.328, stage_2_loss:-10.180
+Valid Summary | End of Epoch 21 | Time 459.21s | Current time 2025-01-07 10:51:11.809914 |Valid Loss -10.270| 
+Found new best model, dict saved
+step:1/1667 avg loss:-11.747, stage_1_loss:-11.443, stage_2_loss:-11.823
+step:1/1667 avg loss:-12.783, stage_1_loss:-12.419, stage_2_loss:-12.874
+step:1001/1667 avg loss:-10.982, stage_1_loss:-10.577, stage_2_loss:-11.084step:1001/1667 avg loss:-11.009, stage_1_loss:-10.606, stage_2_loss:-11.110
+
+Train Summary | End of Epoch 22 | Time 3513.57s | Current time 2025-01-07 11:49:46.988289 |Train Loss -11.057| 
+step:1/417 avg loss:-10.515, stage_1_loss:-10.813, stage_2_loss:-10.440
+step:1/417 avg loss:-8.428, stage_1_loss:-8.818, stage_2_loss:-8.331
+step:301/417 avg loss:-9.969, stage_1_loss:-10.228, stage_2_loss:-9.904
+step:301/417 avg loss:-9.908, stage_1_loss:-10.155, stage_2_loss:-9.846
+Valid Summary | End of Epoch 22 | Time 464.24s | Current time 2025-01-07 11:57:31.451555 |Valid Loss -9.953| 
+step:1/1667 avg loss:-11.397, stage_1_loss:-11.056, stage_2_loss:-11.483
+step:1/1667 avg loss:-12.559, stage_1_loss:-12.473, stage_2_loss:-12.580
+step:1001/1667 avg loss:-10.277, stage_1_loss:-10.079, stage_2_loss:-10.326step:1001/1667 avg loss:-10.268, stage_1_loss:-10.042, stage_2_loss:-10.325
+
+Train Summary | End of Epoch 23 | Time 3537.36s | Current time 2025-01-07 12:56:30.228572 |Train Loss -10.433| 
+step:1/417 avg loss:-10.539, stage_1_loss:-10.227, stage_2_loss:-10.617
+step:1/417 avg loss:-6.857, stage_1_loss:-7.656, stage_2_loss:-6.657
+step:301/417 avg loss:-9.767, stage_1_loss:-10.078, stage_2_loss:-9.689
+step:301/417 avg loss:-9.594, stage_1_loss:-9.890, stage_2_loss:-9.520
+Valid Summary | End of Epoch 23 | Time 470.08s | Current time 2025-01-07 13:04:20.337354 |Valid Loss -9.739| 
+step:1/1667 avg loss:-11.851, stage_1_loss:-11.638, stage_2_loss:-11.904
+step:1/1667 avg loss:-8.659, stage_1_loss:-10.981, stage_2_loss:-8.078
+step:1001/1667 avg loss:-10.095, stage_1_loss:-9.993, stage_2_loss:-10.120step:1001/1667 avg loss:-10.065, stage_1_loss:-9.976, stage_2_loss:-10.087
+
+Train Summary | End of Epoch 24 | Time 3532.29s | Current time 2025-01-07 14:03:14.060079 |Train Loss -10.231| 
+step:1/417 avg loss:-8.291, stage_1_loss:-9.369, stage_2_loss:-8.021
+step:1/417 avg loss:-5.938, stage_1_loss:-7.372, stage_2_loss:-5.579
+step:301/417 avg loss:-8.101, stage_1_loss:-9.784, stage_2_loss:-7.680
+step:301/417 avg loss:-7.961, stage_1_loss:-9.560, stage_2_loss:-7.561
+Valid Summary | End of Epoch 24 | Time 521.01s | Current time 2025-01-07 14:11:55.254488 |Valid Loss -8.097| 
+step:1/1667 avg loss:-11.763, stage_1_loss:-12.261, stage_2_loss:-11.639
+step:1/1667 avg loss:-12.020, stage_1_loss:-11.620, stage_2_loss:-12.120
+step:1001/1667 avg loss:-10.443, stage_1_loss:-10.291, stage_2_loss:-10.482
+step:1001/1667 avg loss:-10.524, stage_1_loss:-10.345, stage_2_loss:-10.569
+Train Summary | End of Epoch 25 | Time 3512.72s | Current time 2025-01-07 15:10:29.364374 |Train Loss -10.505| 
+step:1/417 avg loss:-9.302, stage_1_loss:-10.627, stage_2_loss:-8.971
+step:1/417 avg loss:-6.315, stage_1_loss:-8.372, stage_2_loss:-5.800
+step:301/417 avg loss:-7.993, stage_1_loss:-9.875, stage_2_loss:-7.523
+step:301/417 avg loss:-7.983, stage_1_loss:-9.852, stage_2_loss:-7.516
+Valid Summary | End of Epoch 25 | Time 456.37s | Current time 2025-01-07 15:18:06.084995 |Valid Loss -8.049| 
+step:1/1667 avg loss:-12.189, stage_1_loss:-12.048, stage_2_loss:-12.224
+step:1/1667 avg loss:-7.870, stage_1_loss:-5.904, stage_2_loss:-8.361
+step:1001/1667 avg loss:-11.001, stage_1_loss:-10.823, stage_2_loss:-11.045step:1001/1667 avg loss:-11.029, stage_1_loss:-10.852, stage_2_loss:-11.073
+
+Train Summary | End of Epoch 26 | Time 3544.29s | Current time 2025-01-07 16:17:12.244262 |Train Loss -10.944| 
+step:1/417 avg loss:-9.577, stage_1_loss:-10.528, stage_2_loss:-9.339
+step:1/417 avg loss:-5.788, stage_1_loss:-6.709, stage_2_loss:-5.558
+step:301/417 avg loss:-8.557, stage_1_loss:-9.969, stage_2_loss:-8.204
+step:301/417 avg loss:-8.451, stage_1_loss:-9.873, stage_2_loss:-8.096
+Valid Summary | End of Epoch 26 | Time 748.98s | Current time 2025-01-07 16:29:41.483176 |Valid Loss -8.582| 
+step:1/1667 avg loss:-9.571, stage_1_loss:-8.100, stage_2_loss:-9.939
+step:1/1667 avg loss:-11.156, stage_1_loss:-11.270, stage_2_loss:-11.128
+step:1001/1667 avg loss:-11.290, stage_1_loss:-11.061, stage_2_loss:-11.348
+step:1001/1667 avg loss:-11.363, stage_1_loss:-11.134, stage_2_loss:-11.420
+Train Summary | End of Epoch 27 | Time 3533.67s | Current time 2025-01-07 17:28:36.635050 |Train Loss -11.230| 
+step:1/417 avg loss:-9.778, stage_1_loss:-10.646, stage_2_loss:-9.561
+step:1/417 avg loss:-6.070, stage_1_loss:-7.472, stage_2_loss:-5.719
+step:301/417 avg loss:-8.855, stage_1_loss:-10.300, stage_2_loss:-8.494
+step:301/417 avg loss:-8.824, stage_1_loss:-10.246, stage_2_loss:-8.468
+Valid Summary | End of Epoch 27 | Time 461.34s | Current time 2025-01-07 17:36:18.043696 |Valid Loss -8.912| 
+Learning rate adjusted to: 0.000500
+step:1/1667 avg loss:-9.680, stage_1_loss:-9.556, stage_2_loss:-9.711
+step:1/1667 avg loss:-10.026, stage_1_loss:-9.898, stage_2_loss:-10.058
+step:1001/1667 avg loss:-11.981, stage_1_loss:-11.780, stage_2_loss:-12.031
+step:1001/1667 avg loss:-11.964, stage_1_loss:-11.752, stage_2_loss:-12.017
+Train Summary | End of Epoch 28 | Time 3537.80s | Current time 2025-01-07 18:35:19.600238 |Train Loss -11.972| 
+step:1/417 avg loss:-10.019, stage_1_loss:-11.523, stage_2_loss:-9.644
+step:1/417 avg loss:-6.431, stage_1_loss:-8.147, stage_2_loss:-6.003
+step:301/417 avg loss:-8.791, stage_1_loss:-10.804, stage_2_loss:-8.288
+step:301/417 avg loss:-8.663, stage_1_loss:-10.627, stage_2_loss:-8.172
+Valid Summary | End of Epoch 28 | Time 1357.88s | Current time 2025-01-07 18:57:57.550777 |Valid Loss -8.798| 
+step:1/1667 avg loss:-11.396, stage_1_loss:-11.267, stage_2_loss:-11.428
+step:1/1667 avg loss:-11.075, stage_1_loss:-10.945, stage_2_loss:-11.108
+step:1001/1667 avg loss:-12.123, stage_1_loss:-11.924, stage_2_loss:-12.173step:1001/1667 avg loss:-12.160, stage_1_loss:-11.947, stage_2_loss:-12.214
+
+Train Summary | End of Epoch 29 | Time 3551.96s | Current time 2025-01-07 19:57:12.293298 |Train Loss -12.149| 
+step:1/417 avg loss:-11.804, stage_1_loss:-11.751, stage_2_loss:-11.817
+step:1/417 avg loss:-7.303, stage_1_loss:-7.900, stage_2_loss:-7.154
+step:301/417 avg loss:-10.922, stage_1_loss:-11.043, stage_2_loss:-10.892
+step:301/417 avg loss:-10.860, stage_1_loss:-10.984, stage_2_loss:-10.829
+Valid Summary | End of Epoch 29 | Time 459.03s | Current time 2025-01-07 20:04:51.400231 |Valid Loss -10.944| 
+Found new best model, dict saved
+step:1/1667 avg loss:-14.061, stage_1_loss:-13.784, stage_2_loss:-14.131
+step:1/1667 avg loss:-13.440, stage_1_loss:-13.358, stage_2_loss:-13.460
+step:1001/1667 avg loss:-12.326, stage_1_loss:-12.120, stage_2_loss:-12.377step:1001/1667 avg loss:-12.341, stage_1_loss:-12.133, stage_2_loss:-12.393
+
+Train Summary | End of Epoch 30 | Time 3528.51s | Current time 2025-01-07 21:03:48.741691 |Train Loss -12.281| 
+step:1/417 avg loss:-11.305, stage_1_loss:-11.267, stage_2_loss:-11.314
+step:1/417 avg loss:-7.432, stage_1_loss:-7.652, stage_2_loss:-7.378
+step:301/417 avg loss:-10.851, stage_1_loss:-11.015, stage_2_loss:-10.810
+step:301/417 avg loss:-10.782, stage_1_loss:-10.918, stage_2_loss:-10.748
+Valid Summary | End of Epoch 30 | Time 778.16s | Current time 2025-01-07 21:16:47.327162 |Valid Loss -10.861| 
+step:1/1667 avg loss:-12.321, stage_1_loss:-11.833, stage_2_loss:-12.443
+step:1/1667 avg loss:-12.129, stage_1_loss:-11.907, stage_2_loss:-12.184
+step:1001/1667 avg loss:-12.335, stage_1_loss:-12.142, stage_2_loss:-12.384step:1001/1667 avg loss:-12.294, stage_1_loss:-12.100, stage_2_loss:-12.342
+
+Train Summary | End of Epoch 31 | Time 3520.77s | Current time 2025-01-07 22:15:41.148984 |Train Loss -12.316| 
+step:1/417 avg loss:-11.398, stage_1_loss:-11.438, stage_2_loss:-11.388
+step:1/417 avg loss:-8.226, stage_1_loss:-8.709, stage_2_loss:-8.106
+step:301/417 avg loss:-11.136, stage_1_loss:-11.170, stage_2_loss:-11.128
+step:301/417 avg loss:-11.078, stage_1_loss:-11.103, stage_2_loss:-11.072
+Valid Summary | End of Epoch 31 | Time 478.96s | Current time 2025-01-07 22:23:40.385283 |Valid Loss -11.132| 
+Found new best model, dict saved
+step:1/1667 avg loss:-12.202, stage_1_loss:-12.121, stage_2_loss:-12.222
+step:1/1667 avg loss:-11.740, stage_1_loss:-11.719, stage_2_loss:-11.745
+step:1001/1667 avg loss:-12.419, stage_1_loss:-12.247, stage_2_loss:-12.462step:1001/1667 avg loss:-12.435, stage_1_loss:-12.246, stage_2_loss:-12.483
+
+Train Summary | End of Epoch 32 | Time 3458.15s | Current time 2025-01-07 23:21:21.668971 |Train Loss -12.436| 
+step:1/417 avg loss:-11.637, stage_1_loss:-11.526, stage_2_loss:-11.664
+step:1/417 avg loss:-8.040, stage_1_loss:-8.840, stage_2_loss:-7.840
+step:301/417 avg loss:-11.087, stage_1_loss:-11.093, stage_2_loss:-11.086
+step:301/417 avg loss:-11.007, stage_1_loss:-11.017, stage_2_loss:-11.005
+Valid Summary | End of Epoch 32 | Time 455.72s | Current time 2025-01-07 23:28:57.395823 |Valid Loss -11.096| 
+step:1/1667 avg loss:-12.233, stage_1_loss:-12.208, stage_2_loss:-12.239
+step:1/1667 avg loss:-13.000, stage_1_loss:-12.790, stage_2_loss:-13.052
+step:1001/1667 avg loss:-12.525, stage_1_loss:-12.369, stage_2_loss:-12.564step:1001/1667 avg loss:-12.475, stage_1_loss:-12.303, stage_2_loss:-12.518
+
+Train Summary | End of Epoch 33 | Time 3502.88s | Current time 2025-01-08 00:27:20.615690 |Train Loss -12.511| 
+step:1/417 avg loss:-11.682, stage_1_loss:-11.557, stage_2_loss:-11.714
+step:1/417 avg loss:-9.823, stage_1_loss:-9.546, stage_2_loss:-9.892
+step:301/417 avg loss:-11.199, stage_1_loss:-11.183, stage_2_loss:-11.203
+step:301/417 avg loss:-11.193, stage_1_loss:-11.157, stage_2_loss:-11.203
+Valid Summary | End of Epoch 33 | Time 465.83s | Current time 2025-01-08 00:35:06.457874 |Valid Loss -11.247| 
+Found new best model, dict saved
+step:1/1667 avg loss:-12.423, stage_1_loss:-12.253, stage_2_loss:-12.466
+step:1/1667 avg loss:-11.904, stage_1_loss:-11.813, stage_2_loss:-11.926
+step:1001/1667 avg loss:-12.618, stage_1_loss:-12.481, stage_2_loss:-12.653step:1001/1667 avg loss:-12.639, stage_1_loss:-12.489, stage_2_loss:-12.677
+
+Train Summary | End of Epoch 34 | Time 3499.45s | Current time 2025-01-08 01:33:26.989394 |Train Loss -12.569| 
+step:1/417 avg loss:-11.736, stage_1_loss:-11.611, stage_2_loss:-11.767
+step:1/417 avg loss:-7.964, stage_1_loss:-8.780, stage_2_loss:-7.761
+step:301/417 avg loss:-11.252, stage_1_loss:-11.236, stage_2_loss:-11.257
+step:301/417 avg loss:-11.218, stage_1_loss:-11.171, stage_2_loss:-11.229
+Valid Summary | End of Epoch 34 | Time 454.28s | Current time 2025-01-08 01:41:01.334046 |Valid Loss -11.270| 
+Found new best model, dict saved
+step:1/1667 avg loss:-11.924, stage_1_loss:-11.693, stage_2_loss:-11.982
+step:1/1667 avg loss:-11.534, stage_1_loss:-11.333, stage_2_loss:-11.585
+step:1001/1667 avg loss:-12.649, stage_1_loss:-12.513, stage_2_loss:-12.682
+step:1001/1667 avg loss:-12.660, stage_1_loss:-12.516, stage_2_loss:-12.696
+Train Summary | End of Epoch 35 | Time 3450.31s | Current time 2025-01-08 02:38:32.824330 |Train Loss -12.650| 
+step:1/417 avg loss:-11.731, stage_1_loss:-11.626, stage_2_loss:-11.757
+step:1/417 avg loss:-8.041, stage_1_loss:-9.027, stage_2_loss:-7.794
+step:301/417 avg loss:-11.328, stage_1_loss:-11.262, stage_2_loss:-11.345
+step:301/417 avg loss:-11.224, stage_1_loss:-11.181, stage_2_loss:-11.234
+Valid Summary | End of Epoch 35 | Time 448.47s | Current time 2025-01-08 02:46:01.339268 |Valid Loss -11.332| 
+Found new best model, dict saved
+step:1/1667 avg loss:-12.245, stage_1_loss:-12.005, stage_2_loss:-12.305
+step:1/1667 avg loss:-13.796, stage_1_loss:-13.639, stage_2_loss:-13.835
+step:1001/1667 avg loss:-12.583, stage_1_loss:-12.464, stage_2_loss:-12.612
+step:1001/1667 avg loss:-12.556, stage_1_loss:-12.416, stage_2_loss:-12.591
+Train Summary | End of Epoch 36 | Time 3431.70s | Current time 2025-01-08 03:43:13.911786 |Train Loss -12.596| 
+step:1/417 avg loss:-11.800, stage_1_loss:-11.781, stage_2_loss:-11.805
+step:1/417 avg loss:-9.294, stage_1_loss:-9.564, stage_2_loss:-9.227
+step:301/417 avg loss:-11.362, stage_1_loss:-11.306, stage_2_loss:-11.376
+step:301/417 avg loss:-11.262, stage_1_loss:-11.195, stage_2_loss:-11.278
+Valid Summary | End of Epoch 36 | Time 446.18s | Current time 2025-01-08 03:50:40.173761 |Valid Loss -11.384| 
+Found new best model, dict saved
+step:1/1667 avg loss:-14.174, stage_1_loss:-14.098, stage_2_loss:-14.193
+step:1/1667 avg loss:-9.602, stage_1_loss:-9.537, stage_2_loss:-9.619
+step:1001/1667 avg loss:-12.730, stage_1_loss:-12.613, stage_2_loss:-12.759step:1001/1667 avg loss:-12.716, stage_1_loss:-12.600, stage_2_loss:-12.745
+
+Train Summary | End of Epoch 37 | Time 3529.52s | Current time 2025-01-08 04:49:30.552103 |Train Loss -12.693| 
+step:1/417 avg loss:-11.866, stage_1_loss:-11.802, stage_2_loss:-11.882
+step:1/417 avg loss:-8.626, stage_1_loss:-9.644, stage_2_loss:-8.371
+step:301/417 avg loss:-11.441, stage_1_loss:-11.379, stage_2_loss:-11.456
+step:301/417 avg loss:-11.399, stage_1_loss:-11.307, stage_2_loss:-11.422
+Valid Summary | End of Epoch 37 | Time 451.52s | Current time 2025-01-08 04:57:02.107619 |Valid Loss -11.464| 
+Found new best model, dict saved
+step:1/1667 avg loss:-13.822, stage_1_loss:-13.775, stage_2_loss:-13.833
+step:1/1667 avg loss:-11.037, stage_1_loss:-11.023, stage_2_loss:-11.041
+step:1001/1667 avg loss:-12.735, stage_1_loss:-12.623, stage_2_loss:-12.763
+step:1001/1667 avg loss:-12.748, stage_1_loss:-12.647, stage_2_loss:-12.774
+Train Summary | End of Epoch 38 | Time 3456.02s | Current time 2025-01-08 05:54:39.107900 |Train Loss -12.724| 
+step:1/417 avg loss:-11.955, stage_1_loss:-12.022, stage_2_loss:-11.938
+step:1/417 avg loss:-9.852, stage_1_loss:-9.864, stage_2_loss:-9.849
+step:301/417 avg loss:-11.420, stage_1_loss:-11.378, stage_2_loss:-11.431
+step:301/417 avg loss:-11.374, stage_1_loss:-11.312, stage_2_loss:-11.389
+Valid Summary | End of Epoch 38 | Time 454.65s | Current time 2025-01-08 06:02:14.052423 |Valid Loss -11.445| 
+step:1/1667 avg loss:-12.724, stage_1_loss:-12.599, stage_2_loss:-12.756
+step:1/1667 avg loss:-12.239, stage_1_loss:-12.179, stage_2_loss:-12.253
+step:1001/1667 avg loss:-12.888, stage_1_loss:-12.791, stage_2_loss:-12.912step:1001/1667 avg loss:-12.859, stage_1_loss:-12.756, stage_2_loss:-12.885
+
+Train Summary | End of Epoch 39 | Time 3447.89s | Current time 2025-01-08 06:59:42.282424 |Train Loss -12.856| 
+step:1/417 avg loss:-12.011, stage_1_loss:-11.986, stage_2_loss:-12.017
+step:1/417 avg loss:-8.521, stage_1_loss:-8.681, stage_2_loss:-8.481
+step:301/417 avg loss:-11.294, stage_1_loss:-11.280, stage_2_loss:-11.298
+step:301/417 avg loss:-11.265, stage_1_loss:-11.214, stage_2_loss:-11.278
+Valid Summary | End of Epoch 39 | Time 459.85s | Current time 2025-01-08 07:07:22.142040 |Valid Loss -11.328| 
+step:1/1667 avg loss:-11.544, stage_1_loss:-11.363, stage_2_loss:-11.589
+step:1/1667 avg loss:-11.884, stage_1_loss:-11.755, stage_2_loss:-11.916
+step:1001/1667 avg loss:-12.907, stage_1_loss:-12.811, stage_2_loss:-12.931step:1001/1667 avg loss:-12.873, stage_1_loss:-12.778, stage_2_loss:-12.897
+
+Train Summary | End of Epoch 40 | Time 3524.66s | Current time 2025-01-08 08:06:07.160966 |Train Loss -12.868| 
+step:1/417 avg loss:-11.989, stage_1_loss:-11.894, stage_2_loss:-12.012
+step:1/417 avg loss:-9.481, stage_1_loss:-9.944, stage_2_loss:-9.365
+step:301/417 avg loss:-11.501, stage_1_loss:-11.436, stage_2_loss:-11.517
+step:301/417 avg loss:-11.388, stage_1_loss:-11.324, stage_2_loss:-11.403
+Valid Summary | End of Epoch 40 | Time 455.20s | Current time 2025-01-08 08:13:42.367562 |Valid Loss -11.488| 
+Found new best model, dict saved
+step:1/1667 avg loss:-14.179, stage_1_loss:-14.214, stage_2_loss:-14.171
+step:1/1667 avg loss:-14.596, stage_1_loss:-14.522, stage_2_loss:-14.614
+step:1001/1667 avg loss:-12.977, stage_1_loss:-12.882, stage_2_loss:-13.000step:1001/1667 avg loss:-12.986, stage_1_loss:-12.890, stage_2_loss:-13.010
+
+Train Summary | End of Epoch 41 | Time 3537.02s | Current time 2025-01-08 09:12:41.038388 |Train Loss -12.968| 
+step:1/417 avg loss:-11.799, stage_1_loss:-11.760, stage_2_loss:-11.809
+step:1/417 avg loss:-10.559, stage_1_loss:-10.766, stage_2_loss:-10.507
+step:301/417 avg loss:-11.331, stage_1_loss:-11.309, stage_2_loss:-11.336
+step:301/417 avg loss:-11.281, stage_1_loss:-11.220, stage_2_loss:-11.296
+Valid Summary | End of Epoch 41 | Time 462.27s | Current time 2025-01-08 09:20:23.328438 |Valid Loss -11.354| 
+step:1/1667 avg loss:-12.745, stage_1_loss:-12.647, stage_2_loss:-12.770
+step:1/1667 avg loss:-13.208, stage_1_loss:-12.976, stage_2_loss:-13.265
+step:1001/1667 avg loss:-12.982, stage_1_loss:-12.879, stage_2_loss:-13.008step:1001/1667 avg loss:-12.955, stage_1_loss:-12.857, stage_2_loss:-12.980
+
+Train Summary | End of Epoch 42 | Time 3475.82s | Current time 2025-01-08 10:18:19.565591 |Train Loss -12.903| 
+step:1/417 avg loss:-11.859, stage_1_loss:-11.546, stage_2_loss:-11.938
+step:1/417 avg loss:-9.452, stage_1_loss:-9.373, stage_2_loss:-9.472
+step:301/417 avg loss:-11.343, stage_1_loss:-11.317, stage_2_loss:-11.350
+step:301/417 avg loss:-11.265, stage_1_loss:-11.226, stage_2_loss:-11.275
+Valid Summary | End of Epoch 42 | Time 459.90s | Current time 2025-01-08 10:25:59.531815 |Valid Loss -11.337| 
+step:1/1667 avg loss:-13.547, stage_1_loss:-13.433, stage_2_loss:-13.575
+step:1/1667 avg loss:-11.133, stage_1_loss:-10.961, stage_2_loss:-11.176
+step:1001/1667 avg loss:-13.089, stage_1_loss:-12.998, stage_2_loss:-13.112step:1001/1667 avg loss:-13.064, stage_1_loss:-12.966, stage_2_loss:-13.088
+
+Train Summary | End of Epoch 43 | Time 3545.34s | Current time 2025-01-08 11:25:05.193186 |Train Loss -13.071| 
+step:1/417 avg loss:-12.137, stage_1_loss:-12.035, stage_2_loss:-12.162
+step:1/417 avg loss:-8.847, stage_1_loss:-9.908, stage_2_loss:-8.582
+step:301/417 avg loss:-11.549, stage_1_loss:-11.498, stage_2_loss:-11.562
+step:301/417 avg loss:-11.503, stage_1_loss:-11.432, stage_2_loss:-11.521
+Valid Summary | End of Epoch 43 | Time 465.23s | Current time 2025-01-08 11:32:50.434750 |Valid Loss -11.574| 
+Found new best model, dict saved
+step:1/1667 avg loss:-11.462, stage_1_loss:-11.393, stage_2_loss:-11.480
+step:1/1667 avg loss:-12.307, stage_1_loss:-12.329, stage_2_loss:-12.302
+step:1001/1667 avg loss:-13.124, stage_1_loss:-13.037, stage_2_loss:-13.146step:1001/1667 avg loss:-13.144, stage_1_loss:-13.054, stage_2_loss:-13.166
+
+Train Summary | End of Epoch 44 | Time 3483.61s | Current time 2025-01-08 12:30:57.249255 |Train Loss -13.047| 
+step:1/417 avg loss:-12.041, stage_1_loss:-12.026, stage_2_loss:-12.045
+step:1/417 avg loss:-8.520, stage_1_loss:-9.347, stage_2_loss:-8.313
+step:301/417 avg loss:-11.358, stage_1_loss:-11.356, stage_2_loss:-11.358
+step:301/417 avg loss:-11.272, stage_1_loss:-11.244, stage_2_loss:-11.279
+Valid Summary | End of Epoch 44 | Time 461.58s | Current time 2025-01-08 12:38:38.866209 |Valid Loss -11.359| 
+step:1/1667 avg loss:-11.839, stage_1_loss:-11.747, stage_2_loss:-11.861
+step:1/1667 avg loss:-12.123, stage_1_loss:-12.008, stage_2_loss:-12.152
+step:1001/1667 avg loss:-13.156, stage_1_loss:-13.059, stage_2_loss:-13.180step:1001/1667 avg loss:-13.129, stage_1_loss:-13.042, stage_2_loss:-13.150
+
+Train Summary | End of Epoch 45 | Time 3545.02s | Current time 2025-01-08 13:37:44.472058 |Train Loss -13.057| 
+step:1/417 avg loss:-11.984, stage_1_loss:-11.829, stage_2_loss:-12.022
+step:1/417 avg loss:-8.664, stage_1_loss:-9.854, stage_2_loss:-8.366
+step:301/417 avg loss:-11.394, stage_1_loss:-11.366, stage_2_loss:-11.401
+step:301/417 avg loss:-11.357, stage_1_loss:-11.306, stage_2_loss:-11.369
+Valid Summary | End of Epoch 45 | Time 455.22s | Current time 2025-01-08 13:45:20.043978 |Valid Loss -11.422| 
+step:1/1667 avg loss:-12.402, stage_1_loss:-12.227, stage_2_loss:-12.445
+step:1/1667 avg loss:-14.142, stage_1_loss:-14.088, stage_2_loss:-14.156
+step:1001/1667 avg loss:-13.187, stage_1_loss:-13.091, stage_2_loss:-13.210
+step:1001/1667 avg loss:-13.179, stage_1_loss:-13.086, stage_2_loss:-13.202
+Train Summary | End of Epoch 46 | Time 3516.80s | Current time 2025-01-08 14:43:57.965589 |Train Loss -13.171| 
+step:1/417 avg loss:-11.756, stage_1_loss:-11.359, stage_2_loss:-11.855
+step:1/417 avg loss:-8.288, stage_1_loss:-8.359, stage_2_loss:-8.270
+step:301/417 avg loss:-11.213, stage_1_loss:-11.214, stage_2_loss:-11.213
+step:301/417 avg loss:-11.182, stage_1_loss:-11.147, stage_2_loss:-11.190
+Valid Summary | End of Epoch 46 | Time 465.94s | Current time 2025-01-08 14:51:43.919446 |Valid Loss -11.216| 
+step:1/1667 avg loss:-13.181, stage_1_loss:-13.118, stage_2_loss:-13.197
+step:1/1667 avg loss:-12.087, stage_1_loss:-12.014, stage_2_loss:-12.106
+step:1001/1667 avg loss:-13.239, stage_1_loss:-13.149, stage_2_loss:-13.261
+step:1001/1667 avg loss:-13.243, stage_1_loss:-13.152, stage_2_loss:-13.265
+Train Summary | End of Epoch 47 | Time 3522.29s | Current time 2025-01-08 15:50:26.537123 |Train Loss -13.248| 
+step:1/417 avg loss:-12.142, stage_1_loss:-12.065, stage_2_loss:-12.161
+step:1/417 avg loss:-8.244, stage_1_loss:-8.526, stage_2_loss:-8.174
+step:301/417 avg loss:-11.555, stage_1_loss:-11.512, stage_2_loss:-11.566
+step:301/417 avg loss:-11.554, stage_1_loss:-11.465, stage_2_loss:-11.576
+Valid Summary | End of Epoch 47 | Time 460.30s | Current time 2025-01-08 15:58:06.870488 |Valid Loss -11.581| 
+Found new best model, dict saved
+step:1/1667 avg loss:-13.271, stage_1_loss:-13.201, stage_2_loss:-13.289
+step:1/1667 avg loss:-13.861, stage_1_loss:-13.758, stage_2_loss:-13.887
+step:1001/1667 avg loss:-13.326, stage_1_loss:-13.242, stage_2_loss:-13.347
+step:1001/1667 avg loss:-13.314, stage_1_loss:-13.231, stage_2_loss:-13.335
+Train Summary | End of Epoch 48 | Time 3508.32s | Current time 2025-01-08 16:56:36.072094 |Train Loss -13.288| 
+step:1/417 avg loss:-12.052, stage_1_loss:-12.044, stage_2_loss:-12.054
+step:1/417 avg loss:-8.684, stage_1_loss:-9.262, stage_2_loss:-8.539
+step:301/417 avg loss:-11.598, stage_1_loss:-11.568, stage_2_loss:-11.606
+step:301/417 avg loss:-11.555, stage_1_loss:-11.490, stage_2_loss:-11.572
+Valid Summary | End of Epoch 48 | Time 451.12s | Current time 2025-01-08 17:04:07.191638 |Valid Loss -11.613| 
+Found new best model, dict saved
+step:1/1667 avg loss:-13.757, stage_1_loss:-13.650, stage_2_loss:-13.783
+step:1/1667 avg loss:-14.493, stage_1_loss:-14.371, stage_2_loss:-14.524
+step:1001/1667 avg loss:-13.294, stage_1_loss:-13.199, stage_2_loss:-13.318
+step:1001/1667 avg loss:-13.278, stage_1_loss:-13.180, stage_2_loss:-13.302
+Train Summary | End of Epoch 49 | Time 3456.76s | Current time 2025-01-08 18:01:44.654183 |Train Loss -13.239| 
+step:1/417 avg loss:-12.246, stage_1_loss:-12.178, stage_2_loss:-12.263
+step:1/417 avg loss:-8.133, stage_1_loss:-8.609, stage_2_loss:-8.015
+step:301/417 avg loss:-11.472, stage_1_loss:-11.465, stage_2_loss:-11.473
+step:301/417 avg loss:-11.405, stage_1_loss:-11.378, stage_2_loss:-11.412
+Valid Summary | End of Epoch 49 | Time 466.06s | Current time 2025-01-08 18:09:30.725782 |Valid Loss -11.512| 
+step:1/1667 avg loss:-13.441, stage_1_loss:-13.410, stage_2_loss:-13.448
+step:1/1667 avg loss:-13.614, stage_1_loss:-13.538, stage_2_loss:-13.633
+step:1001/1667 avg loss:-13.457, stage_1_loss:-13.379, stage_2_loss:-13.477
+step:1001/1667 avg loss:-13.467, stage_1_loss:-13.388, stage_2_loss:-13.487
+Train Summary | End of Epoch 50 | Time 3500.61s | Current time 2025-01-08 19:07:51.631034 |Train Loss -13.343| 
+step:1/417 avg loss:-12.078, stage_1_loss:-12.003, stage_2_loss:-12.097
+step:1/417 avg loss:-9.329, stage_1_loss:-10.147, stage_2_loss:-9.124
+step:301/417 avg loss:-11.543, stage_1_loss:-11.513, stage_2_loss:-11.551
+step:301/417 avg loss:-11.468, stage_1_loss:-11.417, stage_2_loss:-11.481
+Valid Summary | End of Epoch 50 | Time 460.01s | Current time 2025-01-08 19:15:31.640830 |Valid Loss -11.573| 
+step:1/1667 avg loss:-13.311, stage_1_loss:-13.103, stage_2_loss:-13.363
+step:1/1667 avg loss:-13.479, stage_1_loss:-13.409, stage_2_loss:-13.496
+step:1001/1667 avg loss:-13.440, stage_1_loss:-13.357, stage_2_loss:-13.461
+step:1001/1667 avg loss:-13.474, stage_1_loss:-13.394, stage_2_loss:-13.494
+Train Summary | End of Epoch 51 | Time 3536.81s | Current time 2025-01-08 20:14:29.112002 |Train Loss -13.394| 
+step:1/417 avg loss:-12.092, stage_1_loss:-11.979, stage_2_loss:-12.120
+step:1/417 avg loss:-8.551, stage_1_loss:-9.413, stage_2_loss:-8.335
+step:301/417 avg loss:-11.564, stage_1_loss:-11.540, stage_2_loss:-11.570
+step:301/417 avg loss:-11.530, stage_1_loss:-11.471, stage_2_loss:-11.545
+Valid Summary | End of Epoch 51 | Time 457.75s | Current time 2025-01-08 20:22:06.906719 |Valid Loss -11.600| 
+step:1/1667 avg loss:-15.040, stage_1_loss:-14.893, stage_2_loss:-15.076
+step:1/1667 avg loss:-13.949, stage_1_loss:-13.788, stage_2_loss:-13.989
+step:1001/1667 avg loss:-13.235, stage_1_loss:-13.134, stage_2_loss:-13.260
+step:1001/1667 avg loss:-13.195, stage_1_loss:-13.086, stage_2_loss:-13.222
+Train Summary | End of Epoch 52 | Time 3508.13s | Current time 2025-01-08 21:20:35.335561 |Train Loss -13.282| 
+step:1/417 avg loss:-12.075, stage_1_loss:-12.061, stage_2_loss:-12.079
+step:1/417 avg loss:-8.528, stage_1_loss:-9.509, stage_2_loss:-8.283
+step:301/417 avg loss:-11.672, stage_1_loss:-11.628, stage_2_loss:-11.683
+step:301/417 avg loss:-11.585, stage_1_loss:-11.527, stage_2_loss:-11.599
+Valid Summary | End of Epoch 52 | Time 462.64s | Current time 2025-01-08 21:28:18.044108 |Valid Loss -11.685| 
+Found new best model, dict saved
+step:1/1667 avg loss:-12.866, stage_1_loss:-12.811, stage_2_loss:-12.880
+step:1/1667 avg loss:-13.127, stage_1_loss:-13.002, stage_2_loss:-13.159
+step:1001/1667 avg loss:-13.452, stage_1_loss:-13.370, stage_2_loss:-13.473
+step:1001/1667 avg loss:-13.431, stage_1_loss:-13.344, stage_2_loss:-13.453
+Train Summary | End of Epoch 53 | Time 3536.21s | Current time 2025-01-08 22:27:15.137571 |Train Loss -13.452| 
+step:1/417 avg loss:-12.120, stage_1_loss:-12.127, stage_2_loss:-12.119
+step:1/417 avg loss:-7.958, stage_1_loss:-8.410, stage_2_loss:-7.845
+step:301/417 avg loss:-11.442, stage_1_loss:-11.447, stage_2_loss:-11.441
+step:301/417 avg loss:-11.373, stage_1_loss:-11.356, stage_2_loss:-11.377
+Valid Summary | End of Epoch 53 | Time 464.78s | Current time 2025-01-08 22:34:59.945935 |Valid Loss -11.457| 
+step:1/1667 avg loss:-12.844, stage_1_loss:-12.822, stage_2_loss:-12.849
+step:1/1667 avg loss:-12.611, stage_1_loss:-12.591, stage_2_loss:-12.617
+step:1001/1667 avg loss:-13.361, stage_1_loss:-13.268, stage_2_loss:-13.384
+step:1001/1667 avg loss:-13.340, stage_1_loss:-13.249, stage_2_loss:-13.363
+Train Summary | End of Epoch 54 | Time 3532.22s | Current time 2025-01-08 23:33:52.786003 |Train Loss -13.323| 
+step:1/417 avg loss:-12.065, stage_1_loss:-11.908, stage_2_loss:-12.104
+step:1/417 avg loss:-8.513, stage_1_loss:-8.551, stage_2_loss:-8.504
+step:301/417 avg loss:-11.651, stage_1_loss:-11.622, stage_2_loss:-11.658
+step:301/417 avg loss:-11.552, stage_1_loss:-11.526, stage_2_loss:-11.559
+Valid Summary | End of Epoch 54 | Time 483.06s | Current time 2025-01-08 23:41:55.930242 |Valid Loss -11.658| 
+step:1/1667 avg loss:-12.525, stage_1_loss:-12.431, stage_2_loss:-12.549
+step:1/1667 avg loss:-13.816, stage_1_loss:-13.745, stage_2_loss:-13.834
+step:1001/1667 avg loss:-13.458, stage_1_loss:-13.375, stage_2_loss:-13.479step:1001/1667 avg loss:-13.473, stage_1_loss:-13.390, stage_2_loss:-13.494
+
+Train Summary | End of Epoch 55 | Time 3512.08s | Current time 2025-01-09 00:40:28.280317 |Train Loss -13.501| 
+step:1/417 avg loss:-12.264, stage_1_loss:-12.230, stage_2_loss:-12.273
+step:1/417 avg loss:-9.106, stage_1_loss:-9.764, stage_2_loss:-8.941
+step:301/417 avg loss:-11.687, stage_1_loss:-11.666, stage_2_loss:-11.692
+step:301/417 avg loss:-11.636, stage_1_loss:-11.584, stage_2_loss:-11.648
+Valid Summary | End of Epoch 55 | Time 467.38s | Current time 2025-01-09 00:48:15.904059 |Valid Loss -11.717| 
+Found new best model, dict saved
+step:1/1667 avg loss:-12.579, stage_1_loss:-12.569, stage_2_loss:-12.582
+step:1/1667 avg loss:-14.472, stage_1_loss:-14.453, stage_2_loss:-14.476
+step:1001/1667 avg loss:-13.606, stage_1_loss:-13.531, stage_2_loss:-13.624
+step:1001/1667 avg loss:-13.616, stage_1_loss:-13.539, stage_2_loss:-13.635
+Train Summary | End of Epoch 56 | Time 3552.72s | Current time 2025-01-09 01:47:29.495466 |Train Loss -13.597| 
+step:1/417 avg loss:-12.235, stage_1_loss:-12.335, stage_2_loss:-12.210
+step:1/417 avg loss:-8.622, stage_1_loss:-9.023, stage_2_loss:-8.522
+step:301/417 avg loss:-11.650, stage_1_loss:-11.631, stage_2_loss:-11.655
+step:301/417 avg loss:-11.595, stage_1_loss:-11.554, stage_2_loss:-11.605
+Valid Summary | End of Epoch 56 | Time 471.94s | Current time 2025-01-09 01:55:21.486948 |Valid Loss -11.665| 
+step:1/1667 avg loss:-13.483, stage_1_loss:-13.436, stage_2_loss:-13.495
+step:1/1667 avg loss:-13.515, stage_1_loss:-13.466, stage_2_loss:-13.527
+step:1001/1667 avg loss:-13.540, stage_1_loss:-13.463, stage_2_loss:-13.559
+step:1001/1667 avg loss:-13.543, stage_1_loss:-13.459, stage_2_loss:-13.563
+Train Summary | End of Epoch 57 | Time 3428.06s | Current time 2025-01-09 02:52:29.846988 |Train Loss -13.443| 
+step:1/417 avg loss:-11.753, stage_1_loss:-11.972, stage_2_loss:-11.699
+step:1/417 avg loss:-8.087, stage_1_loss:-8.311, stage_2_loss:-8.031
+step:301/417 avg loss:-11.379, stage_1_loss:-11.418, stage_2_loss:-11.369
+step:301/417 avg loss:-11.182, stage_1_loss:-11.249, stage_2_loss:-11.165
+Valid Summary | End of Epoch 57 | Time 438.56s | Current time 2025-01-09 02:59:48.453596 |Valid Loss -11.337| 
+step:1/1667 avg loss:-14.051, stage_1_loss:-13.988, stage_2_loss:-14.067
+step:1/1667 avg loss:-12.979, stage_1_loss:-12.930, stage_2_loss:-12.991
+step:1001/1667 avg loss:-13.520, stage_1_loss:-13.434, stage_2_loss:-13.541
+step:1001/1667 avg loss:-13.547, stage_1_loss:-13.460, stage_2_loss:-13.569
+Train Summary | End of Epoch 58 | Time 3404.94s | Current time 2025-01-09 03:56:33.693238 |Train Loss -13.572| 
+step:1/417 avg loss:-12.011, stage_1_loss:-12.127, stage_2_loss:-11.982
+step:1/417 avg loss:-8.473, stage_1_loss:-8.755, stage_2_loss:-8.402
+step:301/417 avg loss:-11.638, stage_1_loss:-11.627, stage_2_loss:-11.641
+step:301/417 avg loss:-11.567, stage_1_loss:-11.546, stage_2_loss:-11.573
+Valid Summary | End of Epoch 58 | Time 441.03s | Current time 2025-01-09 04:03:54.727467 |Valid Loss -11.652| 
+step:1/1667 avg loss:-15.404, stage_1_loss:-15.368, stage_2_loss:-15.413
+step:1/1667 avg loss:-13.547, stage_1_loss:-13.505, stage_2_loss:-13.558
+step:1001/1667 avg loss:-13.653, stage_1_loss:-13.578, stage_2_loss:-13.672
+step:1001/1667 avg loss:-13.634, stage_1_loss:-13.555, stage_2_loss:-13.654
+Train Summary | End of Epoch 59 | Time 3411.32s | Current time 2025-01-09 05:00:46.367885 |Train Loss -13.631| 
+step:1/417 avg loss:-12.284, stage_1_loss:-12.272, stage_2_loss:-12.287
+step:1/417 avg loss:-8.938, stage_1_loss:-9.633, stage_2_loss:-8.764
+step:301/417 avg loss:-11.635, stage_1_loss:-11.652, stage_2_loss:-11.631
+step:301/417 avg loss:-11.612, stage_1_loss:-11.588, stage_2_loss:-11.618
+Valid Summary | End of Epoch 59 | Time 435.50s | Current time 2025-01-09 05:08:01.902394 |Valid Loss -11.675| 
+step:1/1667 avg loss:-14.196, stage_1_loss:-14.171, stage_2_loss:-14.202
+step:1/1667 avg loss:-14.041, stage_1_loss:-14.003, stage_2_loss:-14.051
+step:1001/1667 avg loss:-13.743, stage_1_loss:-13.675, stage_2_loss:-13.760
+step:1001/1667 avg loss:-13.733, stage_1_loss:-13.662, stage_2_loss:-13.750
+Train Summary | End of Epoch 60 | Time 3402.31s | Current time 2025-01-09 06:04:44.564137 |Train Loss -13.712| 
+step:1/417 avg loss:-12.185, stage_1_loss:-12.155, stage_2_loss:-12.193
+step:1/417 avg loss:-8.610, stage_1_loss:-9.191, stage_2_loss:-8.465
+step:301/417 avg loss:-11.549, stage_1_loss:-11.532, stage_2_loss:-11.554
+step:301/417 avg loss:-11.563, stage_1_loss:-11.529, stage_2_loss:-11.571
+Valid Summary | End of Epoch 60 | Time 437.06s | Current time 2025-01-09 06:12:01.630931 |Valid Loss -11.614| 
+step:1/1667 avg loss:-14.716, stage_1_loss:-14.656, stage_2_loss:-14.731
+step:1/1667 avg loss:-14.570, stage_1_loss:-14.408, stage_2_loss:-14.610
+step:1001/1667 avg loss:-13.699, stage_1_loss:-13.621, stage_2_loss:-13.718
+step:1001/1667 avg loss:-13.668, stage_1_loss:-13.587, stage_2_loss:-13.688
+Train Summary | End of Epoch 61 | Time 3396.75s | Current time 2025-01-09 07:08:39.258302 |Train Loss -13.689| 
+step:1/417 avg loss:-11.993, stage_1_loss:-11.946, stage_2_loss:-12.005
+step:1/417 avg loss:-8.642, stage_1_loss:-9.407, stage_2_loss:-8.451
+step:301/417 avg loss:-11.545, stage_1_loss:-11.557, stage_2_loss:-11.542
+step:301/417 avg loss:-11.519, stage_1_loss:-11.534, stage_2_loss:-11.515
+Valid Summary | End of Epoch 61 | Time 425.87s | Current time 2025-01-09 07:15:45.170409 |Valid Loss -11.587| 
+Learning rate adjusted to: 0.000250
+step:1/1667 avg loss:-14.373, stage_1_loss:-14.313, stage_2_loss:-14.388
+step:1/1667 avg loss:-14.432, stage_1_loss:-14.390, stage_2_loss:-14.442
+step:1001/1667 avg loss:-14.006, stage_1_loss:-13.944, stage_2_loss:-14.021
+step:1001/1667 avg loss:-13.958, stage_1_loss:-13.894, stage_2_loss:-13.974
+Train Summary | End of Epoch 62 | Time 3405.87s | Current time 2025-01-09 08:12:31.476363 |Train Loss -13.961| 
+step:1/417 avg loss:-12.085, stage_1_loss:-12.028, stage_2_loss:-12.099
+step:1/417 avg loss:-8.678, stage_1_loss:-9.125, stage_2_loss:-8.566
+step:301/417 avg loss:-11.620, stage_1_loss:-11.654, stage_2_loss:-11.611
+step:301/417 avg loss:-11.589, stage_1_loss:-11.597, stage_2_loss:-11.587
+Valid Summary | End of Epoch 62 | Time 439.80s | Current time 2025-01-09 08:19:51.318739 |Valid Loss -11.666| 
+step:1/1667 avg loss:-14.759, stage_1_loss:-14.699, stage_2_loss:-14.774
+step:1/1667 avg loss:-13.719, stage_1_loss:-13.637, stage_2_loss:-13.739
+step:1001/1667 avg loss:-14.012, stage_1_loss:-13.950, stage_2_loss:-14.028
+step:1001/1667 avg loss:-13.963, stage_1_loss:-13.900, stage_2_loss:-13.979
+Train Summary | End of Epoch 63 | Time 3409.64s | Current time 2025-01-09 09:16:41.314400 |Train Loss -13.992| 
+step:1/417 avg loss:-12.208, stage_1_loss:-12.247, stage_2_loss:-12.199
+step:1/417 avg loss:-9.645, stage_1_loss:-10.246, stage_2_loss:-9.495
+step:301/417 avg loss:-11.695, stage_1_loss:-11.717, stage_2_loss:-11.689
+step:301/417 avg loss:-11.673, stage_1_loss:-11.666, stage_2_loss:-11.675
+Valid Summary | End of Epoch 63 | Time 438.21s | Current time 2025-01-09 09:23:59.563773 |Valid Loss -11.744| 
+Found new best model, dict saved
+step:1/1667 avg loss:-14.613, stage_1_loss:-14.567, stage_2_loss:-14.625
+step:1/1667 avg loss:-14.614, stage_1_loss:-14.567, stage_2_loss:-14.626
+step:1001/1667 avg loss:-14.040, stage_1_loss:-13.978, stage_2_loss:-14.056
+step:1001/1667 avg loss:-14.032, stage_1_loss:-13.968, stage_2_loss:-14.048
+Train Summary | End of Epoch 64 | Time 3387.12s | Current time 2025-01-09 10:20:27.288901 |Train Loss -14.005| 
+step:1/417 avg loss:-12.235, stage_1_loss:-12.280, stage_2_loss:-12.224
+step:1/417 avg loss:-9.194, stage_1_loss:-9.917, stage_2_loss:-9.013
+step:301/417 avg loss:-11.705, stage_1_loss:-11.732, stage_2_loss:-11.698
+step:301/417 avg loss:-11.657, stage_1_loss:-11.649, stage_2_loss:-11.659
+Valid Summary | End of Epoch 64 | Time 438.90s | Current time 2025-01-09 10:27:46.198155 |Valid Loss -11.724| 
+step:1/1667 avg loss:-12.542, stage_1_loss:-12.466, stage_2_loss:-12.561
+step:1/1667 avg loss:-13.948, stage_1_loss:-13.908, stage_2_loss:-13.957
+step:1001/1667 avg loss:-14.109, stage_1_loss:-14.050, stage_2_loss:-14.124
+step:1001/1667 avg loss:-14.090, stage_1_loss:-14.031, stage_2_loss:-14.105
+Train Summary | End of Epoch 65 | Time 3401.59s | Current time 2025-01-09 11:24:28.089512 |Train Loss -14.089| 
+step:1/417 avg loss:-12.176, stage_1_loss:-12.350, stage_2_loss:-12.132
+step:1/417 avg loss:-8.663, stage_1_loss:-9.519, stage_2_loss:-8.449
+step:301/417 avg loss:-11.709, stage_1_loss:-11.739, stage_2_loss:-11.701
+step:301/417 avg loss:-11.678, stage_1_loss:-11.678, stage_2_loss:-11.678
+Valid Summary | End of Epoch 65 | Time 442.16s | Current time 2025-01-09 11:31:50.295375 |Valid Loss -11.748| 
+Found new best model, dict saved
+step:1/1667 avg loss:-14.517, stage_1_loss:-14.484, stage_2_loss:-14.525
+step:1/1667 avg loss:-13.985, stage_1_loss:-13.949, stage_2_loss:-13.994
+step:1001/1667 avg loss:-14.141, stage_1_loss:-14.082, stage_2_loss:-14.155
+step:1001/1667 avg loss:-14.120, stage_1_loss:-14.059, stage_2_loss:-14.135
+Train Summary | End of Epoch 66 | Time 3404.93s | Current time 2025-01-09 12:28:35.909182 |Train Loss -14.110| 
+step:1/417 avg loss:-12.241, stage_1_loss:-12.273, stage_2_loss:-12.232
+step:1/417 avg loss:-8.763, stage_1_loss:-9.547, stage_2_loss:-8.567
+step:301/417 avg loss:-11.715, stage_1_loss:-11.752, stage_2_loss:-11.705
+step:301/417 avg loss:-11.657, stage_1_loss:-11.669, stage_2_loss:-11.654
+Valid Summary | End of Epoch 66 | Time 433.14s | Current time 2025-01-09 12:35:49.053597 |Valid Loss -11.736| 
+step:1/1667 avg loss:-12.630, stage_1_loss:-12.578, stage_2_loss:-12.644
+step:1/1667 avg loss:-13.582, stage_1_loss:-13.575, stage_2_loss:-13.583
+step:1001/1667 avg loss:-14.173, stage_1_loss:-14.118, stage_2_loss:-14.186
+step:1001/1667 avg loss:-14.161, stage_1_loss:-14.107, stage_2_loss:-14.175
+Train Summary | End of Epoch 67 | Time 3405.34s | Current time 2025-01-09 13:32:34.690043 |Train Loss -14.160| 
+step:1/417 avg loss:-12.270, stage_1_loss:-12.321, stage_2_loss:-12.257
+step:1/417 avg loss:-9.077, stage_1_loss:-9.693, stage_2_loss:-8.924
+step:301/417 avg loss:-11.700, stage_1_loss:-11.736, stage_2_loss:-11.691
+step:301/417 avg loss:-11.604, stage_1_loss:-11.629, stage_2_loss:-11.598
+Valid Summary | End of Epoch 67 | Time 440.65s | Current time 2025-01-09 13:39:55.346738 |Valid Loss -11.704| 
+step:1/1667 avg loss:-13.278, stage_1_loss:-13.226, stage_2_loss:-13.291
+step:1/1667 avg loss:-13.845, stage_1_loss:-13.804, stage_2_loss:-13.855
+step:1001/1667 avg loss:-14.231, stage_1_loss:-14.178, stage_2_loss:-14.244
+step:1001/1667 avg loss:-14.187, stage_1_loss:-14.133, stage_2_loss:-14.201
+Train Summary | End of Epoch 68 | Time 3395.25s | Current time 2025-01-09 14:36:30.894199 |Train Loss -14.182| 
+step:1/417 avg loss:-12.305, stage_1_loss:-12.302, stage_2_loss:-12.305
+step:1/417 avg loss:-8.613, stage_1_loss:-8.757, stage_2_loss:-8.577
+step:301/417 avg loss:-11.667, stage_1_loss:-11.725, stage_2_loss:-11.653
+step:301/417 avg loss:-11.583, stage_1_loss:-11.634, stage_2_loss:-11.570
+Valid Summary | End of Epoch 68 | Time 437.73s | Current time 2025-01-09 14:43:48.763613 |Valid Loss -11.678| 
+step:1/1667 avg loss:-12.993, stage_1_loss:-12.950, stage_2_loss:-13.003
+step:1/1667 avg loss:-14.358, stage_1_loss:-14.279, stage_2_loss:-14.378
+step:1001/1667 avg loss:-14.231, stage_1_loss:-14.177, stage_2_loss:-14.244
+step:1001/1667 avg loss:-14.215, stage_1_loss:-14.160, stage_2_loss:-14.229
+Train Summary | End of Epoch 69 | Time 3399.93s | Current time 2025-01-09 15:40:29.166305 |Train Loss -14.200| 
+step:1/417 avg loss:-12.294, stage_1_loss:-12.307, stage_2_loss:-12.290
+step:1/417 avg loss:-8.695, stage_1_loss:-9.180, stage_2_loss:-8.574
+step:301/417 avg loss:-11.682, stage_1_loss:-11.717, stage_2_loss:-11.674
+step:301/417 avg loss:-11.607, stage_1_loss:-11.635, stage_2_loss:-11.600
+Valid Summary | End of Epoch 69 | Time 440.04s | Current time 2025-01-09 15:47:49.268449 |Valid Loss -11.694| 
+step:1/1667 avg loss:-14.245, stage_1_loss:-14.215, stage_2_loss:-14.252
+step:1/1667 avg loss:-14.396, stage_1_loss:-14.344, stage_2_loss:-14.409
+step:1001/1667 avg loss:-14.252, stage_1_loss:-14.201, stage_2_loss:-14.265
+step:1001/1667 avg loss:-14.228, stage_1_loss:-14.174, stage_2_loss:-14.241
+Train Summary | End of Epoch 70 | Time 3384.26s | Current time 2025-01-09 16:44:13.850869 |Train Loss -14.214| 
+step:1/417 avg loss:-12.213, stage_1_loss:-12.186, stage_2_loss:-12.219
+step:1/417 avg loss:-8.677, stage_1_loss:-9.202, stage_2_loss:-8.546
+step:301/417 avg loss:-11.675, stage_1_loss:-11.727, stage_2_loss:-11.662
+step:301/417 avg loss:-11.581, stage_1_loss:-11.620, stage_2_loss:-11.571
+Valid Summary | End of Epoch 70 | Time 437.31s | Current time 2025-01-09 16:51:31.181511 |Valid Loss -11.685| 
+step:1/1667 avg loss:-14.364, stage_1_loss:-14.309, stage_2_loss:-14.377
+step:1/1667 avg loss:-15.553, stage_1_loss:-15.524, stage_2_loss:-15.560
+step:1001/1667 avg loss:-14.270, stage_1_loss:-14.217, stage_2_loss:-14.283
+step:1001/1667 avg loss:-14.261, stage_1_loss:-14.205, stage_2_loss:-14.275
+Train Summary | End of Epoch 71 | Time 3363.85s | Current time 2025-01-09 17:47:36.123754 |Train Loss -14.243| 
+step:1/417 avg loss:-12.115, stage_1_loss:-12.104, stage_2_loss:-12.118
+step:1/417 avg loss:-8.773, stage_1_loss:-9.020, stage_2_loss:-8.711
+step:301/417 avg loss:-11.673, stage_1_loss:-11.748, stage_2_loss:-11.654
+step:301/417 avg loss:-11.550, stage_1_loss:-11.629, stage_2_loss:-11.530
+Valid Summary | End of Epoch 71 | Time 438.07s | Current time 2025-01-09 17:54:54.205802 |Valid Loss -11.682| 
+Learning rate adjusted to: 0.000125
+step:1/1667 avg loss:-14.414, stage_1_loss:-14.360, stage_2_loss:-14.428
+step:1/1667 avg loss:-14.480, stage_1_loss:-14.410, stage_2_loss:-14.498
+step:1001/1667 avg loss:-14.382, stage_1_loss:-14.331, stage_2_loss:-14.395
+step:1001/1667 avg loss:-14.392, stage_1_loss:-14.340, stage_2_loss:-14.405
+Train Summary | End of Epoch 72 | Time 3371.89s | Current time 2025-01-09 18:51:06.411298 |Train Loss -14.381| 
+step:1/417 avg loss:-12.209, stage_1_loss:-12.200, stage_2_loss:-12.211
+step:1/417 avg loss:-8.866, stage_1_loss:-9.300, stage_2_loss:-8.757
+step:301/417 avg loss:-11.661, stage_1_loss:-11.753, stage_2_loss:-11.638
+step:301/417 avg loss:-11.583, stage_1_loss:-11.650, stage_2_loss:-11.566
+Valid Summary | End of Epoch 72 | Time 432.59s | Current time 2025-01-09 18:58:19.039213 |Valid Loss -11.684| 
+step:1/1667 avg loss:-13.021, stage_1_loss:-12.934, stage_2_loss:-13.043
+step:1/1667 avg loss:-12.757, stage_1_loss:-12.709, stage_2_loss:-12.769
+step:1001/1667 avg loss:-14.421, stage_1_loss:-14.370, stage_2_loss:-14.434
+step:1001/1667 avg loss:-14.383, stage_1_loss:-14.331, stage_2_loss:-14.396
+Train Summary | End of Epoch 73 | Time 3407.62s | Current time 2025-01-09 19:55:07.040797 |Train Loss -14.410| 
+step:1/417 avg loss:-12.293, stage_1_loss:-12.245, stage_2_loss:-12.305
+step:1/417 avg loss:-8.701, stage_1_loss:-9.317, stage_2_loss:-8.547
+step:301/417 avg loss:-11.595, stage_1_loss:-11.708, stage_2_loss:-11.566
+step:301/417 avg loss:-11.547, stage_1_loss:-11.644, stage_2_loss:-11.523
+Valid Summary | End of Epoch 73 | Time 441.50s | Current time 2025-01-09 20:02:28.590015 |Valid Loss -11.627| 
+step:1/1667 avg loss:-14.232, stage_1_loss:-14.158, stage_2_loss:-14.250
+step:1/1667 avg loss:-15.681, stage_1_loss:-15.645, stage_2_loss:-15.690
+step:1001/1667 avg loss:-14.473, stage_1_loss:-14.422, stage_2_loss:-14.486
+step:1001/1667 avg loss:-14.439, stage_1_loss:-14.388, stage_2_loss:-14.452
+Train Summary | End of Epoch 74 | Time 3389.32s | Current time 2025-01-09 20:58:58.545979 |Train Loss -14.429| 
+step:1/417 avg loss:-12.195, stage_1_loss:-12.220, stage_2_loss:-12.188
+step:1/417 avg loss:-8.670, stage_1_loss:-9.252, stage_2_loss:-8.524
+step:301/417 avg loss:-11.580, stage_1_loss:-11.708, stage_2_loss:-11.548
+step:301/417 avg loss:-11.476, stage_1_loss:-11.612, stage_2_loss:-11.442
+Valid Summary | End of Epoch 74 | Time 440.21s | Current time 2025-01-09 21:06:18.762585 |Valid Loss -11.588| 
+step:1/1667 avg loss:-14.261, stage_1_loss:-14.225, stage_2_loss:-14.270
+step:1/1667 avg loss:-15.445, stage_1_loss:-15.412, stage_2_loss:-15.453
+step:1001/1667 avg loss:-14.490, stage_1_loss:-14.437, stage_2_loss:-14.504step:1001/1667 avg loss:-14.425, stage_1_loss:-14.372, stage_2_loss:-14.439
+
+Train Summary | End of Epoch 75 | Time 3412.88s | Current time 2025-01-09 22:03:12.002940 |Train Loss -14.445| 
+step:1/417 avg loss:-12.181, stage_1_loss:-12.145, stage_2_loss:-12.190
+step:1/417 avg loss:-9.157, stage_1_loss:-9.769, stage_2_loss:-9.004
+step:301/417 avg loss:-11.578, stage_1_loss:-11.720, stage_2_loss:-11.543
+step:301/417 avg loss:-11.490, stage_1_loss:-11.626, stage_2_loss:-11.456
+Valid Summary | End of Epoch 75 | Time 439.37s | Current time 2025-01-09 22:10:31.415271 |Valid Loss -11.584| 
+No improvement for 10 epochs, early stopping.

@@ -1,0 +1,1270 @@
+started on logs/TDSE/TDSE2024-08-28(16:20:48)
+
+Namespace(mix_lst_path='../../data_preparation/mixture_data_list_2mix_with_occludded.csv', visual_direc='/mntcephfs/lee_dataset/separation/voxceleb2/mp4/', mixture_direc='/mntcephfs/lee_dataset/separation/voxceleb2/mixture/', obj_dir='../../data_preparation/Asset/object_image_sr', obj_mask_dir='../../data_preparation/Asset/object_mask_x4', batch_size=8, max_length=6, num_workers=8, epochs=100, effec_batch_size=8, accu_grad=0, C=2, model_name='TDSE', lr=0.001, max_norm=5, log_name='logs/TDSE/TDSE2024-08-28(16:20:48)', use_tensorboard=1, continue_from='FALSE', local_rank=0, sample_rate=16000, win=512, hop_length=128, n_mels=80, distributed=True, world_size=2, speaker_dict={'id08108': 0, 'id07077': 1, 'id08249': 2, 'id00699': 3, 'id09016': 4, 'id06010': 5, 'id06017': 6, 'id00015': 7, 'id04526': 8, 'id02179': 9, 'id07955': 10, 'id08592': 11, 'id05480': 12, 'id06645': 13, 'id00979': 14, 'id07447': 15, 'id06496': 16, 'id08457': 17, 'id01355': 18, 'id03918': 19, 'id07970': 20, 'id04015': 21, 'id05010': 22, 'id06843': 23, 'id04219': 24, 'id07293': 25, 'id01264': 26, 'id07744': 27, 'id02455': 28, 'id07741': 29, 'id06702': 30, 'id07108': 31, 'id02102': 32, 'id07136': 33, 'id08745': 34, 'id03824': 35, 'id01457': 36, 'id08834': 37, 'id07613': 38, 'id05241': 39, 'id08241': 40, 'id07560': 41, 'id06070': 42, 'id03258': 43, 'id01764': 44, 'id03312': 45, 'id02339': 46, 'id04081': 47, 'id05913': 48, 'id08053': 49, 'id04523': 50, 'id08335': 51, 'id08546': 52, 'id08376': 53, 'id04705': 54, 'id08065': 55, 'id08041': 56, 'id04199': 57, 'id02667': 58, 'id07672': 59, 'id07357': 60, 'id03493': 61, 'id01681': 62, 'id08066': 63, 'id08704': 64, 'id02294': 65, 'id07837': 66, 'id02593': 67, 'id06362': 68, 'id01857': 69, 'id08853': 70, 'id07982': 71, 'id06203': 72, 'id04586': 73, 'id02239': 74, 'id01057': 75, 'id02343': 76, 'id03269': 77, 'id05057': 78, 'id08647': 79, 'id01056': 80, 'id08904': 81, 'id00078': 82, 'id02578': 83, 'id03942': 84, 'id03696': 85, 'id06005': 86, 'id04738': 87, 'id06617': 88, 'id01111': 89, 'id06988': 90, 'id09032': 91, 'id01840': 92, 'id06798': 93, 'id04684': 94, 'id03748': 95, 'id06239': 96, 'id00282': 97, 'id02281': 98, 'id04961': 99, 'id00943': 100, 'id01054': 101, 'id07158': 102, 'id04534': 103, 'id03502': 104, 'id02987': 105, 'id00568': 106, 'id04615': 107, 'id01648': 108, 'id06597': 109, 'id07670': 110, 'id05066': 111, 'id03445': 112, 'id08739': 113, 'id01694': 114, 'id09232': 115, 'id05710': 116, 'id07719': 117, 'id08377': 118, 'id01916': 119, 'id01570': 120, 'id05978': 121, 'id08714': 122, 'id02318': 123, 'id03994': 124, 'id06948': 125, 'id07165': 126, 'id06663': 127, 'id07164': 128, 'id08042': 129, 'id04518': 130, 'id05875': 131, 'id08569': 132, 'id05856': 133, 'id08317': 134, 'id08243': 135, 'id01286': 136, 'id06038': 137, 'id00262': 138, 'id01504': 139, 'id05935': 140, 'id01677': 141, 'id07276': 142, 'id01658': 143, 'id04221': 144, 'id05293': 145, 'id06771': 146, 'id06586': 147, 'id06323': 148, 'id03992': 149, 'id03713': 150, 'id04968': 151, 'id00076': 152, 'id06364': 153, 'id03240': 154, 'id04134': 155, 'id00187': 156, 'id08348': 157, 'id08568': 158, 'id08917': 159, 'id04257': 160, 'id02733': 161, 'id05573': 162, 'id00996': 163, 'id02438': 164, 'id05777': 165, 'id04715': 166, 'id03939': 167, 'id02214': 168, 'id04320': 169, 'id08064': 170, 'id07272': 171, 'id01225': 172, 'id06588': 173, 'id00272': 174, 'id06445': 175, 'id05907': 176, 'id01040': 177, 'id02297': 178, 'id08343': 179, 'id03199': 180, 'id00350': 181, 'id08122': 182, 'id01163': 183, 'id03522': 184, 'id08080': 185, 'id07708': 186, 'id07844': 187, 'id04988': 188, 'id03923': 189, 'id04086': 190, 'id02299': 191, 'id07800': 192, 'id02457': 193, 'id05496': 194, 'id08837': 195, 'id09033': 196, 'id07161': 197, 'id02260': 198, 'id06584': 199, 'id07349': 200, 'id06351': 201, 'id05288': 202, 'id03215': 203, 'id03334': 204, 'id01758': 205, 'id00978': 206, 'id05851': 207, 'id07351': 208, 'id08362': 209, 'id08518': 210, 'id08928': 211, 'id00062': 212, 'id08658': 213, 'id01193': 214, 'id05453': 215, 'id09051': 216, 'id00708': 217, 'id03267': 218, 'id02477': 219, 'id06507': 220, 'id01262': 221, 'id02249': 222, 'id01750': 223, 'id00741': 224, 'id07956': 225, 'id02361': 226, 'id08933': 227, 'id05832': 228, 'id06866': 229, 'id07181': 230, 'id00876': 231, 'id04537': 232, 'id00620': 233, 'id05591': 234, 'id09147': 235, 'id03430': 236, 'id00086': 237, 'id07010': 238, 'id06696': 239, 'id02116': 240, 'id09192': 241, 'id05060': 242, 'id01387': 243, 'id04538': 244, 'id03201': 245, 'id09171': 246, 'id04752': 247, 'id06360': 248, 'id08781': 249, 'id04064': 250, 'id06289': 251, 'id05664': 252, 'id02008': 253, 'id05186': 254, 'id01265': 255, 'id05998': 256, 'id06725': 257, 'id04855': 258, 'id00967': 259, 'id00513': 260, 'id00816': 261, 'id03727': 262, 'id06958': 263, 'id03755': 264, 'id04780': 265, 'id01010': 266, 'id01904': 267, 'id00942': 268, 'id02067': 269, 'id01411': 270, 'id03896': 271, 'id07623': 272, 'id05506': 273, 'id06415': 274, 'id07434': 275, 'id07856': 276, 'id05693': 277, 'id01806': 278, 'id02156': 279, 'id01713': 280, 'id05454': 281, 'id06212': 282, 'id02534': 283, 'id00806': 284, 'id01678': 285, 'id07578': 286, 'id03014': 287, 'id07145': 288, 'id06250': 289, 'id08653': 290, 'id04372': 291, 'id07236': 292, 'id06582': 293, 'id07750': 294, 'id00060': 295, 'id02015': 296, 'id05257': 297, 'id00692': 298, 'id03371': 299, 'id08289': 300, 'id01160': 301, 'id07809': 302, 'id04618': 303, 'id01906': 304, 'id08694': 305, 'id00888': 306, 'id07618': 307, 'id06986': 308, 'id05171': 309, 'id06717': 310, 'id03414': 311, 'id01746': 312, 'id00664': 313, 'id09010': 314, 'id03885': 315, 'id08993': 316, 'id08501': 317, 'id06131': 318, 'id07776': 319, 'id05165': 320, 'id08047': 321, 'id00709': 322, 'id08738': 323, 'id04358': 324, 'id05265': 325, 'id06411': 326, 'id05699': 327, 'id00891': 328, 'id07686': 329, 'id00990': 330, 'id00673': 331, 'id02495': 332, 'id04125': 333, 'id00084': 334, 'id02943': 335, 'id02980': 336, 'id07703': 337, 'id04349': 338, 'id02888': 339, 'id00159': 340, 'id08079': 341, 'id01218': 342, 'id00787': 343, 'id07178': 344, 'id08239': 345, 'id04409': 346, 'id00378': 347, 'id02873': 348, 'id05260': 349, 'id00417': 350, 'id05666': 351, 'id04284': 352, 'id09225': 353, 'id05691': 354, 'id07834': 355, 'id02075': 356, 'id05049': 357, 'id03983': 358, 'id02392': 359, 'id00258': 360, 'id04419': 361, 'id07642': 362, 'id01006': 363, 'id00385': 364, 'id03728': 365, 'id06479': 366, 'id05153': 367, 'id03028': 368, 'id03147': 369, 'id03328': 370, 'id04194': 371, 'id01859': 372, 'id02341': 373, 'id04508': 374, 'id01354': 375, 'id03118': 376, 'id06946': 377, 'id01556': 378, 'id00043': 379, 'id07535': 380, 'id03429': 381, 'id07128': 382, 'id04247': 383, 'id06114': 384, 'id03227': 385, 'id01614': 386, 'id06424': 387, 'id09269': 388, 'id02157': 389, 'id01768': 390, 'id09088': 391, 'id04742': 392, 'id04903': 393, 'id07531': 394, 'id04757': 395, 'id00680': 396, 'id03313': 397, 'id02721': 398, 'id06109': 399, 'id05738': 400, 'id05632': 401, 'id04617': 402, 'id08604': 403, 'id08573': 404, 'id06477': 405, 'id08236': 406, 'id05272': 407, 'id02760': 408, 'id09052': 409, 'id07360': 410, 'id06551': 411, 'id06414': 412, 'id08742': 413, 'id06252': 414, 'id01776': 415, 'id04842': 416, 'id03810': 417, 'id08968': 418, 'id01060': 419, 'id06196': 420, 'id04117': 421, 'id04184': 422, 'id03460': 423, 'id00191': 424, 'id01448': 425, 'id02311': 426, 'id04198': 427, 'id04458': 428, 'id05986': 429, 'id07078': 430, 'id06792': 431, 'id02817': 432, 'id04417': 433, 'id04997': 434, 'id00149': 435, 'id00462': 436, 'id01209': 437, 'id04974': 438, 'id03786': 439, 'id04644': 440, 'id02053': 441, 'id03556': 442, 'id07851': 443, 'id00944': 444, 'id03705': 445, 'id03288': 446, 'id06183': 447, 'id06432': 448, 'id04564': 449, 'id07887': 450, 'id05494': 451, 'id02653': 452, 'id09091': 453, 'id00529': 454, 'id06121': 455, 'id04229': 456, 'id06248': 457, 'id05930': 458, 'id08885': 459, 'id08953': 460, 'id05189': 461, 'id01798': 462, 'id07400': 463, 'id04655': 464, 'id03750': 465, 'id02039': 466, 'id07415': 467, 'id07974': 468, 'id05133': 469, 'id08860': 470, 'id04108': 471, 'id08334': 472, 'id04188': 473, 'id05741': 474, 'id04017': 475, 'id01659': 476, 'id06870': 477, 'id04179': 478, 'id03675': 479, 'id03733': 480, 'id01206': 481, 'id04274': 482, 'id02166': 483, 'id04160': 484, 'id03532': 485, 'id00202': 486, 'id06336': 487, 'id04486': 488, 'id03754': 489, 'id05054': 490, 'id07421': 491, 'id03247': 492, 'id08146': 493, 'id02289': 494, 'id05027': 495, 'id00168': 496, 'id00184': 497, 'id08529': 498, 'id03917': 499, 'id06944': 500, 'id01960': 501, 'id00774': 502, 'id00903': 503, 'id05554': 504, 'id00332': 505, 'id04814': 506, 'id05261': 507, 'id01100': 508, 'id01523': 509, 'id06222': 510, 'id02463': 511, 'id07556': 512, 'id00773': 513, 'id08660': 514, 'id03088': 515, 'id01317': 516, 'id04667': 517, 'id08999': 518, 'id02948': 519, 'id00788': 520, 'id05585': 521, 'id05926': 522, 'id08802': 523, 'id07624': 524, 'id07179': 525, 'id04333': 526, 'id04930': 527, 'id01539': 528, 'id08981': 529, 'id02351': 530, 'id04554': 531, 'id06062': 532, 'id08936': 533, 'id07489': 534, 'id07625': 535, 'id04404': 536, 'id05289': 537, 'id03866': 538, 'id03325': 539, 'id04195': 540, 'id00029': 541, 'id00823': 542, 'id04254': 543, 'id02017': 544, 'id04588': 545, 'id04677': 546, 'id04423': 547, 'id06952': 548, 'id02389': 549, 'id00413': 550, 'id00176': 551, 'id01101': 552, 'id00352': 553, 'id07299': 554, 'id04223': 555, 'id00976': 556, 'id03821': 557, 'id08462': 558, 'id02735': 559, 'id02739': 560, 'id07727': 561, 'id08160': 562, 'id05696': 563, 'id04488': 564, 'id00592': 565, 'id02598': 566, 'id00650': 567, 'id01754': 568, 'id00980': 569, 'id04559': 570, 'id01690': 571, 'id03351': 572, 'id04511': 573, 'id05771': 574, 'id06650': 575, 'id03768': 576, 'id02981': 577, 'id07405': 578, 'id03652': 579, 'id07186': 580, 'id03706': 581, 'id04146': 582, 'id05622': 583, 'id05401': 584, 'id07332': 585, 'id01617': 586, 'id03331': 587, 'id00266': 588, 'id02573': 589, 'id08147': 590, 'id00524': 591, 'id03274': 592, 'id07497': 593, 'id09210': 594, 'id05737': 595, 'id00494': 596, 'id03871': 597, 'id00020': 598, 'id04628': 599, 'id08919': 600, 'id08097': 601, 'id09049': 602, 'id05541': 603, 'id05286': 604, 'id06937': 605, 'id06347': 606, 'id06874': 607, 'id04784': 608, 'id06949': 609, 'id02062': 610, 'id03264': 611, 'id08049': 612, 'id04408': 613, 'id06900': 614, 'id08261': 615, 'id06140': 616, 'id05477': 617, 'id07060': 618, 'id07726': 619, 'id00353': 620, 'id05160': 621, 'id07418': 622, 'id00064': 623, 'id02724': 624, 'id04265': 625, 'id04097': 626, 'id08599': 627, 'id04133': 628, 'id00902': 629, 'id06262': 630, 'id09230': 631, 'id00469': 632, 'id08536': 633, 'id00395': 634, 'id05853': 635, 'id01931': 636, 'id02004': 637, 'id01280': 638, 'id07429': 639, 'id05916': 640, 'id02889': 641, 'id04163': 642, 'id05492': 643, 'id04654': 644, 'id04839': 645, 'id00965': 646, 'id01489': 647, 'id00558': 648, 'id08804': 649, 'id06529': 650, 'id02306': 651, 'id08311': 652, 'id04712': 653, 'id03525': 654, 'id01511': 655, 'id03336': 656, 'id00459': 657, 'id01908': 658, 'id06847': 659, 'id08983': 660, 'id03989': 661, 'id08556': 662, 'id06875': 663, 'id00185': 664, 'id02021': 665, 'id08240': 666, 'id06723': 667, 'id04869': 668, 'id01501': 669, 'id01235': 670, 'id02340': 671, 'id04582': 672, 'id06676': 673, 'id05841': 674, 'id08702': 675, 'id04517': 676, 'id02346': 677, 'id04660': 678, 'id03947': 679, 'id00724': 680, 'id00829': 681, 'id07256': 682, 'id03796': 683, 'id06541': 684, 'id07080': 685, 'id07500': 686, 'id06378': 687, 'id08323': 688, 'id05757': 689, 'id05723': 690, 'id05576': 691, 'id08278': 692, 'id04873': 693, 'id06226': 694, 'id02891': 695, 'id04856': 696, 'id05739': 697, 'id03804': 698, 'id05893': 699, 'id08002': 700, 'id01769': 701, 'id04334': 702, 'id00192': 703, 'id07043': 704, 'id08533': 705, 'id03298': 706, 'id05209': 707, 'id01689': 708, 'id07130': 709, 'id08937': 710, 'id02538': 711, 'id04031': 712, 'id01239': 713, 'id05434': 714, 'id02112': 715, 'id04782': 716, 'id06552': 717, 'id04509': 718, 'id08414': 719, 'id07344': 720, 'id05644': 721, 'id09186': 722, 'id02087': 723, 'id06355': 724, 'id04907': 725, 'id05685': 726, 'id02267': 727, 'id06138': 728, 'id04216': 729, 'id04529': 730, 'id06368': 731, 'id07046': 732, 'id04530': 733, 'id02032': 734, 'id01121': 735, 'id01927': 736, 'id05256': 737, 'id03757': 738, 'id05104': 739, 'id08600': 740, 'id05039': 741, 'id05983': 742, 'id08351': 743, 'id06016': 744, 'id04427': 745, 'id07534': 746, 'id08756': 747, 'id02979': 748, 'id03945': 749, 'id04128': 750, 'id04222': 751, 'id06673': 752, 'id07050': 753, 'id00255': 754, 'id05471': 755, 'id05141': 756, 'id04027': 757, 'id08525': 758, 'id04266': 759, 'id05989': 760, 'id01827': 761, 'id02270': 762, 'id03242': 763, 'id01223': 764, 'id09048': 765, 'id03207': 766, 'id01098': 767, 'id04224': 768, 'id07175': 769, 'id03877': 770, 'id00755': 771, 'id04151': 772, 'id00022': 773, 'id08022': 774, 'id02384': 775, 'id06474': 776, 'id04716': 777, 'id04560': 778, 'id02040': 779, 'id02437': 780, 'id00911': 781, 'id03931': 782, 'id03527': 783, 'id01315': 784, 'id03820': 785, 'id03352': 786, 'id02150': 787, 'id00752': 788, 'id07980': 789, 'id07341': 790, 'id01639': 791, 'id03304': 792, 'id04589': 793, 'id02252': 794, 'id08477': 795, 'id07954': 796, 'id03907': 797, 'id04300': 798, 'id06905': 799}, speakers=800)
+
+Total number of parameters: 22217733 
+
+av_convtasnet(
+  (encoder): Encoder(
+    (conv1d_U): Conv1d(1, 256, kernel_size=(40,), stride=(20,), bias=False)
+  )
+  (separator): TemporalConvNet(
+    (layer_norm): ChannelWiseLayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (bottleneck_conv1x1): Conv1d(256, 256, kernel_size=(1,), stride=(1,), bias=False)
+    (tcn): ModuleList(
+      (0-3): 4 x Sequential(
+        (0): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+        (1): TemporalBlock(
+          (net): Sequential(
+            (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,), bias=False)
+            (1): PReLU(num_parameters=1)
+            (2): GlobalLayerNorm()
+            (3): DepthwiseSeparableConv(
+              (net): Sequential(
+                (0): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(1,), groups=512, bias=False)
+                (1): PReLU(num_parameters=1)
+                (2): GlobalLayerNorm()
+                (3): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+              )
+            )
+          )
+        )
+        (2): TemporalBlock(
+          (net): Sequential(
+            (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,), bias=False)
+            (1): PReLU(num_parameters=1)
+            (2): GlobalLayerNorm()
+            (3): DepthwiseSeparableConv(
+              (net): Sequential(
+                (0): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(2,), dilation=(2,), groups=512, bias=False)
+                (1): PReLU(num_parameters=1)
+                (2): GlobalLayerNorm()
+                (3): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+              )
+            )
+          )
+        )
+        (3): TemporalBlock(
+          (net): Sequential(
+            (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,), bias=False)
+            (1): PReLU(num_parameters=1)
+            (2): GlobalLayerNorm()
+            (3): DepthwiseSeparableConv(
+              (net): Sequential(
+                (0): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(4,), dilation=(4,), groups=512, bias=False)
+                (1): PReLU(num_parameters=1)
+                (2): GlobalLayerNorm()
+                (3): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+              )
+            )
+          )
+        )
+        (4): TemporalBlock(
+          (net): Sequential(
+            (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,), bias=False)
+            (1): PReLU(num_parameters=1)
+            (2): GlobalLayerNorm()
+            (3): DepthwiseSeparableConv(
+              (net): Sequential(
+                (0): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(8,), dilation=(8,), groups=512, bias=False)
+                (1): PReLU(num_parameters=1)
+                (2): GlobalLayerNorm()
+                (3): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+              )
+            )
+          )
+        )
+        (5): TemporalBlock(
+          (net): Sequential(
+            (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,), bias=False)
+            (1): PReLU(num_parameters=1)
+            (2): GlobalLayerNorm()
+            (3): DepthwiseSeparableConv(
+              (net): Sequential(
+                (0): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(16,), dilation=(16,), groups=512, bias=False)
+                (1): PReLU(num_parameters=1)
+                (2): GlobalLayerNorm()
+                (3): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+              )
+            )
+          )
+        )
+        (6): TemporalBlock(
+          (net): Sequential(
+            (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,), bias=False)
+            (1): PReLU(num_parameters=1)
+            (2): GlobalLayerNorm()
+            (3): DepthwiseSeparableConv(
+              (net): Sequential(
+                (0): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(32,), dilation=(32,), groups=512, bias=False)
+                (1): PReLU(num_parameters=1)
+                (2): GlobalLayerNorm()
+                (3): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+              )
+            )
+          )
+        )
+        (7): TemporalBlock(
+          (net): Sequential(
+            (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,), bias=False)
+            (1): PReLU(num_parameters=1)
+            (2): GlobalLayerNorm()
+            (3): DepthwiseSeparableConv(
+              (net): Sequential(
+                (0): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(64,), dilation=(64,), groups=512, bias=False)
+                (1): PReLU(num_parameters=1)
+                (2): GlobalLayerNorm()
+                (3): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+              )
+            )
+          )
+        )
+        (8): TemporalBlock(
+          (net): Sequential(
+            (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,), bias=False)
+            (1): PReLU(num_parameters=1)
+            (2): GlobalLayerNorm()
+            (3): DepthwiseSeparableConv(
+              (net): Sequential(
+                (0): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(128,), dilation=(128,), groups=512, bias=False)
+                (1): PReLU(num_parameters=1)
+                (2): GlobalLayerNorm()
+                (3): Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+              )
+            )
+          )
+        )
+      )
+    )
+    (visual_conv): Sequential(
+      (0): VisualConv1D(
+        (net): Sequential(
+          (0): ReLU()
+          (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(1,), groups=512, bias=False)
+          (3): PReLU(num_parameters=1)
+          (4): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): Conv1d(512, 512, kernel_size=(1,), stride=(1,), bias=False)
+        )
+      )
+      (1): VisualConv1D(
+        (net): Sequential(
+          (0): ReLU()
+          (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(1,), groups=512, bias=False)
+          (3): PReLU(num_parameters=1)
+          (4): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): Conv1d(512, 512, kernel_size=(1,), stride=(1,), bias=False)
+        )
+      )
+      (2): VisualConv1D(
+        (net): Sequential(
+          (0): ReLU()
+          (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(1,), groups=512, bias=False)
+          (3): PReLU(num_parameters=1)
+          (4): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): Conv1d(512, 512, kernel_size=(1,), stride=(1,), bias=False)
+        )
+      )
+      (3): VisualConv1D(
+        (net): Sequential(
+          (0): ReLU()
+          (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(1,), groups=512, bias=False)
+          (3): PReLU(num_parameters=1)
+          (4): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): Conv1d(512, 512, kernel_size=(1,), stride=(1,), bias=False)
+        )
+      )
+      (4): VisualConv1D(
+        (net): Sequential(
+          (0): ReLU()
+          (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(1,), groups=512, bias=False)
+          (3): PReLU(num_parameters=1)
+          (4): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): Conv1d(512, 512, kernel_size=(1,), stride=(1,), bias=False)
+        )
+      )
+    )
+    (ve_conv1x1): ModuleList(
+      (0-3): 4 x Conv1d(512, 256, kernel_size=(1,), stride=(1,), bias=False)
+    )
+    (mask_conv1x1): Conv1d(256, 256, kernel_size=(1,), stride=(1,), bias=False)
+  )
+  (decoder): Decoder(
+    (basis_signals): Linear(in_features=256, out_features=40, bias=False)
+  )
+  (visual_frontend): VisualFrontend(
+    (frontend3D): Sequential(
+      (0): Conv3d(1, 64, kernel_size=(5, 7, 7), stride=(1, 2, 2), padding=(2, 3, 3), bias=False)
+      (1): BatchNorm3d(64, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+      (2): ReLU()
+      (3): MaxPool3d(kernel_size=(1, 3, 3), stride=(1, 2, 2), padding=(0, 1, 1), dilation=1, ceil_mode=False)
+    )
+    (resnet): ResNet(
+      (layer1): ResNetLayer(
+        (conv1a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1a): BatchNorm2d(64, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv2a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (downsample): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (outbna): BatchNorm2d(64, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv1b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1b): BatchNorm2d(64, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv2b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (outbnb): BatchNorm2d(64, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+      )
+      (layer2): ResNetLayer(
+        (conv1a): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1a): BatchNorm2d(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv2a): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (downsample): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (outbna): BatchNorm2d(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv1b): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1b): BatchNorm2d(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv2b): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (outbnb): BatchNorm2d(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+      )
+      (layer3): ResNetLayer(
+        (conv1a): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1a): BatchNorm2d(256, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv2a): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (downsample): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (outbna): BatchNorm2d(256, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv1b): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1b): BatchNorm2d(256, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv2b): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (outbnb): BatchNorm2d(256, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+      )
+      (layer4): ResNetLayer(
+        (conv1a): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1a): BatchNorm2d(512, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv2a): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (downsample): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (outbna): BatchNorm2d(512, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv1b): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1b): BatchNorm2d(512, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (conv2b): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (outbnb): BatchNorm2d(512, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+      )
+      (avgpool): AvgPool2d(kernel_size=(4, 4), stride=(1, 1), padding=0)
+    )
+  )
+)
+Start new training
+step:1/1250 avg loss:38.963
+step:1/1250 avg loss:35.525
+step:1001/1250 avg loss:0.245
+step:1001/1250 avg loss:0.259
+Train Summary | End of Epoch 1 | Time 1767.19s | Current time 2024-08-28 16:50:23.599019 |Train Loss 0.094| 
+step:1/313 avg loss:-0.224
+step:1/313 avg loss:0.039
+step:301/313 avg loss:-0.585
+step:301/313 avg loss:-0.571
+Valid Summary | End of Epoch 1 | Time 395.68s | Current time 2024-08-28 16:56:59.280837 |Valid Loss -0.581| 
+Found new best model, dict saved
+step:1/1250 avg loss:-0.584
+step:1/1250 avg loss:-1.051
+step:1001/1250 avg loss:-0.958
+step:1001/1250 avg loss:-0.985
+Train Summary | End of Epoch 2 | Time 1764.77s | Current time 2024-08-28 17:26:25.849235 |Train Loss -1.046| 
+step:1/313 avg loss:-1.357
+step:1/313 avg loss:-0.792
+step:301/313 avg loss:-1.366
+step:301/313 avg loss:-1.407
+Valid Summary | End of Epoch 2 | Time 393.11s | Current time 2024-08-28 17:32:58.963500 |Valid Loss -1.387| 
+Found new best model, dict saved
+step:1/1250 avg loss:-2.009
+step:1/1250 avg loss:-0.835
+step:1001/1250 avg loss:-1.686
+step:1001/1250 avg loss:-1.703
+Train Summary | End of Epoch 3 | Time 1752.84s | Current time 2024-08-28 18:02:13.825955 |Train Loss -1.761| 
+step:1/313 avg loss:-1.554
+step:1/313 avg loss:-1.434
+step:301/313 avg loss:-2.083
+step:301/313 avg loss:-2.065
+Valid Summary | End of Epoch 3 | Time 394.28s | Current time 2024-08-28 18:08:48.104916 |Valid Loss -2.076| 
+Found new best model, dict saved
+step:1/1250 avg loss:-1.834
+step:1/1250 avg loss:-3.225
+step:1001/1250 avg loss:-2.520
+step:1001/1250 avg loss:-2.567
+Train Summary | End of Epoch 4 | Time 1748.43s | Current time 2024-08-28 18:37:58.266526 |Train Loss -2.595| 
+step:1/313 avg loss:-2.648
+step:1/313 avg loss:-1.948
+step:301/313 avg loss:-2.768
+step:301/313 avg loss:-2.748
+Valid Summary | End of Epoch 4 | Time 393.22s | Current time 2024-08-28 18:44:31.494710 |Valid Loss -2.758| 
+Found new best model, dict saved
+step:1/1250 avg loss:-2.969
+step:1/1250 avg loss:-4.071
+step:1001/1250 avg loss:-3.305
+step:1001/1250 avg loss:-3.286
+Train Summary | End of Epoch 5 | Time 1748.78s | Current time 2024-08-28 19:13:42.264041 |Train Loss -3.372| 
+step:1/313 avg loss:-2.846
+step:1/313 avg loss:-2.981
+step:301/313 avg loss:-3.734
+step:301/313 avg loss:-3.652
+Valid Summary | End of Epoch 5 | Time 394.34s | Current time 2024-08-28 19:20:16.611335 |Valid Loss -3.693| 
+Found new best model, dict saved
+step:1/1250 avg loss:-3.318
+step:1/1250 avg loss:-4.859
+step:1001/1250 avg loss:-3.958
+step:1001/1250 avg loss:-4.043
+Train Summary | End of Epoch 6 | Time 1754.69s | Current time 2024-08-28 19:49:33.025211 |Train Loss -4.091| 
+step:1/313 avg loss:-3.892
+step:1/313 avg loss:-3.611
+step:301/313 avg loss:-4.407
+step:301/313 avg loss:-4.334
+Valid Summary | End of Epoch 6 | Time 393.18s | Current time 2024-08-28 19:56:06.210280 |Valid Loss -4.372| 
+Found new best model, dict saved
+step:1/1250 avg loss:-3.472
+step:1/1250 avg loss:-3.460
+step:1001/1250 avg loss:-4.871
+step:1001/1250 avg loss:-4.847
+Train Summary | End of Epoch 7 | Time 1749.97s | Current time 2024-08-28 20:25:18.122042 |Train Loss -4.902| 
+step:1/313 avg loss:-4.206
+step:1/313 avg loss:-4.045
+step:301/313 avg loss:-4.568
+step:301/313 avg loss:-4.664
+Valid Summary | End of Epoch 7 | Time 394.40s | Current time 2024-08-28 20:31:52.522954 |Valid Loss -4.619| 
+Found new best model, dict saved
+step:1/1250 avg loss:-3.271
+step:1/1250 avg loss:-3.282
+step:1001/1250 avg loss:-5.464
+step:1001/1250 avg loss:-5.471
+Train Summary | End of Epoch 8 | Time 1746.26s | Current time 2024-08-28 21:01:01.270074 |Train Loss -5.522| 
+step:1/313 avg loss:-5.572
+step:1/313 avg loss:-4.871
+step:301/313 avg loss:-5.387
+step:301/313 avg loss:-5.503
+Valid Summary | End of Epoch 8 | Time 393.92s | Current time 2024-08-28 21:07:35.198453 |Valid Loss -5.452| 
+Found new best model, dict saved
+step:1/1250 avg loss:-6.164
+step:1/1250 avg loss:-7.442
+step:1001/1250 avg loss:-6.217
+step:1001/1250 avg loss:-6.170
+Train Summary | End of Epoch 9 | Time 1751.42s | Current time 2024-08-28 21:36:48.172027 |Train Loss -6.213| 
+step:1/313 avg loss:-6.707
+step:1/313 avg loss:-5.228
+step:301/313 avg loss:-6.061
+step:301/313 avg loss:-6.131
+Valid Summary | End of Epoch 9 | Time 395.13s | Current time 2024-08-28 21:43:23.301645 |Valid Loss -6.095| 
+Found new best model, dict saved
+step:1/1250 avg loss:-6.391
+step:1/1250 avg loss:-6.546
+step:1001/1250 avg loss:-6.815
+step:1001/1250 avg loss:-6.750
+Train Summary | End of Epoch 10 | Time 1754.65s | Current time 2024-08-28 22:12:39.355117 |Train Loss -6.794| 
+step:1/313 avg loss:-5.678
+step:1/313 avg loss:-5.771
+step:301/313 avg loss:-6.697
+step:301/313 avg loss:-6.625
+Valid Summary | End of Epoch 10 | Time 393.87s | Current time 2024-08-28 22:19:13.230055 |Valid Loss -6.670| 
+Found new best model, dict saved
+step:1/1250 avg loss:-7.107
+step:1/1250 avg loss:-7.384
+step:1001/1250 avg loss:-7.273
+step:1001/1250 avg loss:-7.278
+Train Summary | End of Epoch 11 | Time 1753.76s | Current time 2024-08-28 22:48:29.803145 |Train Loss -7.260| 
+step:1/313 avg loss:-5.408
+step:1/313 avg loss:-5.826
+step:301/313 avg loss:-6.723
+step:301/313 avg loss:-6.767
+Valid Summary | End of Epoch 11 | Time 393.36s | Current time 2024-08-28 22:55:03.165077 |Valid Loss -6.751| 
+Found new best model, dict saved
+step:1/1250 avg loss:-8.609
+step:1/1250 avg loss:-7.629
+step:1001/1250 avg loss:-7.630
+step:1001/1250 avg loss:-7.579
+Train Summary | End of Epoch 12 | Time 1760.26s | Current time 2024-08-28 23:24:25.055913 |Train Loss -7.616| 
+step:1/313 avg loss:-7.469
+step:1/313 avg loss:-5.739
+step:301/313 avg loss:-6.447
+step:301/313 avg loss:-6.536
+Valid Summary | End of Epoch 12 | Time 393.10s | Current time 2024-08-28 23:30:58.157200 |Valid Loss -6.513| 
+step:1/1250 avg loss:-6.655
+step:1/1250 avg loss:-8.349
+step:1001/1250 avg loss:-7.897
+step:1001/1250 avg loss:-7.889
+Train Summary | End of Epoch 13 | Time 1758.78s | Current time 2024-08-29 00:00:17.592527 |Train Loss -7.919| 
+step:1/313 avg loss:-7.668
+step:1/313 avg loss:-6.375
+step:301/313 avg loss:-7.186
+step:301/313 avg loss:-7.260
+Valid Summary | End of Epoch 13 | Time 395.07s | Current time 2024-08-29 00:06:52.667561 |Valid Loss -7.231| 
+Found new best model, dict saved
+step:1/1250 avg loss:-8.771
+step:1/1250 avg loss:-8.363
+step:1001/1250 avg loss:-8.189
+step:1001/1250 avg loss:-8.162
+Train Summary | End of Epoch 14 | Time 1757.74s | Current time 2024-08-29 00:36:11.810185 |Train Loss -8.190| 
+step:1/313 avg loss:-8.243
+step:1/313 avg loss:-5.469
+step:301/313 avg loss:-7.505
+step:301/313 avg loss:-7.614
+Valid Summary | End of Epoch 14 | Time 396.19s | Current time 2024-08-29 00:42:47.997517 |Valid Loss -7.573| 
+Found new best model, dict saved
+step:1/1250 avg loss:-7.319
+step:1/1250 avg loss:-7.434
+step:1001/1250 avg loss:-8.693
+step:1001/1250 avg loss:-8.704
+Train Summary | End of Epoch 15 | Time 1749.17s | Current time 2024-08-29 01:11:59.019456 |Train Loss -8.692| 
+step:1/313 avg loss:-7.415
+step:1/313 avg loss:-5.873
+step:301/313 avg loss:-7.757
+step:301/313 avg loss:-7.764
+Valid Summary | End of Epoch 15 | Time 394.91s | Current time 2024-08-29 01:18:33.933713 |Valid Loss -7.766| 
+Found new best model, dict saved
+step:1/1250 avg loss:-9.141
+step:1/1250 avg loss:-8.960
+step:1001/1250 avg loss:-8.774
+step:1001/1250 avg loss:-8.792
+Train Summary | End of Epoch 16 | Time 1746.56s | Current time 2024-08-29 01:47:42.228676 |Train Loss -8.722| 
+step:1/313 avg loss:-7.712
+step:1/313 avg loss:-7.264
+step:301/313 avg loss:-7.962
+step:301/313 avg loss:-7.990
+Valid Summary | End of Epoch 16 | Time 397.48s | Current time 2024-08-29 01:54:19.706252 |Valid Loss -7.988| 
+Found new best model, dict saved
+step:1/1250 avg loss:-9.515
+step:1/1250 avg loss:-10.936
+step:1001/1250 avg loss:-8.901
+step:1001/1250 avg loss:-8.811
+Train Summary | End of Epoch 17 | Time 1748.46s | Current time 2024-08-29 02:23:30.028518 |Train Loss -8.871| 
+step:1/313 avg loss:-8.757
+step:1/313 avg loss:-7.412
+step:301/313 avg loss:-7.917
+step:301/313 avg loss:-7.992
+Valid Summary | End of Epoch 17 | Time 398.85s | Current time 2024-08-29 02:30:08.885831 |Valid Loss -7.975| 
+step:1/1250 avg loss:-10.272
+step:1/1250 avg loss:-10.099
+step:1001/1250 avg loss:-9.161
+step:1001/1250 avg loss:-9.167
+Train Summary | End of Epoch 18 | Time 1744.74s | Current time 2024-08-29 02:59:14.288938 |Train Loss -9.196| 
+step:1/313 avg loss:-8.941
+step:1/313 avg loss:-7.328
+step:301/313 avg loss:-8.285
+step:301/313 avg loss:-8.391
+Valid Summary | End of Epoch 18 | Time 400.87s | Current time 2024-08-29 03:05:55.161131 |Valid Loss -8.358| 
+Found new best model, dict saved
+step:1/1250 avg loss:-9.975
+step:1/1250 avg loss:-7.841
+step:1001/1250 avg loss:-9.546
+step:1001/1250 avg loss:-9.499
+Train Summary | End of Epoch 19 | Time 1748.19s | Current time 2024-08-29 03:35:06.284291 |Train Loss -9.396| 
+step:1/313 avg loss:-6.882
+step:1/313 avg loss:-8.953
+step:301/313 avg loss:-7.765
+step:301/313 avg loss:-7.840
+Valid Summary | End of Epoch 19 | Time 401.57s | Current time 2024-08-29 03:41:47.853172 |Valid Loss -7.833| 
+step:1/1250 avg loss:-10.182
+step:1/1250 avg loss:-8.818
+step:1001/1250 avg loss:-9.478
+step:1001/1250 avg loss:-9.479
+Train Summary | End of Epoch 20 | Time 1743.04s | Current time 2024-08-29 04:10:52.309190 |Train Loss -9.473| 
+step:1/313 avg loss:-9.518
+step:1/313 avg loss:-7.978
+step:301/313 avg loss:-8.374
+step:301/313 avg loss:-8.459
+Valid Summary | End of Epoch 20 | Time 398.67s | Current time 2024-08-29 04:17:30.988426 |Valid Loss -8.436| 
+Found new best model, dict saved
+step:1/1250 avg loss:-8.070
+step:1/1250 avg loss:-9.906
+step:1001/1250 avg loss:-9.689
+step:1001/1250 avg loss:-9.651
+Train Summary | End of Epoch 21 | Time 1741.03s | Current time 2024-08-29 04:46:34.732360 |Train Loss -9.650| 
+step:1/313 avg loss:-9.546
+step:1/313 avg loss:-7.339
+step:301/313 avg loss:-8.469
+step:301/313 avg loss:-8.451
+Valid Summary | End of Epoch 21 | Time 400.76s | Current time 2024-08-29 04:53:15.496056 |Valid Loss -8.470| 
+Found new best model, dict saved
+step:1/1250 avg loss:-9.470
+step:1/1250 avg loss:-11.043
+step:1001/1250 avg loss:-9.814
+step:1001/1250 avg loss:-9.814
+Train Summary | End of Epoch 22 | Time 1746.78s | Current time 2024-08-29 05:22:24.427538 |Train Loss -9.749| 
+step:1/313 avg loss:-9.430
+step:1/313 avg loss:-7.865
+step:301/313 avg loss:-8.526
+step:301/313 avg loss:-8.505
+Valid Summary | End of Epoch 22 | Time 398.85s | Current time 2024-08-29 05:29:03.282713 |Valid Loss -8.525| 
+Found new best model, dict saved
+step:1/1250 avg loss:-8.967
+step:1/1250 avg loss:-10.622
+step:1001/1250 avg loss:-9.978
+step:1001/1250 avg loss:-9.957
+Train Summary | End of Epoch 23 | Time 1746.70s | Current time 2024-08-29 05:58:12.447085 |Train Loss -9.996| 
+step:1/313 avg loss:-9.363
+step:1/313 avg loss:-6.530
+step:301/313 avg loss:-8.432
+step:301/313 avg loss:-8.601
+Valid Summary | End of Epoch 23 | Time 396.38s | Current time 2024-08-29 06:04:48.825431 |Valid Loss -8.534| 
+Found new best model, dict saved
+step:1/1250 avg loss:-10.680
+step:1/1250 avg loss:-10.432
+step:1001/1250 avg loss:-9.946
+step:1001/1250 avg loss:-9.992
+Train Summary | End of Epoch 24 | Time 1744.67s | Current time 2024-08-29 06:33:56.022573 |Train Loss -9.849| 
+step:1/313 avg loss:-7.476
+step:1/313 avg loss:-6.786
+step:301/313 avg loss:-8.282
+step:301/313 avg loss:-8.397
+Valid Summary | End of Epoch 24 | Time 397.87s | Current time 2024-08-29 06:40:33.899248 |Valid Loss -8.336| 
+step:1/1250 avg loss:-9.505
+step:1/1250 avg loss:-10.731
+step:1001/1250 avg loss:-10.126
+step:1001/1250 avg loss:-10.158
+Train Summary | End of Epoch 25 | Time 1752.72s | Current time 2024-08-29 07:09:48.061723 |Train Loss -10.121| 
+step:1/313 avg loss:-9.571
+step:1/313 avg loss:-7.677
+step:301/313 avg loss:-8.324
+step:301/313 avg loss:-8.459
+Valid Summary | End of Epoch 25 | Time 394.15s | Current time 2024-08-29 07:16:22.213719 |Valid Loss -8.394| 
+step:1/1250 avg loss:-9.918
+step:1/1250 avg loss:-7.440
+step:1001/1250 avg loss:-10.260
+step:1001/1250 avg loss:-10.281
+Train Summary | End of Epoch 26 | Time 1758.88s | Current time 2024-08-29 07:45:42.445485 |Train Loss -10.206| 
+step:1/313 avg loss:-9.770
+step:1/313 avg loss:-7.201
+step:301/313 avg loss:-8.774
+step:301/313 avg loss:-8.668
+Valid Summary | End of Epoch 26 | Time 395.59s | Current time 2024-08-29 07:52:18.039946 |Valid Loss -8.740| 
+Found new best model, dict saved
+step:1/1250 avg loss:-10.984
+step:1/1250 avg loss:-11.741
+step:1001/1250 avg loss:-10.342
+step:1001/1250 avg loss:-10.309
+Train Summary | End of Epoch 27 | Time 1751.32s | Current time 2024-08-29 08:21:31.651500 |Train Loss -10.300| 
+step:1/313 avg loss:-10.249
+step:1/313 avg loss:-7.216
+step:301/313 avg loss:-8.998
+step:301/313 avg loss:-9.128
+Valid Summary | End of Epoch 27 | Time 395.05s | Current time 2024-08-29 08:28:06.709339 |Valid Loss -9.061| 
+Found new best model, dict saved
+step:1/1250 avg loss:-10.633
+step:1/1250 avg loss:-8.816
+step:1001/1250 avg loss:-10.402
+step:1001/1250 avg loss:-10.422
+Train Summary | End of Epoch 28 | Time 1752.66s | Current time 2024-08-29 08:57:21.652447 |Train Loss -10.428| 
+step:1/313 avg loss:-8.634
+step:1/313 avg loss:-8.190
+step:301/313 avg loss:-8.894
+step:301/313 avg loss:-8.989
+Valid Summary | End of Epoch 28 | Time 395.08s | Current time 2024-08-29 09:03:56.738022 |Valid Loss -8.937| 
+step:1/1250 avg loss:-8.905
+step:1/1250 avg loss:-11.196
+step:1001/1250 avg loss:-10.149
+step:1001/1250 avg loss:-10.219
+Train Summary | End of Epoch 29 | Time 1758.31s | Current time 2024-08-29 09:33:15.849831 |Train Loss -10.070| 
+step:1/313 avg loss:-9.873
+step:1/313 avg loss:-7.188
+step:301/313 avg loss:-8.518
+step:301/313 avg loss:-8.626
+Valid Summary | End of Epoch 29 | Time 395.53s | Current time 2024-08-29 09:39:51.379892 |Valid Loss -8.573| 
+step:1/1250 avg loss:-8.484
+step:1/1250 avg loss:-9.105
+step:1001/1250 avg loss:-10.203
+step:1001/1250 avg loss:-10.188
+Train Summary | End of Epoch 30 | Time 1755.89s | Current time 2024-08-29 10:09:07.949587 |Train Loss -10.216| 
+step:1/313 avg loss:-10.125
+step:1/313 avg loss:-8.504
+step:301/313 avg loss:-8.989
+step:301/313 avg loss:-9.203
+Valid Summary | End of Epoch 30 | Time 394.35s | Current time 2024-08-29 10:15:42.301376 |Valid Loss -9.107| 
+Found new best model, dict saved
+step:1/1250 avg loss:-10.815
+step:1/1250 avg loss:-10.455
+step:1001/1250 avg loss:-10.628
+step:1001/1250 avg loss:-10.585
+Train Summary | End of Epoch 31 | Time 1747.12s | Current time 2024-08-29 10:44:53.175819 |Train Loss -10.592| 
+step:1/313 avg loss:-9.643
+step:1/313 avg loss:-8.415
+step:301/313 avg loss:-9.074
+step:301/313 avg loss:-9.088
+Valid Summary | End of Epoch 31 | Time 393.99s | Current time 2024-08-29 10:51:27.170797 |Valid Loss -9.094| 
+step:1/1250 avg loss:-10.371
+step:1/1250 avg loss:-11.268
+step:1001/1250 avg loss:-10.959
+step:1001/1250 avg loss:-10.925
+Train Summary | End of Epoch 32 | Time 1749.31s | Current time 2024-08-29 11:20:37.945827 |Train Loss -10.937| 
+step:1/313 avg loss:-9.551
+step:1/313 avg loss:-7.316
+step:301/313 avg loss:-9.030
+step:301/313 avg loss:-9.238
+Valid Summary | End of Epoch 32 | Time 394.80s | Current time 2024-08-29 11:27:12.743332 |Valid Loss -9.139| 
+Found new best model, dict saved
+step:1/1250 avg loss:-12.270
+step:1/1250 avg loss:-11.619
+step:1001/1250 avg loss:-10.882
+step:1001/1250 avg loss:-10.926
+Train Summary | End of Epoch 33 | Time 1753.41s | Current time 2024-08-29 11:56:27.399947 |Train Loss -10.877| 
+step:1/313 avg loss:-9.049
+step:1/313 avg loss:-8.036
+step:301/313 avg loss:-8.956
+step:301/313 avg loss:-9.090
+Valid Summary | End of Epoch 33 | Time 394.79s | Current time 2024-08-29 12:03:02.194396 |Valid Loss -9.025| 
+step:1/1250 avg loss:-8.587
+step:1/1250 avg loss:-9.957
+step:1001/1250 avg loss:-10.802
+step:1001/1250 avg loss:-10.745
+Train Summary | End of Epoch 34 | Time 1760.67s | Current time 2024-08-29 12:32:23.615028 |Train Loss -10.792| 
+step:1/313 avg loss:-9.364
+step:1/313 avg loss:-8.013
+step:301/313 avg loss:-9.416
+step:301/313 avg loss:-9.603
+Valid Summary | End of Epoch 34 | Time 395.02s | Current time 2024-08-29 12:38:58.641671 |Valid Loss -9.504| 
+Found new best model, dict saved
+step:1/1250 avg loss:-9.137
+step:1/1250 avg loss:-9.989
+step:1001/1250 avg loss:-11.130
+step:1001/1250 avg loss:-11.111
+Train Summary | End of Epoch 35 | Time 1756.12s | Current time 2024-08-29 13:08:16.680284 |Train Loss -11.112| 
+step:1/313 avg loss:-9.203
+step:1/313 avg loss:-8.131
+step:301/313 avg loss:-9.509
+step:301/313 avg loss:-9.650
+Valid Summary | End of Epoch 35 | Time 393.85s | Current time 2024-08-29 13:14:50.532116 |Valid Loss -9.577| 
+Found new best model, dict saved
+step:1/1250 avg loss:-12.149
+step:1/1250 avg loss:-12.228
+step:1001/1250 avg loss:-11.113
+step:1001/1250 avg loss:-11.062
+Train Summary | End of Epoch 36 | Time 1756.14s | Current time 2024-08-29 13:44:08.151480 |Train Loss -11.051| 
+step:1/313 avg loss:-9.756
+step:1/313 avg loss:-8.263
+step:301/313 avg loss:-8.964
+step:301/313 avg loss:-9.042
+Valid Summary | End of Epoch 36 | Time 398.79s | Current time 2024-08-29 13:50:46.947280 |Valid Loss -9.005| 
+step:1/1250 avg loss:-11.769
+step:1/1250 avg loss:-11.513
+step:1001/1250 avg loss:-10.947
+step:1001/1250 avg loss:-10.950
+Train Summary | End of Epoch 37 | Time 1759.98s | Current time 2024-08-29 14:20:07.761567 |Train Loss -10.991| 
+step:1/313 avg loss:-8.915
+step:1/313 avg loss:-8.398
+step:301/313 avg loss:-9.544
+step:301/313 avg loss:-9.588
+Valid Summary | End of Epoch 37 | Time 394.86s | Current time 2024-08-29 14:26:42.629387 |Valid Loss -9.566| 
+step:1/1250 avg loss:-9.738
+step:1/1250 avg loss:-11.256
+step:1001/1250 avg loss:-11.250
+step:1001/1250 avg loss:-11.234
+Train Summary | End of Epoch 38 | Time 1764.42s | Current time 2024-08-29 14:56:08.201554 |Train Loss -11.201| 
+step:1/313 avg loss:-8.021
+step:1/313 avg loss:-7.968
+step:301/313 avg loss:-9.284
+step:301/313 avg loss:-9.326
+Valid Summary | End of Epoch 38 | Time 394.34s | Current time 2024-08-29 15:02:42.543360 |Valid Loss -9.294| 
+step:1/1250 avg loss:-11.431
+step:1/1250 avg loss:-11.816
+step:1001/1250 avg loss:-11.259
+step:1001/1250 avg loss:-11.254
+Train Summary | End of Epoch 39 | Time 1764.78s | Current time 2024-08-29 15:32:08.098187 |Train Loss -11.270| 
+step:1/313 avg loss:-10.222
+step:1/313 avg loss:-9.255
+step:301/313 avg loss:-9.414
+step:301/313 avg loss:-9.564
+Valid Summary | End of Epoch 39 | Time 393.28s | Current time 2024-08-29 15:38:41.382415 |Valid Loss -9.505| 
+step:1/1250 avg loss:-10.549
+step:1/1250 avg loss:-10.269
+step:1001/1250 avg loss:-11.494
+step:1001/1250 avg loss:-11.481
+Train Summary | End of Epoch 40 | Time 1754.51s | Current time 2024-08-29 16:07:56.688590 |Train Loss -11.416| 
+step:1/313 avg loss:-5.978
+step:1/313 avg loss:-8.731
+step:301/313 avg loss:-9.435
+step:301/313 avg loss:-9.644
+Valid Summary | End of Epoch 40 | Time 394.01s | Current time 2024-08-29 16:14:30.705663 |Valid Loss -9.543| 
+step:1/1250 avg loss:-12.973
+step:1/1250 avg loss:-11.016
+step:1001/1250 avg loss:-11.492
+step:1001/1250 avg loss:-11.472
+Train Summary | End of Epoch 41 | Time 1756.23s | Current time 2024-08-29 16:43:49.054456 |Train Loss -11.371| 
+step:1/313 avg loss:-10.111
+step:1/313 avg loss:-9.094
+step:301/313 avg loss:-9.587
+step:301/313 avg loss:-9.488
+Valid Summary | End of Epoch 41 | Time 394.64s | Current time 2024-08-29 16:50:23.697499 |Valid Loss -9.541| 
+Learning rate adjusted to: 0.000500
+step:1/1250 avg loss:-11.863
+step:1/1250 avg loss:-12.633
+step:1001/1250 avg loss:-11.974
+step:1001/1250 avg loss:-12.008
+Train Summary | End of Epoch 42 | Time 1753.07s | Current time 2024-08-29 17:19:37.800401 |Train Loss -11.974| 
+step:1/313 avg loss:-9.310
+step:1/313 avg loss:-9.151
+step:301/313 avg loss:-9.869
+step:301/313 avg loss:-10.084
+Valid Summary | End of Epoch 42 | Time 395.85s | Current time 2024-08-29 17:26:13.656406 |Valid Loss -9.984| 
+Found new best model, dict saved
+step:1/1250 avg loss:-12.373
+step:1/1250 avg loss:-14.503
+step:1001/1250 avg loss:-12.197
+step:1001/1250 avg loss:-12.201
+Train Summary | End of Epoch 43 | Time 1767.40s | Current time 2024-08-29 17:55:42.641212 |Train Loss -12.192| 
+step:1/313 avg loss:-10.060
+step:1/313 avg loss:-8.684
+step:301/313 avg loss:-10.192
+step:301/313 avg loss:-10.304
+Valid Summary | End of Epoch 43 | Time 395.78s | Current time 2024-08-29 18:02:18.421614 |Valid Loss -10.252| 
+Found new best model, dict saved
+step:1/1250 avg loss:-11.937
+step:1/1250 avg loss:-12.096
+step:1001/1250 avg loss:-12.270
+step:1001/1250 avg loss:-12.289
+Train Summary | End of Epoch 44 | Time 1759.13s | Current time 2024-08-29 18:31:39.949188 |Train Loss -12.289| 
+step:1/313 avg loss:-11.427
+step:1/313 avg loss:-9.764
+step:301/313 avg loss:-10.003
+step:301/313 avg loss:-10.204
+Valid Summary | End of Epoch 44 | Time 394.94s | Current time 2024-08-29 18:38:14.895155 |Valid Loss -10.111| 
+step:1/1250 avg loss:-12.921
+step:1/1250 avg loss:-12.287
+step:1001/1250 avg loss:-12.325
+step:1001/1250 avg loss:-12.301
+Train Summary | End of Epoch 45 | Time 1756.28s | Current time 2024-08-29 19:07:32.081559 |Train Loss -12.327| 
+step:1/313 avg loss:-11.182
+step:1/313 avg loss:-9.481
+step:301/313 avg loss:-10.224
+step:301/313 avg loss:-10.205
+Valid Summary | End of Epoch 45 | Time 394.08s | Current time 2024-08-29 19:14:06.163718 |Valid Loss -10.221| 
+step:1/1250 avg loss:-13.617
+step:1/1250 avg loss:-11.564
+step:1001/1250 avg loss:-12.472
+step:1001/1250 avg loss:-12.463
+Train Summary | End of Epoch 46 | Time 1756.31s | Current time 2024-08-29 19:43:23.579958 |Train Loss -12.440| 
+step:1/313 avg loss:-10.580
+step:1/313 avg loss:-9.335
+step:301/313 avg loss:-9.894
+step:301/313 avg loss:-10.035
+Valid Summary | End of Epoch 46 | Time 393.55s | Current time 2024-08-29 19:49:57.134988 |Valid Loss -9.976| 
+step:1/1250 avg loss:-10.453
+step:1/1250 avg loss:-12.367
+step:1001/1250 avg loss:-12.420
+step:1001/1250 avg loss:-12.394
+Train Summary | End of Epoch 47 | Time 1755.82s | Current time 2024-08-29 20:19:13.969616 |Train Loss -12.431| 
+step:1/313 avg loss:-9.015
+step:1/313 avg loss:-8.983
+step:301/313 avg loss:-10.122
+step:301/313 avg loss:-10.321
+Valid Summary | End of Epoch 47 | Time 393.80s | Current time 2024-08-29 20:25:47.768946 |Valid Loss -10.234| 
+step:1/1250 avg loss:-12.882
+step:1/1250 avg loss:-12.285
+step:1001/1250 avg loss:-12.596
+step:1001/1250 avg loss:-12.578
+Train Summary | End of Epoch 48 | Time 1758.74s | Current time 2024-08-29 20:55:07.726355 |Train Loss -12.553| 
+step:1/313 avg loss:-9.513
+step:1/313 avg loss:-9.225
+step:301/313 avg loss:-10.195
+step:301/313 avg loss:-10.154
+Valid Summary | End of Epoch 48 | Time 395.23s | Current time 2024-08-29 21:01:42.963327 |Valid Loss -10.173| 
+step:1/1250 avg loss:-12.151
+step:1/1250 avg loss:-11.505
+step:1001/1250 avg loss:-12.607
+step:1001/1250 avg loss:-12.562
+Train Summary | End of Epoch 49 | Time 1754.41s | Current time 2024-08-29 21:30:58.506299 |Train Loss -12.589| 
+step:1/313 avg loss:-10.193
+step:1/313 avg loss:-9.216
+step:301/313 avg loss:-10.216
+step:301/313 avg loss:-10.310
+Valid Summary | End of Epoch 49 | Time 395.03s | Current time 2024-08-29 21:37:33.541661 |Valid Loss -10.271| 
+Found new best model, dict saved
+step:1/1250 avg loss:-13.515
+step:1/1250 avg loss:-12.569
+step:1001/1250 avg loss:-12.548
+step:1001/1250 avg loss:-12.547
+Train Summary | End of Epoch 50 | Time 1757.22s | Current time 2024-08-29 22:06:53.390871 |Train Loss -12.541| 
+step:1/313 avg loss:-10.820
+step:1/313 avg loss:-9.228
+step:301/313 avg loss:-10.316
+step:301/313 avg loss:-10.409
+Valid Summary | End of Epoch 50 | Time 396.60s | Current time 2024-08-29 22:13:29.995970 |Valid Loss -10.371| 
+Found new best model, dict saved
+step:1/1250 avg loss:-12.816
+step:1/1250 avg loss:-14.117
+step:1001/1250 avg loss:-12.788
+step:1001/1250 avg loss:-12.783
+Train Summary | End of Epoch 51 | Time 1752.88s | Current time 2024-08-29 22:42:48.043883 |Train Loss -12.785| 
+step:1/313 avg loss:-9.579
+step:1/313 avg loss:-9.151
+step:301/313 avg loss:-10.035
+step:301/313 avg loss:-10.071
+Valid Summary | End of Epoch 51 | Time 396.61s | Current time 2024-08-29 22:49:24.654683 |Valid Loss -10.069| 
+step:1/1250 avg loss:-12.268
+step:1/1250 avg loss:-11.906
+step:1001/1250 avg loss:-12.634
+step:1001/1250 avg loss:-12.598
+Train Summary | End of Epoch 52 | Time 1749.63s | Current time 2024-08-29 23:18:35.084741 |Train Loss -12.594| 
+step:1/313 avg loss:-9.367
+step:1/313 avg loss:-8.317
+step:301/313 avg loss:-10.385
+step:301/313 avg loss:-10.341
+Valid Summary | End of Epoch 52 | Time 398.90s | Current time 2024-08-29 23:25:13.983689 |Valid Loss -10.371| 
+Found new best model, dict saved
+step:1/1250 avg loss:-11.500
+step:1/1250 avg loss:-13.756
+step:1001/1250 avg loss:-12.861
+step:1001/1250 avg loss:-12.869
+Train Summary | End of Epoch 53 | Time 1751.35s | Current time 2024-08-29 23:54:28.618131 |Train Loss -12.861| 
+step:1/313 avg loss:-10.535
+step:1/313 avg loss:-7.860
+step:301/313 avg loss:-10.344
+step:301/313 avg loss:-10.610
+Valid Summary | End of Epoch 53 | Time 401.00s | Current time 2024-08-30 00:01:09.623176 |Valid Loss -10.477| 
+Found new best model, dict saved
+step:1/1250 avg loss:-12.928
+step:1/1250 avg loss:-13.149
+step:1001/1250 avg loss:-12.791
+step:1001/1250 avg loss:-12.788
+Train Summary | End of Epoch 54 | Time 1750.52s | Current time 2024-08-30 00:30:22.023207 |Train Loss -12.726| 
+step:1/313 avg loss:-11.433
+step:1/313 avg loss:-8.030
+step:301/313 avg loss:-10.184
+step:301/313 avg loss:-10.289
+Valid Summary | End of Epoch 54 | Time 399.79s | Current time 2024-08-30 00:37:01.818504 |Valid Loss -10.233| 
+step:1/1250 avg loss:-12.064
+step:1/1250 avg loss:-12.626
+step:1001/1250 avg loss:-12.807
+step:1001/1250 avg loss:-12.796
+Train Summary | End of Epoch 55 | Time 1747.66s | Current time 2024-08-30 01:06:10.458814 |Train Loss -12.771| 
+step:1/313 avg loss:-9.539
+step:1/313 avg loss:-7.272
+step:301/313 avg loss:-10.170
+step:301/313 avg loss:-10.249
+Valid Summary | End of Epoch 55 | Time 403.64s | Current time 2024-08-30 01:12:54.098219 |Valid Loss -10.195| 
+step:1/1250 avg loss:-12.562
+step:1/1250 avg loss:-11.886
+step:1001/1250 avg loss:-12.938
+step:1001/1250 avg loss:-12.938
+Train Summary | End of Epoch 56 | Time 1746.26s | Current time 2024-08-30 01:42:01.356586 |Train Loss -12.923| 
+step:1/313 avg loss:-9.345
+step:1/313 avg loss:-8.722
+step:301/313 avg loss:-9.508
+step:301/313 avg loss:-9.443
+Valid Summary | End of Epoch 56 | Time 400.88s | Current time 2024-08-30 01:48:42.236136 |Valid Loss -9.479| 
+step:1/1250 avg loss:-12.066
+step:1/1250 avg loss:-11.768
+step:1001/1250 avg loss:-12.850
+step:1001/1250 avg loss:-12.848
+Train Summary | End of Epoch 57 | Time 1752.10s | Current time 2024-08-30 02:17:55.020832 |Train Loss -12.769| 
+step:1/313 avg loss:-9.750
+step:1/313 avg loss:-9.127
+step:301/313 avg loss:-10.265
+step:301/313 avg loss:-10.384
+Valid Summary | End of Epoch 57 | Time 398.97s | Current time 2024-08-30 02:24:33.995541 |Valid Loss -10.326| 
+step:1/1250 avg loss:-12.643
+step:1/1250 avg loss:-11.757
+step:1001/1250 avg loss:-12.913
+step:1001/1250 avg loss:-12.906
+Train Summary | End of Epoch 58 | Time 1748.64s | Current time 2024-08-30 02:53:43.335310 |Train Loss -12.906| 
+step:1/313 avg loss:-8.946
+step:1/313 avg loss:-9.592
+step:301/313 avg loss:-10.396
+step:301/313 avg loss:-10.376
+Valid Summary | End of Epoch 58 | Time 400.56s | Current time 2024-08-30 03:00:23.895712 |Valid Loss -10.399| 
+step:1/1250 avg loss:-13.089
+step:1/1250 avg loss:-11.976
+step:1001/1250 avg loss:-13.042
+step:1001/1250 avg loss:-13.021
+Train Summary | End of Epoch 59 | Time 1754.88s | Current time 2024-08-30 03:29:39.690423 |Train Loss -13.000| 
+step:1/313 avg loss:-8.330
+step:1/313 avg loss:-9.730
+step:301/313 avg loss:-10.493
+step:301/313 avg loss:-10.652
+Valid Summary | End of Epoch 59 | Time 397.93s | Current time 2024-08-30 03:36:17.618971 |Valid Loss -10.575| 
+Found new best model, dict saved
+step:1/1250 avg loss:-13.220
+step:1/1250 avg loss:-11.806
+step:1001/1250 avg loss:-13.080
+step:1001/1250 avg loss:-13.055
+Train Summary | End of Epoch 60 | Time 1754.44s | Current time 2024-08-30 04:05:34.300590 |Train Loss -13.034| 
+step:1/313 avg loss:-10.508
+step:1/313 avg loss:-9.243
+step:301/313 avg loss:-10.373
+step:301/313 avg loss:-10.571
+Valid Summary | End of Epoch 60 | Time 397.24s | Current time 2024-08-30 04:12:11.546161 |Valid Loss -10.484| 
+step:1/1250 avg loss:-13.284
+step:1/1250 avg loss:-13.679
+step:1001/1250 avg loss:-13.212
+step:1001/1250 avg loss:-13.195
+Train Summary | End of Epoch 61 | Time 1757.21s | Current time 2024-08-30 04:41:30.142279 |Train Loss -13.195| 
+step:1/313 avg loss:-8.975
+step:1/313 avg loss:-8.637
+step:301/313 avg loss:-10.606
+step:301/313 avg loss:-10.468
+Valid Summary | End of Epoch 61 | Time 395.45s | Current time 2024-08-30 04:48:05.590013 |Valid Loss -10.535| 
+step:1/1250 avg loss:-13.575
+step:1/1250 avg loss:-13.648
+step:1001/1250 avg loss:-12.935
+step:1001/1250 avg loss:-12.942
+Train Summary | End of Epoch 62 | Time 1757.75s | Current time 2024-08-30 05:17:24.468798 |Train Loss -12.995| 
+step:1/313 avg loss:-10.283
+step:1/313 avg loss:-8.724
+step:301/313 avg loss:-10.535
+step:301/313 avg loss:-10.666
+Valid Summary | End of Epoch 62 | Time 395.34s | Current time 2024-08-30 05:23:59.810793 |Valid Loss -10.597| 
+Found new best model, dict saved
+step:1/1250 avg loss:-13.698
+step:1/1250 avg loss:-13.978
+step:1001/1250 avg loss:-13.096
+step:1001/1250 avg loss:-13.077
+Train Summary | End of Epoch 63 | Time 1750.70s | Current time 2024-08-30 05:53:11.864377 |Train Loss -13.058| 
+step:1/313 avg loss:-9.317
+step:1/313 avg loss:-9.457
+step:301/313 avg loss:-10.469
+step:301/313 avg loss:-10.319
+Valid Summary | End of Epoch 63 | Time 394.11s | Current time 2024-08-30 05:59:45.976245 |Valid Loss -10.409| 
+step:1/1250 avg loss:-12.835
+step:1/1250 avg loss:-14.288
+step:1001/1250 avg loss:-13.121
+step:1001/1250 avg loss:-13.092
+Train Summary | End of Epoch 64 | Time 1752.17s | Current time 2024-08-30 06:28:59.164885 |Train Loss -13.103| 
+step:1/313 avg loss:-10.882
+step:1/313 avg loss:-9.243
+step:301/313 avg loss:-10.404
+step:301/313 avg loss:-10.548
+Valid Summary | End of Epoch 64 | Time 395.12s | Current time 2024-08-30 06:35:34.285339 |Valid Loss -10.487| 
+step:1/1250 avg loss:-13.779
+step:1/1250 avg loss:-13.480
+step:1001/1250 avg loss:-12.987
+step:1001/1250 avg loss:-12.927
+Train Summary | End of Epoch 65 | Time 1753.29s | Current time 2024-08-30 07:04:48.445310 |Train Loss -12.966| 
+step:1/313 avg loss:-9.499
+step:1/313 avg loss:-9.007
+step:301/313 avg loss:-10.345
+step:301/313 avg loss:-10.397
+Valid Summary | End of Epoch 65 | Time 395.25s | Current time 2024-08-30 07:11:23.699882 |Valid Loss -10.375| 
+step:1/1250 avg loss:-13.558
+step:1/1250 avg loss:-14.111
+step:1001/1250 avg loss:-13.207
+step:1001/1250 avg loss:-13.142
+Train Summary | End of Epoch 66 | Time 1761.48s | Current time 2024-08-30 07:40:45.826254 |Train Loss -13.186| 
+step:1/313 avg loss:-9.186
+step:1/313 avg loss:-8.711
+step:301/313 avg loss:-10.357
+step:301/313 avg loss:-10.460
+Valid Summary | End of Epoch 66 | Time 394.04s | Current time 2024-08-30 07:47:19.866299 |Valid Loss -10.420| 
+step:1/1250 avg loss:-12.847
+step:1/1250 avg loss:-13.765
+step:1001/1250 avg loss:-13.358
+step:1001/1250 avg loss:-13.325
+Train Summary | End of Epoch 67 | Time 1761.66s | Current time 2024-08-30 08:16:42.537519 |Train Loss -13.317| 
+step:1/313 avg loss:-10.095
+step:1/313 avg loss:-9.043
+step:301/313 avg loss:-10.525
+step:301/313 avg loss:-10.614
+Valid Summary | End of Epoch 67 | Time 395.37s | Current time 2024-08-30 08:23:17.910043 |Valid Loss -10.575| 
+step:1/1250 avg loss:-12.918
+step:1/1250 avg loss:-12.603
+step:1001/1250 avg loss:-13.117
+step:1001/1250 avg loss:-13.129
+Train Summary | End of Epoch 68 | Time 1753.72s | Current time 2024-08-30 08:52:32.499326 |Train Loss -13.119| 
+step:1/313 avg loss:-9.224
+step:1/313 avg loss:-8.766
+step:301/313 avg loss:-10.461
+step:301/313 avg loss:-10.582
+Valid Summary | End of Epoch 68 | Time 393.50s | Current time 2024-08-30 08:59:05.999976 |Valid Loss -10.530| 
+Learning rate adjusted to: 0.000250
+step:1/1250 avg loss:-14.173
+step:1/1250 avg loss:-12.382
+step:1001/1250 avg loss:-13.452
+step:1001/1250 avg loss:-13.417
+Train Summary | End of Epoch 69 | Time 1758.97s | Current time 2024-08-30 09:28:25.742111 |Train Loss -13.444| 
+step:1/313 avg loss:-9.538
+step:1/313 avg loss:-9.256
+step:301/313 avg loss:-10.604
+step:301/313 avg loss:-10.804
+Valid Summary | End of Epoch 69 | Time 397.31s | Current time 2024-08-30 09:35:03.057360 |Valid Loss -10.717| 
+Found new best model, dict saved
+step:1/1250 avg loss:-12.796
+step:1/1250 avg loss:-13.733
+step:1001/1250 avg loss:-13.566
+step:1001/1250 avg loss:-13.530
+Train Summary | End of Epoch 70 | Time 1760.94s | Current time 2024-08-30 10:04:25.387081 |Train Loss -13.541| 
+step:1/313 avg loss:-9.675
+step:1/313 avg loss:-8.692
+step:301/313 avg loss:-10.697
+step:301/313 avg loss:-10.892
+Valid Summary | End of Epoch 70 | Time 397.62s | Current time 2024-08-30 10:11:03.009041 |Valid Loss -10.803| 
+Found new best model, dict saved
+step:1/1250 avg loss:-14.734
+step:1/1250 avg loss:-14.076
+step:1001/1250 avg loss:-13.553step:1001/1250 avg loss:-13.604
+
+Train Summary | End of Epoch 71 | Time 1771.79s | Current time 2024-08-30 10:40:37.212808 |Train Loss -13.528| 
+step:1/313 avg loss:-9.469
+step:1/313 avg loss:-9.541
+step:301/313 avg loss:-10.399
+step:301/313 avg loss:-10.642
+Valid Summary | End of Epoch 71 | Time 396.28s | Current time 2024-08-30 10:47:13.496862 |Valid Loss -10.537| 
+step:1/1250 avg loss:-12.705
+step:1/1250 avg loss:-12.594
+step:1001/1250 avg loss:-13.595
+step:1001/1250 avg loss:-13.578
+Train Summary | End of Epoch 72 | Time 1774.81s | Current time 2024-08-30 11:16:49.064992 |Train Loss -13.578| 
+step:1/313 avg loss:-9.718
+step:1/313 avg loss:-9.165
+step:301/313 avg loss:-10.647
+step:301/313 avg loss:-10.884
+Valid Summary | End of Epoch 72 | Time 394.01s | Current time 2024-08-30 11:23:23.081954 |Valid Loss -10.778| 
+step:1/1250 avg loss:-12.861
+step:1/1250 avg loss:-13.247
+step:1001/1250 avg loss:-13.649
+step:1001/1250 avg loss:-13.623
+Train Summary | End of Epoch 73 | Time 1757.08s | Current time 2024-08-30 11:52:40.813735 |Train Loss -13.640| 
+step:1/313 avg loss:-9.439
+step:1/313 avg loss:-8.748
+step:301/313 avg loss:-10.695
+step:301/313 avg loss:-10.891
+Valid Summary | End of Epoch 73 | Time 395.29s | Current time 2024-08-30 11:59:16.108691 |Valid Loss -10.805| 
+Found new best model, dict saved
+step:1/1250 avg loss:-14.594
+step:1/1250 avg loss:-12.639
+step:1001/1250 avg loss:-13.723
+step:1001/1250 avg loss:-13.688
+Train Summary | End of Epoch 74 | Time 1759.43s | Current time 2024-08-30 12:28:37.255745 |Train Loss -13.701| 
+step:1/313 avg loss:-9.463
+step:1/313 avg loss:-9.744
+step:301/313 avg loss:-10.719
+step:301/313 avg loss:-10.924
+Valid Summary | End of Epoch 74 | Time 394.80s | Current time 2024-08-30 12:35:12.056957 |Valid Loss -10.835| 
+Found new best model, dict saved
+step:1/1250 avg loss:-13.231step:1/1250 avg loss:-13.971
+
+step:1001/1250 avg loss:-13.731
+step:1001/1250 avg loss:-13.688
+Train Summary | End of Epoch 75 | Time 1757.50s | Current time 2024-08-30 13:04:31.322165 |Train Loss -13.707| 
+step:1/313 avg loss:-9.598
+step:1/313 avg loss:-9.753
+step:301/313 avg loss:-10.704
+step:301/313 avg loss:-10.915
+Valid Summary | End of Epoch 75 | Time 392.23s | Current time 2024-08-30 13:11:03.553842 |Valid Loss -10.819| 
+step:1/1250 avg loss:-13.434
+step:1/1250 avg loss:-12.439
+step:1001/1250 avg loss:-13.778
+step:1001/1250 avg loss:-13.745
+Train Summary | End of Epoch 76 | Time 1754.28s | Current time 2024-08-30 13:40:18.615065 |Train Loss -13.758| 
+step:1/313 avg loss:-9.677
+step:1/313 avg loss:-9.779
+step:301/313 avg loss:-10.659
+step:301/313 avg loss:-10.920
+Valid Summary | End of Epoch 76 | Time 396.73s | Current time 2024-08-30 13:46:55.349149 |Valid Loss -10.800| 
+step:1/1250 avg loss:-14.593
+step:1/1250 avg loss:-13.962
+step:1001/1250 avg loss:-13.713
+step:1001/1250 avg loss:-13.697
+Train Summary | End of Epoch 77 | Time 1757.92s | Current time 2024-08-30 14:16:13.887424 |Train Loss -13.703| 
+step:1/313 avg loss:-11.393
+step:1/313 avg loss:-9.347
+step:301/313 avg loss:-10.636
+step:301/313 avg loss:-10.832
+Valid Summary | End of Epoch 77 | Time 394.94s | Current time 2024-08-30 14:22:48.830832 |Valid Loss -10.746| 
+step:1/1250 avg loss:-14.147
+step:1/1250 avg loss:-13.721
+step:1001/1250 avg loss:-13.833
+step:1001/1250 avg loss:-13.795
+Train Summary | End of Epoch 78 | Time 1760.67s | Current time 2024-08-30 14:52:10.078868 |Train Loss -13.813| 
+step:1/313 avg loss:-11.251
+step:1/313 avg loss:-9.522
+step:301/313 avg loss:-10.714
+step:301/313 avg loss:-10.963
+Valid Summary | End of Epoch 78 | Time 394.29s | Current time 2024-08-30 14:58:44.368233 |Valid Loss -10.846| 
+Found new best model, dict saved
+step:1/1250 avg loss:-13.570
+step:1/1250 avg loss:-13.373
+step:1001/1250 avg loss:-13.835
+step:1001/1250 avg loss:-13.799
+Train Summary | End of Epoch 79 | Time 1756.04s | Current time 2024-08-30 15:28:02.743310 |Train Loss -13.813| 
+step:1/313 avg loss:-10.263
+step:1/313 avg loss:-9.259
+step:301/313 avg loss:-10.689
+step:301/313 avg loss:-10.930
+Valid Summary | End of Epoch 79 | Time 393.90s | Current time 2024-08-30 15:34:36.643033 |Valid Loss -10.816| 
+step:1/1250 avg loss:-13.340
+step:1/1250 avg loss:-14.321
+step:1001/1250 avg loss:-13.883
+step:1001/1250 avg loss:-13.838
+Train Summary | End of Epoch 80 | Time 1753.78s | Current time 2024-08-30 16:03:51.200812 |Train Loss -13.840| 
+step:1/313 avg loss:-10.322
+step:1/313 avg loss:-9.706
+step:301/313 avg loss:-10.860
+step:301/313 avg loss:-10.615
+Valid Summary | End of Epoch 80 | Time 393.32s | Current time 2024-08-30 16:10:24.527184 |Valid Loss -10.756| 
+step:1/1250 avg loss:-14.872
+step:1/1250 avg loss:-12.831
+step:1001/1250 avg loss:-13.914
+step:1001/1250 avg loss:-13.884
+Train Summary | End of Epoch 81 | Time 1756.13s | Current time 2024-08-30 16:39:42.815932 |Train Loss -13.881| 
+step:1/313 avg loss:-8.761
+step:1/313 avg loss:-9.229
+step:301/313 avg loss:-10.298
+step:301/313 avg loss:-10.514
+Valid Summary | End of Epoch 81 | Time 396.62s | Current time 2024-08-30 16:46:19.433516 |Valid Loss -10.418| 
+step:1/1250 avg loss:-13.436
+step:1/1250 avg loss:-13.374
+step:1001/1250 avg loss:-13.835
+step:1001/1250 avg loss:-13.796
+Train Summary | End of Epoch 82 | Time 1758.57s | Current time 2024-08-30 17:15:38.810030 |Train Loss -13.805| 
+step:1/313 avg loss:-11.345
+step:1/313 avg loss:-9.309
+step:301/313 avg loss:-10.732
+step:301/313 avg loss:-10.793
+Valid Summary | End of Epoch 82 | Time 393.73s | Current time 2024-08-30 17:22:12.544837 |Valid Loss -10.769| 
+step:1/1250 avg loss:-14.064
+step:1/1250 avg loss:-14.569
+step:1001/1250 avg loss:-13.905
+step:1001/1250 avg loss:-13.884
+Train Summary | End of Epoch 83 | Time 1758.88s | Current time 2024-08-30 17:51:32.182148 |Train Loss -13.891| 
+step:1/313 avg loss:-11.313
+step:1/313 avg loss:-8.953
+step:301/313 avg loss:-10.893
+step:301/313 avg loss:-10.708
+Valid Summary | End of Epoch 83 | Time 394.89s | Current time 2024-08-30 17:58:07.075866 |Valid Loss -10.809| 
+step:1/1250 avg loss:-13.129
+step:1/1250 avg loss:-14.658
+step:1001/1250 avg loss:-13.975
+step:1001/1250 avg loss:-13.959
+Train Summary | End of Epoch 84 | Time 1760.26s | Current time 2024-08-30 18:27:28.094713 |Train Loss -13.959| 
+step:1/313 avg loss:-11.162
+step:1/313 avg loss:-8.987
+step:301/313 avg loss:-10.679
+step:301/313 avg loss:-10.934
+Valid Summary | End of Epoch 84 | Time 395.26s | Current time 2024-08-30 18:34:03.352898 |Valid Loss -10.820| 
+Learning rate adjusted to: 0.000125
+step:1/1250 avg loss:-11.917
+step:1/1250 avg loss:-12.432
+step:1001/1250 avg loss:-14.071
+step:1001/1250 avg loss:-14.021
+Train Summary | End of Epoch 85 | Time 1755.89s | Current time 2024-08-30 19:03:19.988219 |Train Loss -14.043| 
+step:1/313 avg loss:-7.972
+step:1/313 avg loss:-9.061
+step:301/313 avg loss:-10.533
+step:301/313 avg loss:-10.761
+Valid Summary | End of Epoch 85 | Time 395.42s | Current time 2024-08-30 19:09:55.405853 |Valid Loss -10.654| 
+step:1/1250 avg loss:-13.979
+step:1/1250 avg loss:-15.288
+step:1001/1250 avg loss:-14.077
+step:1001/1250 avg loss:-14.051
+Train Summary | End of Epoch 86 | Time 1767.16s | Current time 2024-08-30 19:39:23.979944 |Train Loss -14.063| 
+step:1/313 avg loss:-11.255
+step:1/313 avg loss:-9.043
+step:301/313 avg loss:-10.692
+step:301/313 avg loss:-10.944
+Valid Summary | End of Epoch 86 | Time 395.67s | Current time 2024-08-30 19:45:59.649042 |Valid Loss -10.831| 
+step:1/1250 avg loss:-13.481
+step:1/1250 avg loss:-13.840
+step:1001/1250 avg loss:-14.093
+step:1001/1250 avg loss:-14.073
+Train Summary | End of Epoch 87 | Time 1765.36s | Current time 2024-08-30 20:15:25.769180 |Train Loss -14.085| 
+step:1/313 avg loss:-11.207
+step:1/313 avg loss:-9.165
+step:301/313 avg loss:-10.746
+step:301/313 avg loss:-10.948
+Valid Summary | End of Epoch 87 | Time 397.52s | Current time 2024-08-30 20:22:03.291442 |Valid Loss -10.858| 
+Found new best model, dict saved
+step:1/1250 avg loss:-14.709
+step:1/1250 avg loss:-14.443
+step:1001/1250 avg loss:-14.116
+step:1001/1250 avg loss:-14.093
+Train Summary | End of Epoch 88 | Time 1758.11s | Current time 2024-08-30 20:51:23.003828 |Train Loss -14.100| 
+step:1/313 avg loss:-11.273
+step:1/313 avg loss:-9.128
+step:301/313 avg loss:-10.720
+step:301/313 avg loss:-10.939
+Valid Summary | End of Epoch 88 | Time 398.26s | Current time 2024-08-30 20:58:01.261226 |Valid Loss -10.843| 
+step:1/1250 avg loss:-13.525
+step:1/1250 avg loss:-13.889
+step:1001/1250 avg loss:-14.153
+step:1001/1250 avg loss:-14.115
+Train Summary | End of Epoch 89 | Time 1753.92s | Current time 2024-08-30 21:27:15.855126 |Train Loss -14.121| 
+step:1/313 avg loss:-10.826
+step:1/313 avg loss:-9.432
+step:301/313 avg loss:-10.920
+step:301/313 avg loss:-10.728
+Valid Summary | End of Epoch 89 | Time 398.37s | Current time 2024-08-30 21:33:54.228862 |Valid Loss -10.836| 
+step:1/1250 avg loss:-13.805
+step:1/1250 avg loss:-12.259
+step:1001/1250 avg loss:-14.150
+step:1001/1250 avg loss:-14.124
+Train Summary | End of Epoch 90 | Time 1751.21s | Current time 2024-08-30 22:03:06.006189 |Train Loss -14.136| 
+step:1/313 avg loss:-10.137
+step:1/313 avg loss:-9.203
+step:301/313 avg loss:-10.690
+step:301/313 avg loss:-10.916
+Valid Summary | End of Epoch 90 | Time 401.15s | Current time 2024-08-30 22:09:47.155213 |Valid Loss -10.812| 
+step:1/1250 avg loss:-14.387
+step:1/1250 avg loss:-14.376
+step:1001/1250 avg loss:-14.185
+step:1001/1250 avg loss:-14.141
+Train Summary | End of Epoch 91 | Time 1743.10s | Current time 2024-08-30 22:38:52.689372 |Train Loss -14.156| 
+step:1/313 avg loss:-11.308
+step:1/313 avg loss:-8.934
+step:301/313 avg loss:-10.730
+step:301/313 avg loss:-10.949
+Valid Summary | End of Epoch 91 | Time 400.09s | Current time 2024-08-30 22:45:32.785337 |Valid Loss -10.852| 
+step:1/1250 avg loss:-15.192
+step:1/1250 avg loss:-15.030
+step:1001/1250 avg loss:-14.192
+step:1001/1250 avg loss:-14.149
+Train Summary | End of Epoch 92 | Time 1751.20s | Current time 2024-08-30 23:14:44.956971 |Train Loss -14.172| 
+step:1/313 avg loss:-10.582
+step:1/313 avg loss:-9.098
+step:301/313 avg loss:-10.690
+step:301/313 avg loss:-10.904
+Valid Summary | End of Epoch 92 | Time 400.71s | Current time 2024-08-30 23:21:25.673039 |Valid Loss -10.805| 
+step:1/1250 avg loss:-14.028
+step:1/1250 avg loss:-14.077
+step:1001/1250 avg loss:-14.202
+step:1001/1250 avg loss:-14.160
+Train Summary | End of Epoch 93 | Time 1750.02s | Current time 2024-08-30 23:50:36.341303 |Train Loss -14.187| 
+step:1/313 avg loss:-8.867
+step:1/313 avg loss:-9.865
+step:301/313 avg loss:-10.682
+step:301/313 avg loss:-10.890
+Valid Summary | End of Epoch 93 | Time 401.59s | Current time 2024-08-30 23:57:17.936914 |Valid Loss -10.801| 
+Learning rate adjusted to: 0.000063
+step:1/1250 avg loss:-13.643
+step:1/1250 avg loss:-14.610
+step:1001/1250 avg loss:-14.255
+step:1001/1250 avg loss:-14.234
+Train Summary | End of Epoch 94 | Time 1748.58s | Current time 2024-08-31 00:26:27.285365 |Train Loss -14.242| 
+step:1/313 avg loss:-9.774
+step:1/313 avg loss:-9.085
+step:301/313 avg loss:-10.649
+step:301/313 avg loss:-10.906
+Valid Summary | End of Epoch 94 | Time 401.14s | Current time 2024-08-31 00:33:08.423055 |Valid Loss -10.785| 
+step:1/1250 avg loss:-15.334
+step:1/1250 avg loss:-14.841
+step:1001/1250 avg loss:-14.266
+step:1001/1250 avg loss:-14.250
+Train Summary | End of Epoch 95 | Time 1751.17s | Current time 2024-08-31 01:02:20.283270 |Train Loss -14.255| 
+step:1/313 avg loss:-10.032
+step:1/313 avg loss:-9.280
+step:301/313 avg loss:-10.641
+step:301/313 avg loss:-10.942
+Valid Summary | End of Epoch 95 | Time 402.30s | Current time 2024-08-31 01:09:02.585647 |Valid Loss -10.803| 
+step:1/1250 avg loss:-13.646
+step:1/1250 avg loss:-13.825
+step:1001/1250 avg loss:-14.284
+step:1001/1250 avg loss:-14.255
+Train Summary | End of Epoch 96 | Time 1750.92s | Current time 2024-08-31 01:38:14.327055 |Train Loss -14.264| 
+step:1/313 avg loss:-10.651
+step:1/313 avg loss:-9.130
+step:301/313 avg loss:-10.664
+step:301/313 avg loss:-10.879
+Valid Summary | End of Epoch 96 | Time 398.42s | Current time 2024-08-31 01:44:52.749847 |Valid Loss -10.779| 
+step:1/1250 avg loss:-14.055
+step:1/1250 avg loss:-14.755
+step:1001/1250 avg loss:-14.301
+step:1001/1250 avg loss:-14.258
+Train Summary | End of Epoch 97 | Time 1756.49s | Current time 2024-08-31 02:14:10.239333 |Train Loss -14.272| 
+step:1/313 avg loss:-10.162
+step:1/313 avg loss:-8.990
+step:301/313 avg loss:-10.686
+step:301/313 avg loss:-10.911
+Valid Summary | End of Epoch 97 | Time 396.40s | Current time 2024-08-31 02:20:46.639661 |Valid Loss -10.810| 
+No improvement for 10 epochs, early stopping.
