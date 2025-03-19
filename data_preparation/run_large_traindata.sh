@@ -59,14 +59,6 @@ python 3_create_LowQuality_visual_list.py \
 --video_data_direc $data_direc_mp4 \
 --mix_data_list $mixture_data_list \
 --mixture_data_list_with_occludded $mixture_data_list_with_occludded
-else 
-    echo $mixture_data_list_with_occludded' exist!'
-fi 
-
-
-
-# stage 4
-echo "stage 4: concate dev and test from $mixture_dev_test_list to $mixture_data_list"
 
 # Extract lines starting with 'val' and append them to mix_largetrain.csv
 grep '^val' "$mixture_dev_test_list" >> "$mixture_data_list"
@@ -75,6 +67,8 @@ grep '^test' "$mixture_dev_test_list" >> "$mixture_data_list"
 
 grep '^val' "$mixture_dev_test_list_with_occludded" >> "$mixture_data_list_with_occludded"
 grep '^test' "$mixture_dev_test_list_with_occludded" >> "$mixture_data_list_with_occludded"
+else 
+    echo $mixture_data_list_with_occludded' exist!'
+fi 
 
 
-echo "Done!"
