@@ -273,7 +273,7 @@ class Solver(object):
 
                 self.accu_count += 1
                 step += 1
-                total_loss = loss
+                total_loss += loss
 
                 # loss.backward()
                 self.optimizer.step()

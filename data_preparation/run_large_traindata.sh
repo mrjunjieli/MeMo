@@ -35,6 +35,9 @@ if [ ! -f $mixture_data_list ];then
     --sampling_rate $sampling_rate \
     --mixture_data_list $mixture_data_list \
     --max_length $max_length
+
+    grep '^val' "$mixture_dev_test_list" >> "$mixture_data_list"
+    grep '^test' "$mixture_dev_test_list" >> "$mixture_data_list"
     else
     echo $mixture_data_list' exist!'
 fi
@@ -59,11 +62,6 @@ python 3_create_LowQuality_visual_list.py \
 --video_data_direc $data_direc_mp4 \
 --mix_data_list $mixture_data_list \
 --mixture_data_list_with_occludded $mixture_data_list_with_occludded
-
-# Extract lines starting with 'val' and append them to mix_largetrain.csv
-grep '^val' "$mixture_dev_test_list" >> "$mixture_data_list"
-grep '^test' "$mixture_dev_test_list" >> "$mixture_data_list"
-
 
 grep '^val' "$mixture_dev_test_list_with_occludded" >> "$mixture_data_list_with_occludded"
 grep '^test' "$mixture_dev_test_list_with_occludded" >> "$mixture_data_list_with_occludded"
